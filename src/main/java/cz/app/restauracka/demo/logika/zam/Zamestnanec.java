@@ -1,8 +1,14 @@
 package cz.app.restauracka.demo.logika.zam;
 
+
+import org.springframework.stereotype.Component;
+
 import java.util.Set;
 
-public class Zamestnanec implements IZamestnanec {
+@Component
+public class Zamestnanec implements InterfaceZamestnanec {
+
+	private Set<InterfaceZamestnanec> Zamestnanci;
 
 	private String jmeno;
 
@@ -18,46 +24,83 @@ public class Zamestnanec implements IZamestnanec {
 
 	private String heslo;
 
-	private Set<Zamestnanec> Zamestnanci;
+	public Zamestnanec(String jmeno, String prijmeni, int id, String pozice, int telefon, String mail, String heslo) {
+		this.jmeno = jmeno;
+		this.prijmeni = prijmeni;
+		this.id = id;
+		this.pozice = pozice;
+		this.telefon = telefon;
+		this.mail = mail;
+		this.heslo = heslo;
+	}
 
 	@Override
 	public String getJmeno() {
-		return null;
+		return jmeno;
+	}
+
+	@Override
+	public void setJmeno(String jmeno) {
+		this.jmeno = jmeno;
 	}
 
 	@Override
 	public String getPrijmeni() {
-		return null;
+		return prijmeni;
 	}
 
 	@Override
-	public String getID() {
-		return null;
+	public void setPrijmeni(String prijmeni) {
+		this.prijmeni = prijmeni;
+	}
+
+	@Override
+	public int getId() {
+		return id;
+	}
+
+	@Override
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	@Override
 	public String getPozice() {
-		return null;
+		return pozice;
+	}
+
+	@Override
+	public void setPozice(String pozice) {
+		this.pozice = pozice;
 	}
 
 	@Override
 	public int getTelefon() {
-		return 0;
+		return telefon;
+	}
+
+	@Override
+	public void setTelefon(int telefon) {
+		this.telefon = telefon;
 	}
 
 	@Override
 	public String getMail() {
-		return null;
+		return mail;
 	}
 
 	@Override
-	public Zamestnanec getZamestnanec() {
-		return null;
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 
 	@Override
-	public Set getSetZamestnanci() {
-		return null;
+	public String getHeslo() {
+		return heslo;
 	}
 
+	@Override
+	public void setHeslo(String heslo) {
+		this.heslo = heslo;
+	}
 }
