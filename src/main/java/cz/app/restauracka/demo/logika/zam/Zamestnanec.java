@@ -6,9 +6,12 @@ import org.springframework.stereotype.Component;
 import java.util.Set;
 
 @Component
-public class Zamestnanec implements InterfaceZamestnanec {
+public class Zamestnanec implements iZamestnanec {
+	//TODO mají i další podtřídy implementovat interface?
+	//TODO Doporučení na práci s observerem?
 
-	private Set<InterfaceZamestnanec> Zamestnanci;
+
+	private Set<iZamestnanec> Zamestnanci;
 
 	private String jmeno;
 

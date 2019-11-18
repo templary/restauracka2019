@@ -11,6 +11,7 @@ public class Kuchar extends Zamestnanec {
 		super(jmeno, prijmeni, id, pozice, telefon, mail, heslo);
 	}
 
+
 	public void prijmoutZadaniJidla() {
 
 	}

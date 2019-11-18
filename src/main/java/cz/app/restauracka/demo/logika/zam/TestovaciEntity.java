@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class TestovaciEntity {
     @Autowired
-    InterfaceZamestnanec zamestnanec;
+    iZamestnanec zamestnanec;
     @Autowired
     Manager manager;
     @Autowired

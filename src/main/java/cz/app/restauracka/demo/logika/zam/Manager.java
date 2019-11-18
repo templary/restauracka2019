@@ -17,6 +17,7 @@ public class Manager extends Zamestnanec {
 
 	public void vyhoditZam() {
 
+		
 	}
 
 	public void vypis() {

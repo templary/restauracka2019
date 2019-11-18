@@ -1,6 +1,7 @@
 package cz.app.restauracka.demo.logika.zam;
 
-public interface InterfaceZamestnanec {
+public interface iZamestnanec {
+
     String getJmeno();
 
     void setJmeno(String jmeno);
