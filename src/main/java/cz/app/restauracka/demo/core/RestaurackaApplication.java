@@ -1,22 +1,24 @@
 package cz.app.restauracka.demo.core;
 
-import cz.app.restauracka.demo.logika.zam.Manager;
-import cz.app.restauracka.demo.logika.zam.TestovaciEntity;
+import cz.app.restauracka.demo.logika.zam.Zamestnanec;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"cz.app.restauracka"})
 public class RestaurackaApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(RestaurackaApplication.class, args);
 
-        TestovaciEntity testovaciEntity = context.getBean(TestovaciEntity.class);
+        Zamestnanec zamestnanec = context.getBean(Zamestnanec.class);
+        zamestnanec.cre
 
-        Manager manager = context.getBean(Manager.class);
+        //TestovaciEntity testovaciEntity = context.getBean(TestovaciEntity.class);
 
-        System.out.println(manager.getJmeno());
+        //Manager manager = context.getBean(Manager.class);
+
+        //System.out.println(manager.getJmeno());
     }
 
 
