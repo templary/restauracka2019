@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -18,10 +17,11 @@
                 </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                     <children>
-                        <Button id="leftOrderButton" layoutX="5.0" layoutY="6.0" mnemonicParsing="false"
-                                prefHeight="86.0" prefWidth="107.0" text="Objednat"/>
-                        <Button layoutX="119.0" layoutY="6.0" mnemonicParsing="false" prefHeight="86.0"
-                                prefWidth="107.0" text="Zaplatit"/>
+                        <Button id="leftOrderButton" fx:id="objednat" layoutX="5.0" layoutY="6.0"
+                                mnemonicParsing="false" onAction="#objednej" prefHeight="86.0" prefWidth="107.0"
+                                text="Objednat"/>
+                        <Button fx:id="zaplatit" layoutX="119.0" layoutY="6.0" mnemonicParsing="false"
+                                onAction="#zaplat" prefHeight="86.0" prefWidth="107.0" text="Zaplatit"/>
                     </children>
                 </AnchorPane>
             </items>
@@ -35,18 +35,22 @@
                     <children>
                         <AnchorPane id="topLogoImage" layoutX="14.0" layoutY="10.0" prefHeight="75.0"
                                     prefWidth="110.0"/>
-                        <Button id="topButton-addMenu" layoutX="142.0" layoutY="4.0" mnemonicParsing="false"
-                                prefHeight="86.0" prefWidth="107.0" text="Přidat Menu"/>
-                        <Button id="topButton-addUser" layoutX="266.0" layoutY="5.0" mnemonicParsing="false"
-                                prefHeight="86.0" prefWidth="107.0" text="Přidat uživatele"/>
-                        <Button id="topButton-uzaverka" layoutX="386.0" layoutY="5.0" mnemonicParsing="false"
-                                prefHeight="86.0" prefWidth="107.0" text="Uzávěrka"/>
+                        <Button id="topButton-addMenu" fx:id="pridatMenu" layoutX="142.0" layoutY="4.0"
+                                mnemonicParsing="false" onAction="#pridejMenu" prefHeight="86.0" prefWidth="107.0"
+                                text="Přidat Menu"/>
+                        <Button id="topButton-addUser" fx:id="pridatUzivatele" layoutX="266.0" layoutY="5.0"
+                                mnemonicParsing="false" onAction="#pridejUzivatele" prefHeight="86.0" prefWidth="107.0"
+                                text="Přidat uživatele"/>
+                        <Button id="topButton-uzaverka" fx:id="uzaverka" layoutX="386.0" layoutY="5.0"
+                                mnemonicParsing="false" onAction="#uzaverka" prefHeight="86.0" prefWidth="107.0"
+                                text="Uzávěrka"/>
                     </children>
                 </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                     <children>
-                        <Button id="topButton-logOut" layoutX="26.0" layoutY="5.0" mnemonicParsing="false"
-                                prefHeight="86.0" prefWidth="107.0" text="LOG OUT"/>
+                        <Button id="topButton-logOut" fx:id="logOut" layoutX="26.0" layoutY="5.0"
+                                mnemonicParsing="false" onAction="#logOut" prefHeight="86.0" prefWidth="107.0"
+                                text="LOG OUT"/>
                     </children>
                 </AnchorPane>
             </items>
@@ -72,9 +76,9 @@
                     <children>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                             <children>
-                                <Button id="table1" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0"
-                                        layoutY="41.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="107.0"
-                                        text="Stůl 1">
+                                <Button id="table1" fx:id="table1" alignment="CENTER" contentDisplay="CENTER"
+                                        layoutX="46.0" layoutY="41.0" mnemonicParsing="false" onAction="#akceStul1"
+                                        prefHeight="86.0" prefWidth="107.0" text="Stůl 1">
                                     <font>
                                         <Font size="25.0"/>
                                     </font>
@@ -83,9 +87,9 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                             <children>
-                                <Button id="table2" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0"
-                                        layoutY="41.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="107.0"
-                                        text="Stůl 2">
+                                <Button id="table2" fx:id="table2" alignment="CENTER" contentDisplay="CENTER"
+                                        layoutX="46.0" layoutY="41.0" mnemonicParsing="false" onAction="#akceStul2"
+                                        prefHeight="86.0" prefWidth="107.0" text="Stůl 2">
                                     <font>
                                         <Font size="25.0"/>
                                     </font>
@@ -94,9 +98,9 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                             <children>
-                                <Button id="table3" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0"
-                                        layoutY="41.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="107.0"
-                                        text="Stůl 3">
+                                <Button id="table3" fx:id="table3" alignment="CENTER" contentDisplay="CENTER"
+                                        layoutX="52.0" layoutY="41.0" mnemonicParsing="false" onAction="#akceStul3"
+                                        prefHeight="86.0" prefWidth="107.0" text="Stůl 3">
                                     <font>
                                         <Font size="25.0"/>
                                     </font>
@@ -105,9 +109,9 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                             <children>
-                                <Button id="table4" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0"
-                                        layoutY="41.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="107.0"
-                                        text="Stůl 4">
+                                <Button id="table4" fx:id="table4" alignment="CENTER" contentDisplay="CENTER"
+                                        layoutX="38.0" layoutY="41.0" mnemonicParsing="false" onAction="#akceStul4"
+                                        prefHeight="86.0" prefWidth="107.0" text="Stůl 4">
                                     <font>
                                         <Font size="25.0"/>
                                     </font>
@@ -116,9 +120,9 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                             <children>
-                                <Button id="table5" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0"
-                                        layoutY="41.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="107.0"
-                                        text="Stůl 5">
+                                <Button id="table5" fx:id="table5" alignment="CENTER" contentDisplay="CENTER"
+                                        layoutX="46.0" layoutY="41.0" mnemonicParsing="false" onAction="#akceStul5"
+                                        prefHeight="86.0" prefWidth="107.0" text="Stůl 5">
                                     <font>
                                         <Font size="25.0"/>
                                     </font>
@@ -127,9 +131,9 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                             <children>
-                                <Button id="table6" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0"
-                                        layoutY="41.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="107.0"
-                                        text="Stůl 6">
+                                <Button id="table6" fx:id="table6" alignment="CENTER" contentDisplay="CENTER"
+                                        layoutX="46.0" layoutY="32.0" mnemonicParsing="false" onAction="#akceStul6"
+                                        prefHeight="86.0" prefWidth="107.0" text="Stůl 6">
                                     <font>
                                         <Font size="25.0"/>
                                     </font>
@@ -138,9 +142,9 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                             <children>
-                                <Button id="table7" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0"
-                                        layoutY="41.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="107.0"
-                                        text="Stůl 7">
+                                <Button id="table7" fx:id="table7" alignment="CENTER" contentDisplay="CENTER"
+                                        layoutX="46.0" layoutY="41.0" mnemonicParsing="false" onAction="#akceStul7"
+                                        prefHeight="86.0" prefWidth="107.0" text="Stůl 7">
                                     <font>
                                         <Font size="25.0"/>
                                     </font>
@@ -149,9 +153,9 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                             <children>
-                                <Button id="table8" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0"
-                                        layoutY="41.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="107.0"
-                                        text="Stůl 8">
+                                <Button id="table8" fx:id="table8" alignment="CENTER" contentDisplay="CENTER"
+                                        layoutX="46.0" layoutY="41.0" mnemonicParsing="false" onAction="#akceStul8"
+                                        prefHeight="86.0" prefWidth="107.0" text="Stůl 8">
                                     <font>
                                         <Font size="25.0"/>
                                     </font>
@@ -160,9 +164,9 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                             <children>
-                                <Button id="table9" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0"
-                                        layoutY="41.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="107.0"
-                                        text="Stůl 9">
+                                <Button id="table9" fx:id="table9" alignment="CENTER" contentDisplay="CENTER"
+                                        layoutX="46.0" layoutY="41.0" mnemonicParsing="false" onAction="#akceStul9"
+                                        prefHeight="86.0" prefWidth="107.0" text="Stůl 9">
                                     <font>
                                         <Font size="25.0"/>
                                     </font>

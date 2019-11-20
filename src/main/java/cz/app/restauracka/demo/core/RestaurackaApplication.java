@@ -12,7 +12,7 @@ public class RestaurackaApplication {
         ConfigurableApplicationContext context = SpringApplication.run(RestaurackaApplication.class, args);
 
         Zamestnanec zamestnanec = context.getBean(Zamestnanec.class);
-        zamestnanec.cre
+        
 
         //TestovaciEntity testovaciEntity = context.getBean(TestovaciEntity.class);
 
