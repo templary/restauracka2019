@@ -1,14 +1,11 @@
 package cz.app.restauracka.demo.logika.zam;
 
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
-
-import java.util.Set;
 
 @Repository
 public abstract class Zamestnanec {
-
-	private Set<Zamestnanec> Zamestnanci;
 
 	private String jmeno;
 
@@ -24,11 +21,11 @@ public abstract class Zamestnanec {
 
 	private String heslo;
 
-
-	public Zamestnanec(String jmeno, String prijmeni, int id, String pozice, int telefon, String mail, String heslo) {
-		System.out.println("Vytvarim entitu třídy " + this.getClass().getName());
-
+	public Zamestnanec(@Value("") String jmeno, @Value("") String prijmeni, @Value("") int id, @Value("") String pozice, @Value("") int telefon, @Value("") String mail, @Value("") String heslo) {
+		System.out.println("vytvářím: " + getClass().getName());
 	}
+
+
 
 	public String getJmeno() {
 		return jmeno;

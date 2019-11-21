@@ -6,4 +6,5 @@ public class Manager extends Zamestnanec {
 	public Manager(String jmeno, String prijmeni, int id, String pozice, int telefon, String mail, String heslo) {
 		super(jmeno, prijmeni, id, pozice, telefon, mail, heslo);
 	}
+
 }
