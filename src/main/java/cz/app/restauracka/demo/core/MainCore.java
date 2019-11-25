@@ -13,13 +13,13 @@ public class MainCore {
         ConfigurableApplicationContext context = SpringApplication.run(MainCore.class, args);
 
         Zamestnanci zamestnanci = context.getBean(Zamestnanci.class);
-        //Zamestnanec zamestnanec = context.getBean(Zamestnanec.class);
         TestovaciEntity testovaciEntity = context.getBean(TestovaciEntity.class);
 
         testovaciEntity.vlozZamestnance();
 
         System.out.println(zamestnanci.getZamestnanciSet());
-        System.out.println(zamestnanci.getZamestnanecPokudExistuje("Karel"));
+        System.out.println(zamestnanci.getZamestnanecPokudExistuje("Karel").getJmeno());
+        System.out.println(zamestnanci.getJmenaZamestnancu());
 
 
 

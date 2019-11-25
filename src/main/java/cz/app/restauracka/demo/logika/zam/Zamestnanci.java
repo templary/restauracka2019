@@ -4,6 +4,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Repository
 public class Zamestnanci {
@@ -22,7 +23,10 @@ public class Zamestnanci {
         zamestnanciSet.add(zamestnanec);
     }
 
-
+    /**
+     * Metoda pro zjištění zda zamestnanec existuje.
+     * Pokud ano, vrací zamestnance.
+     */
     public Zamestnanec getZamestnanecPokudExistuje(String jmeno) {
         for (Zamestnanec zamestnanec : this.zamestnanciSet) {
             if (zamestnanec.getJmeno().equals(jmeno)) {
@@ -30,6 +34,15 @@ public class Zamestnanci {
             }
         }
         return null;
+    }
+
+    /**
+     * Metoda vrací seznam zamestnancu
+     */
+    public Set getJmenaZamestnancu() {
+        return zamestnanciSet.stream()
+                .map(zamestnanec -> zamestnanec.getJmeno())
+                .collect(Collectors.toSet());
     }
 
 }

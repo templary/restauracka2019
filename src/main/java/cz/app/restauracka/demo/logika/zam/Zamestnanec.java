@@ -1,11 +1,9 @@
 package cz.app.restauracka.demo.logika.zam;
 
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Repository;
+import cz.app.restauracka.demo.logika.Pozice;
 
-@Repository
-public abstract class Zamestnanec {
+public class Zamestnanec {
 
 	private String jmeno;
 
@@ -13,7 +11,7 @@ public abstract class Zamestnanec {
 
 	private int id;
 
-	private String pozice;
+    private Pozice pozice;
 
 	private int telefon;
 
@@ -21,76 +19,67 @@ public abstract class Zamestnanec {
 
 	private String heslo;
 
-	public Zamestnanec(@Value("") String jmeno, @Value("") String prijmeni, @Value("") int id, @Value("") String pozice, @Value("") int telefon, @Value("") String mail, @Value("") String heslo) {
-		System.out.println("vytvářím: " + getClass().getName());
+    public Zamestnanec(String jmeno, String prijmeni, int id, Pozice pozice, int telefon, String mail, String heslo) {
+        this.jmeno = jmeno;
+        this.prijmeni = prijmeni;
+        this.id = id;
+        this.pozice = pozice;
+        this.telefon = telefon;
+        this.mail = mail;
+        this.heslo = heslo;
 	}
-
-
 
 	public String getJmeno() {
 		return jmeno;
 	}
 
-
 	public void setJmeno(String jmeno) {
 		this.jmeno = jmeno;
 	}
-
 
 	public String getPrijmeni() {
 		return prijmeni;
 	}
 
-
 	public void setPrijmeni(String prijmeni) {
 		this.prijmeni = prijmeni;
 	}
-
 
 	public int getId() {
 		return id;
 	}
 
-
 	public void setId(int id) {
 		this.id = id;
 	}
 
-
-	public String getPozice() {
+    public Pozice getPozice() {
 		return pozice;
 	}
 
-
-	public void setPozice(String pozice) {
+    public void setPozice(Pozice pozice) {
 		this.pozice = pozice;
 	}
-
 
 	public int getTelefon() {
 		return telefon;
 	}
 
-
 	public void setTelefon(int telefon) {
 		this.telefon = telefon;
 	}
-
 
 	public String getMail() {
 		return mail;
 	}
 
-
 	public void setMail(String mail) {
 		this.mail = mail;
 	}
 
-
 	public String getHeslo() {
 		return heslo;
 	}
-
 
 	public void setHeslo(String heslo) {
 		this.heslo = heslo;
