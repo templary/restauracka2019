@@ -1,20 +1,26 @@
 package cz.app.restauracka.demo.logika.obj;
 
+/**
+ * Pouze statická jídla která se přidají do Meníčka
+ */
 public class Jidlo {
-
     private int id;
 
-    private String jmeno;
+    private String nazev;
 
     private String popis;
 
     private int cena;
 
-    private int alergeny;
+    //private int alergeny; //TODO dodelat
 
-    private boolean jePripravovano;
 
-    private boolean jeVydano;
+    public Jidlo(int id, String nazev, String popis, int cena) {
+        this.id = id;
+        this.nazev = nazev;
+        this.popis = popis;
+        this.cena = cena;
+    }
 
     public int getId() {
         return id;
@@ -24,12 +30,12 @@ public class Jidlo {
         this.id = id;
     }
 
-    public String getJmeno() {
-        return jmeno;
+    String getNazev() {
+        return nazev;
     }
 
-    public void setJmeno(String jmeno) {
-        this.jmeno = jmeno;
+    public void setNazev(String nazev) {
+        this.nazev = nazev;
     }
 
     public String getPopis() {
@@ -46,29 +52,5 @@ public class Jidlo {
 
     public void setCena(int cena) {
         this.cena = cena;
-    }
-
-    public int getAlergeny() {
-        return alergeny;
-    }
-
-    public void setAlergeny(int alergeny) {
-        this.alergeny = alergeny;
-    }
-
-    public boolean isJePripravovano() {
-        return jePripravovano;
-    }
-
-    public void setJePripravovano(boolean jePripravovano) {
-        this.jePripravovano = jePripravovano;
-    }
-
-    public boolean isJeVydano() {
-        return jeVydano;
-    }
-
-    public void setJeVydano(boolean jeVydano) {
-        this.jeVydano = jeVydano;
     }
 }

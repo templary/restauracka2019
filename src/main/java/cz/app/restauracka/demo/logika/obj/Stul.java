@@ -1,19 +1,28 @@
 package cz.app.restauracka.demo.logika.obj;
 
-import java.util.Set;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class Stul {
 
-    private int idStolu;
-    private Objednavka objednavka;
-    private Set<Stul> Stoly;
+    @Autowired
+    Objednavky objednavky;
 
-    public int getIdStolu() {
-        return idStolu;
+    private int id;
+    private int pocetMist;
+    private Objednavka objednavka;
+
+    public Stul(int id, int pocetMist) {
+        this.id = id;
+        this.pocetMist = pocetMist;
+        objednavka = null;
     }
 
-    public void setIdStolu(int idStolu) {
-        this.idStolu = idStolu;
+    int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Objednavka getObjednavka() {
@@ -24,11 +33,11 @@ public class Stul {
         this.objednavka = objednavka;
     }
 
-    public Set<Stul> getStoly() {
-        return Stoly;
+    public int getPocetMist() {
+        return pocetMist;
     }
 
-    public void setStoly(Set<Stul> stoly) {
-        Stoly = stoly;
+    public void setPocetMist(int pocetMist) {
+        this.pocetMist = pocetMist;
     }
 }

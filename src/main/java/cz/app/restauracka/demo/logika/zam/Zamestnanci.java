@@ -15,17 +15,38 @@ public class Zamestnanci {
         System.out.println("Vytvarim: " + getClass().getName());
     }
 
+    /**
+     * Metoda vrací celý set
+     *
+     * @return
+     */
     public Set<Zamestnanec> getZamestnanciSet() {
         return zamestnanciSet;
     }
 
+    /**
+     * metoda dle
+     *
+     * @param zamestnanec vloží zam. do setu
+     */
     public void vlozZamestnanceDoSetu(Zamestnanec zamestnanec) {
         zamestnanciSet.add(zamestnanec);
     }
 
     /**
-     * Metoda pro zjištění zda zamestnanec existuje.
-     * Pokud ano, vrací zamestnance.
+     * Metoda dle
+     *
+     * @param zamestnanec odebere zamestnance
+     */
+    public void odeberZamestnanceZSetu(Zamestnanec zamestnanec) {
+        zamestnanciSet.remove(zamestnanec);
+    }
+
+    /**
+     * metoda dle
+     * @param jmeno
+     * zjistí zda Zam je v setu pokud ano, vrátího
+     * @return
      */
     public Zamestnanec getZamestnanecPokudExistuje(String jmeno) {
         for (Zamestnanec zamestnanec : this.zamestnanciSet) {
@@ -37,11 +58,12 @@ public class Zamestnanci {
     }
 
     /**
-     * Metoda vrací seznam zamestnancu
+     * metoda vrací jmena Zam.
+     * @return
      */
     public Set getJmenaZamestnancu() {
         return zamestnanciSet.stream()
-                .map(zamestnanec -> zamestnanec.getJmeno())
+                .map(Zamestnanec::getJmeno)
                 .collect(Collectors.toSet());
     }
 
