@@ -7,6 +7,11 @@ import cz.app.restauracka.demo.logika.obj.Objednavky;
 import cz.app.restauracka.demo.logika.obj.Stoly;
 import cz.app.restauracka.demo.logika.ovladac.OvladacZam;
 import cz.app.restauracka.demo.logika.zam.Zamestnanci;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -14,8 +19,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 import static cz.app.restauracka.demo.logika.Pozice.Kuchar;
 
 @SpringBootApplication(scanBasePackages = {"cz.app.restauracka"})
-public class MainCore {
-    //TODO dává smysl vytvářet nondefault constr pod Springem?
+public class MainCore extends Application {
+
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(MainCore.class, args);
 
@@ -26,6 +31,7 @@ public class MainCore {
         Objednavky objednavky = context.getBean(Objednavky.class);
         OvladacZam ovladacZam = context.getBean(OvladacZam.class);
         UlozDataObjednavek ulozDataObjednavek = context.getBean(UlozDataObjednavek.class);
+        GUI gui = context.getBean(GUI.class);
 
 
         testovaciEntity.vlozZamestnance();
@@ -48,6 +54,10 @@ public class MainCore {
         System.out.println(menuJidla.getNazvyJidel());
         ulozDataObjednavek.saveData();
 
+        //gui.startMain();
+
+
+
 
 
 
@@ -55,4 +65,17 @@ public class MainCore {
     }
 
 
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/scene.fxml"));
+        Parent rootComponent = loader.load();
+
+        Scene scene = new Scene(rootComponent);
+        primaryStage.setScene(scene);
+
+        primaryStage.setTitle("Serialization example");
+
+        primaryStage.show();
+    }
 }
