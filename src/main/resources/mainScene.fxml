@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity" prefHeight="607.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/11.0.1">
+            minWidth="-Infinity" prefHeight="607.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/8">
     <left>
         <SplitPane dividerPositions="0.7991318074191002" orientation="VERTICAL" prefHeight="520.0" prefWidth="234.0"
                    BorderPane.alignment="CENTER">
@@ -110,7 +110,7 @@
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                             <children>
                                 <Button id="table4" fx:id="table4" alignment="CENTER" contentDisplay="CENTER"
-                                        layoutX="38.0" layoutY="41.0" mnemonicParsing="false" onAction="#akceStul4"
+                                        layoutX="47.0" layoutY="41.0" mnemonicParsing="false" onAction="#akceStul4"
                                         prefHeight="86.0" prefWidth="107.0" text="Stůl 4">
                                     <font>
                                         <Font size="25.0"/>

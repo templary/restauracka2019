@@ -15,40 +15,20 @@ public class Zamestnanci {
         System.out.println("Vytvarim: " + getClass().getName());
     }
 
-    /**
-     * Metoda vrací celý set
-     *
-     * @return
-     */
     public Set<Zamestnanec> getZamestnanciSet() {
         return zamestnanciSet;
     }
 
-    /**
-     * metoda dle
-     *
-     * @param zamestnanec vloží zam. do setu
-     */
     public void vlozZamestnanceDoSetu(Zamestnanec zamestnanec) {
         zamestnanciSet.add(zamestnanec);
     }
 
-    /**
-     * Metoda dle
-     *
-     * @param zamestnanec odebere zamestnance
-     */
+
     public void odeberZamestnanceZSetu(Zamestnanec zamestnanec) {
         zamestnanciSet.remove(zamestnanec);
     }
 
-    /**
-     * metoda dle
-     * @param jmeno
-     * zjistí zda Zam je v setu pokud ano, vrátího
-     * @return
-     */
-    public Zamestnanec getZamestnanecPokudExistuje(String jmeno) {
+    public Zamestnanec getZamestnanecPodleJmena(String jmeno) {
         for (Zamestnanec zamestnanec : this.zamestnanciSet) {
             if (zamestnanec.getJmeno().equals(jmeno)) {
                 return zamestnanec;
@@ -57,10 +37,24 @@ public class Zamestnanci {
         return null;
     }
 
-    /**
-     * metoda vrací jmena Zam.
-     * @return
-     */
+    public Zamestnanec getZamestnanecPodleUzJmeno(String uzJmeno) {
+        for (Zamestnanec zamestnanec : this.zamestnanciSet) {
+            if (zamestnanec.getUzJmeno().equals(uzJmeno)) {
+                return zamestnanec;
+            }
+        }
+        return null;
+    }
+
+    public Zamestnanec getZamestnanecPodleID(int id) {
+        for (Zamestnanec zamestnanec : this.zamestnanciSet) {
+            if (zamestnanec.getId() == id) {
+                return zamestnanec;
+            }
+        }
+        return null;
+    }
+
     public Set getJmenaZamestnancu() {
         return zamestnanciSet.stream()
                 .map(Zamestnanec::getJmeno)

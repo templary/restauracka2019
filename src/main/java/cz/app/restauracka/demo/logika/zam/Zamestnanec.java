@@ -9,6 +9,8 @@ public class Zamestnanec {
 
 	private String prijmeni;
 
+	private String uzJmeno;
+
 	private int id;
 
     private Pozice pozice;
@@ -19,14 +21,15 @@ public class Zamestnanec {
 
 	private String heslo;
 
-    public Zamestnanec(String jmeno, String prijmeni, int id, Pozice pozice, int telefon, String mail, String heslo) {
-        this.jmeno = jmeno;
-        this.prijmeni = prijmeni;
-        this.id = id;
-        this.pozice = pozice;
-        this.telefon = telefon;
-        this.mail = mail;
-        this.heslo = heslo;
+	public Zamestnanec(String jmeno, String prijmeni, String uzJmeno, int id, Pozice pozice, int telefon, String mail, String heslo) {
+		this.jmeno = jmeno;
+		this.prijmeni = prijmeni;
+		this.uzJmeno = uzJmeno;
+		this.id = id;
+		this.pozice = pozice;
+		this.telefon = telefon;
+		this.mail = mail;
+		this.heslo = heslo;
 	}
 
 	public String getJmeno() {
@@ -83,5 +86,13 @@ public class Zamestnanec {
 
 	public void setHeslo(String heslo) {
 		this.heslo = heslo;
+	}
+
+	public String getUzJmeno() {
+		return uzJmeno;
+	}
+
+	public void setUzJmeno(String uzJmeno) {
+		this.uzJmeno = uzJmeno;
 	}
 }

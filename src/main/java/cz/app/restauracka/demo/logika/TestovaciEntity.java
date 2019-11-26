@@ -21,10 +21,10 @@ public class TestovaciEntity {
     Objednavky objednavky;
 
 
-    Zamestnanec karel = new Zamestnanec("Karel", "Novák", 1, cz.app.restauracka.demo.logika.Pozice.Kuchar, 792, "aa@se.cz", "1234");
-    Zamestnanec vojta = new Zamestnanec("Vojta", "Dvořák", 2, cz.app.restauracka.demo.logika.Pozice.Kuchar, 792, "aa@se.cz", "1234");
-    Zamestnanec tomas = new Zamestnanec("Tomas", "Novotný", 3, cz.app.restauracka.demo.logika.Pozice.Boss, 792, "aa@se.cz", "1234");
-    Zamestnanec adam = new Zamestnanec("Adam", "Rychlý", 4, cz.app.restauracka.demo.logika.Pozice.Cisnik, 792, "aa@se.cz", "1234");
+    Zamestnanec karel = new Zamestnanec("Karel", "Novák", "karlos1", 1, cz.app.restauracka.demo.logika.Pozice.Kuchar, 792, "aa@se.cz", "1234");
+    Zamestnanec vojta = new Zamestnanec("Vojta", "Dvořák", "vojtik22", 2, cz.app.restauracka.demo.logika.Pozice.Kuchar, 792, "aa@se.cz", "1234");
+    Zamestnanec tomas = new Zamestnanec("Tomas", "Novotný", "tomasos1", 3, cz.app.restauracka.demo.logika.Pozice.Boss, 792, "aa@se.cz", "1234");
+    Zamestnanec adam = new Zamestnanec("Adam", "Rychlý", "adam12", 4, cz.app.restauracka.demo.logika.Pozice.Cisnik, 792, "aa@se.cz", "1234");
 
 
     Jidlo svickova = new Jidlo(1, "Svíčková", "Dobré jídlo", 100);
