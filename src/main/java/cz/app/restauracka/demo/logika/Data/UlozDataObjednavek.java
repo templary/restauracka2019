@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+//TODO předělat na Mysql až bude čas.
 @Component
 public class UlozDataObjednavek {
     private static final String SAVE_FILE_NAME = "zamestnanci.json";
