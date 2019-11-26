@@ -10,6 +10,12 @@ public class OvladacZam {
     @Autowired
     Zamestnanci zamestnanci;
 
+    private static final int permiseKuchar = 0;
+    private static final int permiseCisnik = 1;
+    private static final int permiseManager = 2;
+    private static final int permiseBoss = 3;
+
+
     public void identifikace(String uzJmeno) {
         switch (zamestnanci.getZamestnanecPodleUzJmeno(uzJmeno).getPozice()) {
             case Kuchar:
@@ -27,6 +33,13 @@ public class OvladacZam {
             default:
                 // code block
         }
+    }
+
+    /**
+     *
+     */
+    public void prijmoutObjednavku() {
+
     }
 
 
