@@ -1,13 +1,11 @@
 package cz.app.restauracka.demo.core;
 
-import cz.app.restauracka.demo.logika.Data.UlozDataObjednavek;
-import cz.app.restauracka.demo.logika.TestovaciEntity;
+import cz.app.restauracka.demo.logika.Data.NactiDataZamestnancu;
 import cz.app.restauracka.demo.logika.obj.MenuJidla;
 import cz.app.restauracka.demo.logika.obj.Objednavky;
 import cz.app.restauracka.demo.logika.obj.Stoly;
-import cz.app.restauracka.demo.logika.ovladac.OvladacZam;
+import cz.app.restauracka.demo.logika.ovladac.OvladacData;
 import cz.app.restauracka.demo.logika.zam.Zamestnanci;
-import javafx.fxml.FXMLLoader;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -21,17 +19,18 @@ public class MainCore {
         ConfigurableApplicationContext context = SpringApplication.run(MainCore.class, args);
 
         Zamestnanci zamestnanci = context.getBean(Zamestnanci.class);
-        TestovaciEntity testovaciEntity = context.getBean(TestovaciEntity.class);
+        //TestovaciEntity testovaciEntity = context.getBean(TestovaciEntity.class);
         Stoly stoly = context.getBean(Stoly.class);
         MenuJidla menuJidla = context.getBean(MenuJidla.class);
         Objednavky objednavky = context.getBean(Objednavky.class);
-        OvladacZam ovladacZam = context.getBean(OvladacZam.class);
-        UlozDataObjednavek ulozDataObjednavek = context.getBean(UlozDataObjednavek.class);
+        OvladacData ovladacData = context.getBean(OvladacData.class);
+        NactiDataZamestnancu nactiDataZamestnancu = context.getBean(NactiDataZamestnancu.class);
 
-        testovaciEntity.vlozZamestnance();
-        testovaciEntity.vlozJidloDoMenu();
-        testovaciEntity.vlozStulDoStolu();
-        testovaciEntity.vytvorObjednavku();
+
+//        testovaciEntity.vlozZamestnance();
+//        testovaciEntity.vlozJidloDoMenu();
+//        testovaciEntity.vlozStulDoStolu();
+//        testovaciEntity.vytvorObjednavku();
 
 
 
@@ -50,7 +49,9 @@ public class MainCore {
         System.out.println(stoly.getStulPodleID(1).getObjednavka().getObsahObjednavky());
         System.out.println(menuJidla.getMenuSet());
         System.out.println(menuJidla.getNazvyJidel());
-        ulozDataObjednavek.saveData();
+        //System.out.println(nactiDataZamestnancu.loadData());
+
+
 
         //gui.startMain();
 

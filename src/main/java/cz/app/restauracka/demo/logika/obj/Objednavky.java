@@ -25,4 +25,12 @@ public class Objednavky {
         }
         return null;
     }
+
+    public Set<Objednavka> getSetObjednavek() {
+        return setObjednavek;
+    }
+
+    public void setSetObjednavek(Set<Objednavka> setObjednavek) {
+        this.setObjednavek = setObjednavek;
+    }
 }

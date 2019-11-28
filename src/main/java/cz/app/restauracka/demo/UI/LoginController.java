@@ -49,7 +49,7 @@ public class LoginController implements Initializable {
         if (loggedZam!=null) {
             if(loggedZam.getHeslo().equals(loginHeslo.getText())){
                 loginInfoText.setText("Prihlasen!");
-                System.out.println("AHoj");
+                System.out.println(loggedZam.getJmeno());
                 startMain();
             }else {
                 loginInfoText.setText("Chybné jméno nebo heslo");

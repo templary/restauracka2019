@@ -1,4 +1,4 @@
-package cz.app.restauracka.demo.logika;
+/*package cz.app.restauracka.demo.logika;
 
 import cz.app.restauracka.demo.logika.obj.*;
 import cz.app.restauracka.demo.logika.zam.Zamestnanci;
@@ -78,12 +78,14 @@ public class TestovaciEntity {
         stoly.vlozStul(stul9);
     }
 
+
     public void vytvorObjednavku() {
         objednavkovySet.add(rizek);
         objednavkovySet.add(burger);
         Objednavka objednavka1 = new Objednavka(objednavkovySet, 1);
         objednavky.vlozObjednavku(objednavka1);
-
+        stoly.getStulPodleID(1).setObjednavka(objednavka1);
     }
 
 }
+*/

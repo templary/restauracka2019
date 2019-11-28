@@ -33,6 +33,10 @@ public class MenuJidla {
         return null;
     }
 
+    public void setMenuSet(Set<Jidlo> menuSet) {
+        this.menuSet = menuSet;
+    }
+
     public Set getNazvyJidel() {
         return menuSet.stream()
                 .map(Jidlo::getNazev)

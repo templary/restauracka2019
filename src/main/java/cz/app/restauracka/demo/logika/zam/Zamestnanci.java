@@ -20,6 +20,10 @@ public class Zamestnanci {
         return zamestnanciSet;
     }
 
+    public void setZamestnanciSet(Set<Zamestnanec> zamestnanciSet) {
+        this.zamestnanciSet = zamestnanciSet;
+    }
+
     public void vlozZamestnanceDoSetu(Zamestnanec zamestnanec) {
         zamestnanciSet.add(zamestnanec);
     }

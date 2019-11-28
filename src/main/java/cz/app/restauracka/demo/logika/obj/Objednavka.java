@@ -24,6 +24,18 @@ public class Objednavka {
         return id;
     }
 
+    public Set<String> getNazvyJidel() {
+        return this.jidloVObjednavce.stream()
+                .map(Jidlo::getNazev)
+                .collect(Collectors.toSet());
+    }
+
+    public Set<String> getNazeJidlaACenu() {
+        return this.jidloVObjednavce.stream()
+                .map(Jidlo::getNazevACena)
+                .collect(Collectors.toSet());
+    }
+
     public void pridejDoObjednavky(Jidlo jidlo) {
         jidloVObjednavce.add(jidlo);
     }

@@ -1,11 +1,10 @@
 package cz.app.restauracka.demo.UI;
 
-import cz.app.restauracka.demo.core.MainCore;
 import cz.app.restauracka.demo.logika.Data.UlozDataObjednavek;
-import cz.app.restauracka.demo.logika.TestovaciEntity;
 import cz.app.restauracka.demo.logika.obj.MenuJidla;
 import cz.app.restauracka.demo.logika.obj.Objednavky;
 import cz.app.restauracka.demo.logika.obj.Stoly;
+import cz.app.restauracka.demo.logika.ovladac.OvladacData;
 import cz.app.restauracka.demo.logika.ovladac.OvladacZam;
 import cz.app.restauracka.demo.logika.zam.Zamestnanci;
 import javafx.application.Application;
@@ -32,17 +31,19 @@ public class GUI extends Application {
                 .run(args);
 
         Zamestnanci zamestnanci = applicationContext.getBean(Zamestnanci.class);
-        TestovaciEntity testovaciEntity = applicationContext.getBean(TestovaciEntity.class);
+        //TestovaciEntity testovaciEntity = applicationContext.getBean(TestovaciEntity.class);
         Stoly stoly = applicationContext.getBean(Stoly.class);
         MenuJidla menuJidla = applicationContext.getBean(MenuJidla.class);
         Objednavky objednavky = applicationContext.getBean(Objednavky.class);
         OvladacZam ovladacZam = applicationContext.getBean(OvladacZam.class);
         UlozDataObjednavek ulozDataObjednavek = applicationContext.getBean(UlozDataObjednavek.class);
+        OvladacData ovladacData = applicationContext.getBean(OvladacData.class);
+        ovladacData.nactiData();
 
-        testovaciEntity.vlozZamestnance();
-        testovaciEntity.vlozJidloDoMenu();
-        testovaciEntity.vlozStulDoStolu();
-        testovaciEntity.vytvorObjednavku();
+        //testovaciEntity.vlozZamestnance();
+        //testovaciEntity.vlozJidloDoMenu();
+        //testovaciEntity.vlozStulDoStolu();
+        //testovaciEntity.vytvorObjednavku();
 
     }
 

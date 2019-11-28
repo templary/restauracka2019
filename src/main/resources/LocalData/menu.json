@@ -1,0 +1,20 @@
+[
+  {
+    "id": 3,
+    "nazev": "Rizek",
+    "popis": "Dobré jídlo",
+    "cena": 110
+  },
+  {
+    "id": 2,
+    "nazev": "Burger",
+    "popis": "Dobré jídlo",
+    "cena": 120
+  },
+  {
+    "id": 1,
+    "nazev": "Svíčková",
+    "popis": "Dobré jídlo",
+    "cena": 100
+  }
+]

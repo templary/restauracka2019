@@ -25,4 +25,12 @@ public class Stoly {
         }
         return null;
     }
+
+    public Set<Stul> getSetStolu() {
+        return setStolu;
+    }
+
+    public void setSetStolu(Set<Stul> setStolu) {
+        this.setStolu = setStolu;
+    }
 }

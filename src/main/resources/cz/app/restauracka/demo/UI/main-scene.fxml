@@ -5,14 +5,20 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity" prefHeight="607.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/8" fx:controller="cz.app.restauracka.demo.UI.MainController">
+            minWidth="-Infinity" prefHeight="607.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/8"
+            fx:controller="cz.app.restauracka.demo.UI.MainController">
     <left>
         <SplitPane dividerPositions="0.7991318074191002" orientation="VERTICAL" prefHeight="520.0" prefWidth="234.0"
                    BorderPane.alignment="CENTER">
             <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="419.0" prefWidth="273.0">
                     <children>
-                        <VBox id="leftOrdersVBox" prefHeight="419.0" prefWidth="234.0"/>
+                        <VBox id="leftOrdersVBox" prefHeight="419.0" prefWidth="234.0">
+                            <children>
+                                <ListView fx:id="objednanePolozky" prefHeight="200.0" prefWidth="200.0"/>
+                                <ListView fx:id="vyberPolozek" prefHeight="200.0" prefWidth="200.0"/>
+                            </children>
+                        </VBox>
                     </children>
                 </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
@@ -33,22 +39,20 @@
             <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                     <children>
-                        <AnchorPane id="topLogoImage" layoutX="14.0" layoutY="10.0" prefHeight="75.0"
-                                    prefWidth="110.0"/>
-                        <Button id="topButton-addMenu" fx:id="pridatMenu" layoutX="142.0" layoutY="4.0"
-                                mnemonicParsing="false" onAction="#pridejMenu" prefHeight="86.0" prefWidth="107.0"
-                                text="Přidat Menu"/>
-                        <Button id="topButton-addUser" fx:id="pridatUzivatele" layoutX="266.0" layoutY="5.0"
+                        <Button id="topButton-addUser" fx:id="pridatUzivatele" layoutX="14.0" layoutY="5.0"
                                 mnemonicParsing="false" onAction="#pridejUzivatele" prefHeight="86.0" prefWidth="107.0"
                                 text="Přidat uživatele"/>
-                        <Button id="topButton-uzaverka" fx:id="uzaverka" layoutX="386.0" layoutY="5.0"
+                        <Button id="topButton-uzaverka" fx:id="uzaverka" layoutX="244.0" layoutY="5.0"
                                 mnemonicParsing="false" onAction="#uzaverka" prefHeight="86.0" prefWidth="107.0"
                                 text="Uzávěrka"/>
+                        <Button id="topButton-addMenu" fx:id="pridatMenu" layoutX="128.0" layoutY="5.0"
+                                mnemonicParsing="false" onAction="#pridejMenu" prefHeight="86.0" prefWidth="107.0"
+                                text="Přidat Menu"/>
                     </children>
                 </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                     <children>
-                        <Button id="topButton-logOut" fx:id="logOut" layoutX="26.0" layoutY="5.0"
+                        <Button id="topButton-logOut" fx:id="buttonLogout" layoutX="26.0" layoutY="5.0"
                                 mnemonicParsing="false" onAction="#logOut" prefHeight="86.0" prefWidth="107.0"
                                 text="LOG OUT"/>
                     </children>
@@ -99,7 +103,7 @@
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                             <children>
                                 <Button id="table3" fx:id="table3" alignment="CENTER" contentDisplay="CENTER"
-                                        layoutX="52.0" layoutY="41.0" mnemonicParsing="false" onAction="#akceStul3"
+                                        layoutX="46.0" layoutY="41.0" mnemonicParsing="false" onAction="#akceStul3"
                                         prefHeight="86.0" prefWidth="107.0" text="Stůl 3">
                                     <font>
                                         <Font size="25.0"/>
@@ -132,7 +136,7 @@
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                             <children>
                                 <Button id="table6" fx:id="table6" alignment="CENTER" contentDisplay="CENTER"
-                                        layoutX="46.0" layoutY="32.0" mnemonicParsing="false" onAction="#akceStul6"
+                                        layoutX="46.0" layoutY="41.0" mnemonicParsing="false" onAction="#akceStul6"
                                         prefHeight="86.0" prefWidth="107.0" text="Stůl 6">
                                     <font>
                                         <Font size="25.0"/>
