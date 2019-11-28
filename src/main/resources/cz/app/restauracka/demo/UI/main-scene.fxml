@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity" prefHeight="607.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/8">
+            minWidth="-Infinity" prefHeight="607.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/8" fx:controller="cz.app.restauracka.demo.UI.MainController">
     <left>
         <SplitPane dividerPositions="0.7991318074191002" orientation="VERTICAL" prefHeight="520.0" prefWidth="234.0"
                    BorderPane.alignment="CENTER">

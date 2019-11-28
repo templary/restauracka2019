@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.VBox?>
 <VBox xmlns:fx="http://javafx.com/fxml"
       xmlns="http://javafx.com/javafx"
-      fx:controller="cz.app.restauracka.demo.UI.MyController"
+      fx:controller="cz.app.restauracka.demo.UI.MainController"
       prefHeight="100.0" prefWidth="350.0" spacing="10" alignment="CENTER">
 
     <Label fx:id="weatherLabel"/>

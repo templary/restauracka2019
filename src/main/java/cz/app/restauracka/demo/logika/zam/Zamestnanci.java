@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 @Repository
 public class Zamestnanci {
 
+
     private Set<Zamestnanec> zamestnanciSet = new HashSet<>();
 
     public Zamestnanci() {
