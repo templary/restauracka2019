@@ -46,6 +46,7 @@ public class RegistraceController implements Initializable {
     @FXML
     private TableView<Zamestnanec> tabulkaUzivatelu;
 
+    @FXML
     private TableColumn<Zamestnanec, String> registraceTabulkaJmeno = new TableColumn();
     @FXML
     private TableColumn<Zamestnanec, String> registraceTabulkaPrijmeni = new TableColumn();
@@ -87,7 +88,7 @@ public class RegistraceController implements Initializable {
     }
 
     private Boolean overeniVstupu() {
-        return registraceJmeno.getText() != null && registracePrijmeni != null && registraceNick != null && registraceTelefon != null && registraceMail != null && registraceHeslo != null && registracePozice != null;
+        return registraceJmeno.getText() != null && registracePrijmeni.getText() != null && registraceNick.getText() != null && registraceTelefon.getText() != null && registraceMail.getText() != null && registraceHeslo.getText() != null && registracePozice.getValue() != null;
     }
 
     @FXML

@@ -5,7 +5,7 @@
     "uzJmeno": "tomasos1",
     "id": 3,
     "pozice": "Boss",
-    "telefon": 792,
+    "telefon": "792",
     "mail": "aa@se.cz",
     "heslo": "1234"
   },
@@ -15,7 +15,7 @@
     "uzJmeno": "adam12",
     "id": 4,
     "pozice": "Cisnik",
-    "telefon": 792,
+    "telefon": "792",
     "mail": "aa@se.cz",
     "heslo": "1234"
   },
@@ -25,7 +25,7 @@
     "uzJmeno": "vojtik22",
     "id": 2,
     "pozice": "Kuchar",
-    "telefon": 792,
+    "telefon": "792",
     "mail": "aa@se.cz",
     "heslo": "1234"
   },
@@ -35,7 +35,7 @@
     "uzJmeno": "karlos1",
     "id": 1,
     "pozice": "Kuchar",
-    "telefon": 792,
+    "telefon": "792",
     "mail": "aa@se.cz",
     "heslo": "1234"
   },
@@ -45,7 +45,7 @@
     "uzJmeno": "prom20",
     "id": 111,
     "pozice": "Kuchar",
-    "telefon": 123321,
+    "telefon": "123321",
     "mail": "mm@ge.cz",
     "heslo": "ahoj"
   }
