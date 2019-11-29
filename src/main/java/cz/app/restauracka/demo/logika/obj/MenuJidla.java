@@ -33,6 +33,15 @@ public class MenuJidla {
         return null;
     }
 
+    public Jidlo getJidloPodleID(int id) {
+        for (Jidlo jidlo : this.menuSet) {
+            if (jidlo.getId() == id) {
+                return jidlo;
+            }
+        }
+        return null;
+    }
+
     public void setMenuSet(Set<Jidlo> menuSet) {
         this.menuSet = menuSet;
     }

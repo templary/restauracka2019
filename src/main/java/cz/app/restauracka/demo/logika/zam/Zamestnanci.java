@@ -60,7 +60,7 @@ public class Zamestnanci {
         return null;
     }
 
-    public Set getJmenaZamestnancu() {
+    public Set getSetJmenaZamestnancu() {
         return zamestnanciSet.stream()
                 .map(Zamestnanec::getJmeno)
                 .collect(Collectors.toSet());

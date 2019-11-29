@@ -1,4 +1,5 @@
-/*package cz.app.restauracka.demo.logika;
+/*
+package cz.app.restauracka.demo.logika;
 
 import cz.app.restauracka.demo.logika.obj.*;
 import cz.app.restauracka.demo.logika.zam.Zamestnanci;

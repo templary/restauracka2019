@@ -13,9 +13,14 @@ public class OvladacZam {
     Zamestnanci zamestnanci;
 
 
-    public void vytvorNovehoUzivatele(String jmeno, String prijmeni, String uzJmeno, int id, Pozice pozice, int telefon, String mail, String heslo) {
+    public void vytvorNovehoUzivatele(String jmeno, String prijmeni, String uzJmeno, int id, Pozice pozice, String telefon, String mail, String heslo) {
         Zamestnanec zamestnanec = new Zamestnanec(jmeno, prijmeni, uzJmeno, id, pozice, telefon, mail, heslo);
         zamestnanci.vlozZamestnanceDoSetu(zamestnanec);
+    }
+
+    public int idGenerator() {
+        int count = zamestnanci.getZamestnanciSet().size();
+        return count + 1;
     }
 
 

@@ -15,13 +15,13 @@ public class Zamestnanec {
 
     private Pozice pozice;
 
-	private int telefon;
+	private String telefon;
 
 	private String mail;
 
 	private String heslo;
 
-	public Zamestnanec(String jmeno, String prijmeni, String uzJmeno, int id, Pozice pozice, int telefon, String mail, String heslo) {
+	public Zamestnanec(String jmeno, String prijmeni, String uzJmeno, int id, Pozice pozice, String telefon, String mail, String heslo) {
 		this.jmeno = jmeno;
 		this.prijmeni = prijmeni;
 		this.uzJmeno = uzJmeno;
@@ -64,11 +64,11 @@ public class Zamestnanec {
 		this.pozice = pozice;
 	}
 
-	public int getTelefon() {
+	public String getTelefon() {
 		return telefon;
 	}
 
-	public void setTelefon(int telefon) {
+	public void setTelefon(String telefon) {
 		this.telefon = telefon;
 	}
 

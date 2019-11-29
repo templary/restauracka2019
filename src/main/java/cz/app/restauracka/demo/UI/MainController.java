@@ -1,5 +1,6 @@
 package cz.app.restauracka.demo.UI;
 
+import cz.app.restauracka.demo.logika.obj.Jidlo;
 import cz.app.restauracka.demo.logika.obj.MenuJidla;
 import cz.app.restauracka.demo.logika.obj.Stoly;
 import cz.app.restauracka.demo.logika.ovladac.OvladacData;
@@ -16,6 +17,7 @@ import net.rgielen.fxweaver.core.FxmlView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Component
@@ -24,7 +26,7 @@ public class MainController {
     @Autowired
     LoginController loginController;
     @Autowired
-    NovyUzivatelController novyUzivatelController;
+    RegistraceController registraceController;
     @Autowired
     Stoly stoly;
     @Autowired
@@ -40,6 +42,8 @@ public class MainController {
     private ListView<String> vyberPolozek = new ListView<>();
     @FXML
     private Button buttonLogout;
+
+    Set<Jidlo> objednavkovySet = new HashSet<>();
 
 
     private ObservableList<String> listSetter(Set<String> stringSet) {
@@ -62,6 +66,7 @@ public class MainController {
 
     public void pridejUzivatele(ActionEvent actionEvent) {
         startRegistrace();
+        registraceController.setup();
     }
 
     public void uzaverka(ActionEvent actionEvent) {
@@ -118,7 +123,7 @@ public class MainController {
     private void startRegistrace() {
         Stage stage = (Stage) buttonLogout.getScene().getWindow();
 
-        Scene scene = new Scene(this.fxWeaver.loadView(NovyUzivatelController.class));
+        Scene scene = new Scene(this.fxWeaver.loadView(RegistraceController.class));
         stage.setScene(scene);
         stage.setTitle("Register Form");
         stage.show();

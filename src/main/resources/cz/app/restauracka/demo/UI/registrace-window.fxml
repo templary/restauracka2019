@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="666.0" prefWidth="399.0" spacing="10"
+      xmlns="http://javafx.com/javafx/8" fx:controller="cz.app.restauracka.demo.UI.RegistraceController">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10"/>
+    </padding>
+    <children>
+        <TitledPane text="Vytvořit nového uživatele">
+            <content>
+                <VBox spacing="10">
+                    <children>
+                        <HBox alignment="CENTER" spacing="10">
+                            <children>
+                                <Label prefHeight="17.0" prefWidth="66.0" text="Jméno">First Name</Label>
+                                <TextField fx:id="registraceJmeno"/>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="10">
+                            <children>
+                                <Label prefHeight="17.0" prefWidth="66.0" text="Příjmení">Last Name</Label>
+                                <TextField fx:id="registracePrijmeni"/>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="10">
+                            <children>
+                                <Label prefHeight="17.0" prefWidth="66.0" text="Nick">Age</Label>
+                                <TextField fx:id="registraceNick"/>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="10">
+                            <children>
+                                <Label prefHeight="17.0" prefWidth="66.0" text="Telefon"/>
+                                <TextField fx:id="registraceTelefon"/>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="10">
+                            <children>
+                                <Label prefHeight="17.0" prefWidth="66.0" text="Mail"/>
+                                <TextField fx:id="registraceMail"/>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="10">
+                            <children>
+                                <Label prefHeight="17.0" prefWidth="66.0" text="Heslo"/>
+                                <PasswordField fx:id="registraceHeslo"/>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="10">
+                            <children>
+                                <Label prefHeight="17.0" prefWidth="66.0" text="Pozice"/>
+                                <ComboBox fx:id="registracePozice" prefHeight="27.0" prefWidth="161.0"/>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="10"/>
+                        <HBox alignment="CENTER" spacing="10">
+                            <children>
+                                <Button fx:id="buttonVytvor" mnemonicParsing="false" onAction="#handleButtonVytvor"
+                                        text="Vytvořit"/>
+                                <Button fx:id="buttonSmazat" mnemonicParsing="false" onAction="#handleButtonSmazat"
+                                        text="Smazat"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </content>
+        </TitledPane>
+
+        <TableView fx:id="tabulkaUzivatelu" prefHeight="256.0" prefWidth="353.0">
+            <columns>
+                <TableColumn fx:id="registraceTabulkaJmeno" prefWidth="120" text="Jméno">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="firstName"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="registraceTabulkaPrijmeni" prefWidth="120" text="Příjmení">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="lastName"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="registraceTabulkaPozice" prefWidth="85.0" text="Pozice">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="age"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="registraceTabulkaID" prefWidth="53.0" text="ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="age"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+
+        <HBox alignment="CENTER" spacing="10">
+            <children>
+                <Button fx:id="registraceButtonZpet" onAction="#handleButtonZpet" text="Zpět">Load</Button>
+            </children>
+        </HBox>
+    </children>
+</VBox>

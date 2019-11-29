@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 <GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" prefHeight="474.0" prefWidth="447.0"
           vgap="10" xmlns="http://javafx.com/javafx/8"
-          fx:controller="cz.app.restauracka.demo.UI.NovyUzivatelController">
+          fx:controller="cz.app.restauracka.demo.UI.RegistraceController">
     <padding>
         <Insets bottom="40" left="40" right="40" top="40"/>
     </padding>

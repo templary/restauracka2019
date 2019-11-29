@@ -13,7 +13,25 @@
   },
   {
     "id": 1,
-    "pocetMist": 0
+    "pocetMist": 0,
+    "objednavka": {
+      "cenaObjednavky": 0,
+      "jidloVObjednavce": [
+        {
+          "id": 2,
+          "nazev": "Burger",
+          "popis": "Dobré jídlo",
+          "cena": 120
+        },
+        {
+          "id": 1,
+          "nazev": "Svíčková",
+          "popis": "Dobré jídlo",
+          "cena": 100
+        }
+      ],
+      "id": 2
+    }
   },
   {
     "id": 111,

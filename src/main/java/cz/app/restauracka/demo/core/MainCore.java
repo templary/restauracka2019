@@ -37,7 +37,7 @@ public class MainCore {
 
         System.out.println(zamestnanci.getZamestnanciSet());
         System.out.println(zamestnanci.getZamestnanecPodleJmena("Karel").getJmeno());
-        System.out.println(zamestnanci.getJmenaZamestnancu());
+        System.out.println(zamestnanci.getSetJmenaZamestnancu());
         System.out.println("--" + zamestnanci.getZamestnanecPodleID(1).getPozice().equals(Kuchar));
 
 

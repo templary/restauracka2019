@@ -14,7 +14,6 @@ public class Stul {
     public Stul(int id, int pocetMist) {
         this.id = id;
         this.pocetMist = pocetMist;
-        objednavka = null;
     }
 
     int getId() {
