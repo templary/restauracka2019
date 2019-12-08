@@ -1,10 +1,10 @@
 package cz.app.restauracka.demo.UI;
 
+import cz.app.restauracka.demo.logika.Data.UlozDataZamestnancu;
 import cz.app.restauracka.demo.logika.Pozice;
 import cz.app.restauracka.demo.logika.ovladac.OvladacZam;
 import cz.app.restauracka.demo.logika.zam.Zamestnanci;
 import cz.app.restauracka.demo.logika.zam.Zamestnanec;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import net.rgielen.fxweaver.core.FxWeaver;
 import net.rgielen.fxweaver.core.FxmlView;
@@ -35,6 +36,8 @@ public class RegistraceController implements Initializable {
     Zamestnanci zamestnanci;
     @Autowired
     VarovaniController varovaniController;
+    @Autowired
+    UlozDataZamestnancu ulozDataZamestnancu;
 
 
     @FXML
@@ -44,7 +47,7 @@ public class RegistraceController implements Initializable {
     @FXML
     private ComboBox<Pozice> registracePozice = new ComboBox<>();
     @FXML
-    private TableView<Zamestnanec> tabulkaUzivatelu;
+    private TableView tabulkaUzivatelu = new TableView<>();
 
     @FXML
     private TableColumn<Zamestnanec, String> registraceTabulkaJmeno = new TableColumn();
@@ -88,12 +91,13 @@ public class RegistraceController implements Initializable {
     }
 
     private Boolean overeniVstupu() {
-        return registraceJmeno.getText() != null && registracePrijmeni.getText() != null && registraceNick.getText() != null && registraceTelefon.getText() != null && registraceMail.getText() != null && registraceHeslo.getText() != null && registracePozice.getValue() != null;
+        //TODO - dodělat ověření.
+        return registraceJmeno.getText() == null && registracePrijmeni.getText() == null && registraceNick.getText() == null && registraceTelefon.getText() == null && registraceMail.getText() == null && registraceHeslo.getText() == null;
     }
 
     @FXML
     private void handleButtonVytvor(ActionEvent actionEvent) {
-        if (!overeniVstupu()) {
+        if (1 == 1) { //TODO dodělat ověření!!!!
             String jmeno = registraceJmeno.getText();
             String prijmeni = registracePrijmeni.getText();
             String nick = registraceNick.getText();
@@ -104,6 +108,8 @@ public class RegistraceController implements Initializable {
             int idZam = ovladacZam.idGenerator();
 
             ovladacZam.vytvorNovehoUzivatele(jmeno, prijmeni, nick, idZam, pozice, telefon, mail, heslo);
+            ulozDataZamestnancu.saveData();
+            zobrazZamestnance();
         } else {
             startVarovani();
             varovaniController.setVarovaniText("Chybně zadané parametry zaměstnance");
@@ -126,16 +132,25 @@ public class RegistraceController implements Initializable {
         return FXCollections.observableArrayList(stringSet);
     }
 
+    private void zobrazZamestnance() {
+        registraceTabulkaJmeno.setCellValueFactory(new PropertyValueFactory<>("Jmeno"));
+        registraceTabulkaPrijmeni.setCellValueFactory(new PropertyValueFactory<>("Prijmeni"));
+        registraceTabulkaPozice.setCellValueFactory(new PropertyValueFactory<>("Pozice"));
+        registraceTabulkaID.setCellValueFactory(new PropertyValueFactory<>("id"));
+
+        ObservableList<Zamestnanec> observableList = FXCollections.observableArrayList(
+                zamestnanci.getZamestnanciSet()
+        );
+        tabulkaUzivatelu.setItems(observableList);
+    }
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        zobrazZamestnance();
         registracePozice.getItems().setAll(Pozice.values());
 
-        //TODO zprovoznit zobrazování uživatelů.
-        registraceTabulkaJmeno.setCellValueFactory(cellData ->
-                new SimpleStringProperty(cellData.getValue().getJmeno()));
-
-//        for (Zamestnanec zamestnanec : zamestnanci.getZamestnanciSet()) {
-//            registraceTabulkaJmeno.setCellValueFactory(listSetter(zamestnanci.getSetJmenaZamestnancu()));
-//        }
     }
+
 }

@@ -16,5 +16,17 @@
     "nazev": "Svíčková",
     "popis": "Dobré jídlo",
     "cena": 100
+  },
+  {
+    "id": 4,
+    "nazev": "řízek",
+    "popis": "pop",
+    "cena": 23
+  },
+  {
+    "id": 5,
+    "nazev": "Rizek",
+    "popis": "pop",
+    "cena": 123
   }
 ]

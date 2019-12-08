@@ -28,6 +28,8 @@ public class MainController {
     @Autowired
     RegistraceController registraceController;
     @Autowired
+    PridejJidloController pridejJidloController;
+    @Autowired
     Stoly stoly;
     @Autowired
     FxWeaver fxWeaver;
@@ -62,6 +64,7 @@ public class MainController {
     }
 
     public void pridejMenu(ActionEvent actionEvent) {
+        startVytvorJidlo();
     }
 
     public void pridejUzivatele(ActionEvent actionEvent) {
@@ -126,6 +129,15 @@ public class MainController {
         Scene scene = new Scene(this.fxWeaver.loadView(RegistraceController.class));
         stage.setScene(scene);
         stage.setTitle("Register Form");
+        stage.show();
+    }
+
+    private void startVytvorJidlo() {
+        Stage stage = (Stage) buttonLogout.getScene().getWindow();
+
+        Scene scene = new Scene(this.fxWeaver.loadView(PridejJidloController.class));
+        stage.setScene(scene);
+        stage.setTitle("Pridaní jídla");
         stage.show();
     }
 }
