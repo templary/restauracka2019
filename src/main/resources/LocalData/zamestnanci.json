@@ -7,7 +7,7 @@
     "pozice": "Boss",
     "telefon": "792",
     "mail": "aa@se.cz",
-    "heslo": "1234"
+    "heslo": "d404559f602eab6fd602ac7680dacbfaadd13630335e951f097af3900e9de176b6db28512f2e000b9d04fba5133e8b1c6e8df59db3a8ab9d60be4b97cc9e81db"
   },
   {
     "jmeno": "Adam",
@@ -17,7 +17,7 @@
     "pozice": "Cisnik",
     "telefon": "792",
     "mail": "aa@se.cz",
-    "heslo": "1234"
+    "heslo": "d404559f602eab6fd602ac7680dacbfaadd13630335e951f097af3900e9de176b6db28512f2e000b9d04fba5133e8b1c6e8df59db3a8ab9d60be4b97cc9e81db"
   },
   {
     "jmeno": "Vojta",
@@ -27,7 +27,7 @@
     "pozice": "Kuchar",
     "telefon": "792",
     "mail": "aa@se.cz",
-    "heslo": "1234"
+    "heslo": "d404559f602eab6fd602ac7680dacbfaadd13630335e951f097af3900e9de176b6db28512f2e000b9d04fba5133e8b1c6e8df59db3a8ab9d60be4b97cc9e81db"
   },
   {
     "jmeno": "Karel",
@@ -37,27 +37,7 @@
     "pozice": "Kuchar",
     "telefon": "792",
     "mail": "aa@se.cz",
-    "heslo": "1234"
-  },
-  {
-    "jmeno": "adam",
-    "prijmeni": "michal",
-    "uzJmeno": "mika",
-    "id": 5,
-    "pozice": "Manager",
-    "telefon": "9283",
-    "mail": "maaij@s.cz",
-    "heslo": "heslo"
-  },
-  {
-    "jmeno": "Karel",
-    "prijmeni": "Adam",
-    "uzJmeno": "karl111",
-    "id": 6,
-    "pozice": "Manager",
-    "telefon": "123",
-    "mail": "123",
-    "heslo": "123"
+    "heslo": "d404559f602eab6fd602ac7680dacbfaadd13630335e951f097af3900e9de176b6db28512f2e000b9d04fba5133e8b1c6e8df59db3a8ab9d60be4b97cc9e81db"
   },
   {
     "jmeno": "Karel",
@@ -67,6 +47,16 @@
     "pozice": "Manager",
     "telefon": "788287888",
     "mail": "m.c@mail.cz",
-    "heslo": "ahoj"
+    "heslo": "1c8655f398d3cebd3bae5f866e5676ac0094cb4c0ae9b2f60a7d6dfdc28e1c9b9c514ac9a000f8fcd4287e27913a9c39b76cf1530faedfec117e6c0d9d82c272"
+  },
+  {
+    "jmeno": "petr",
+    "prijmeni": "vokurka",
+    "uzJmeno": "vokur1",
+    "id": 8,
+    "pozice": "Manager",
+    "telefon": "78928",
+    "mail": "mailos.mail",
+    "heslo": "ba4aa5d6da7de19518c18027fafbda43428d74d3d84ae78a7711d4ad9d8e6e63aa62cf688cbad44b5170187b1c8a14aab6b2e225dbea19bb2e378c54decbff51"
   }
 ]

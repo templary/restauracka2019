@@ -2,6 +2,7 @@ package cz.app.restauracka.demo.UI;
 
 import cz.app.restauracka.demo.logika.Data.UlozDataZamestnancu;
 import cz.app.restauracka.demo.logika.Pozice;
+import cz.app.restauracka.demo.logika.ovladac.OvladacHash;
 import cz.app.restauracka.demo.logika.ovladac.OvladacZam;
 import cz.app.restauracka.demo.logika.zam.Zamestnanci;
 import cz.app.restauracka.demo.logika.zam.Zamestnanec;
@@ -38,6 +39,8 @@ public class RegistraceController implements Initializable {
     VarovaniController varovaniController;
     @Autowired
     UlozDataZamestnancu ulozDataZamestnancu;
+    @Autowired
+    OvladacHash ovladacHash;
 
 
     @FXML
@@ -104,10 +107,11 @@ public class RegistraceController implements Initializable {
             String telefon = registraceTelefon.getText();
             String mail = registraceMail.getText();
             String heslo = registraceHeslo.getText();
+            String shaHeslo = ovladacHash.sha512hash(heslo);
             Pozice pozice = registracePozice.getValue();
             int idZam = ovladacZam.idGenerator();
 
-            ovladacZam.vytvorNovehoUzivatele(jmeno, prijmeni, nick, idZam, pozice, telefon, mail, heslo);
+            ovladacZam.vytvorNovehoUzivatele(jmeno, prijmeni, nick, idZam, pozice, telefon, mail, shaHeslo);
             ulozDataZamestnancu.saveData();
             zobrazZamestnance();
         } else {

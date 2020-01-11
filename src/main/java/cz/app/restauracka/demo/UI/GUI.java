@@ -5,6 +5,7 @@ import cz.app.restauracka.demo.logika.obj.MenuJidla;
 import cz.app.restauracka.demo.logika.obj.Objednavky;
 import cz.app.restauracka.demo.logika.obj.Stoly;
 import cz.app.restauracka.demo.logika.ovladac.OvladacData;
+import cz.app.restauracka.demo.logika.ovladac.OvladacHash;
 import cz.app.restauracka.demo.logika.ovladac.OvladacZam;
 import cz.app.restauracka.demo.logika.zam.Zamestnanci;
 import javafx.application.Application;
@@ -39,6 +40,8 @@ public class GUI extends Application {
         UlozDataObjednavek ulozDataObjednavek = applicationContext.getBean(UlozDataObjednavek.class);
         OvladacData ovladacData = applicationContext.getBean(OvladacData.class);
         ovladacData.nactiData();
+
+        OvladacHash ovladacHash = applicationContext.getBean(OvladacHash.class);
 
         //testovaciEntity.vlozZamestnance();
         //testovaciEntity.vlozJidloDoMenu();

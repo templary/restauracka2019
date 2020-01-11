@@ -12,8 +12,6 @@ public class Jidlo {
 
     private int cena;
 
-    //private int alergeny; //TODO dodelat
-
 
     public Jidlo(int id, String nazev, String popis, int cena) {
         this.id = id;

@@ -1,5 +1,6 @@
 package cz.app.restauracka.demo.UI;
 
+import cz.app.restauracka.demo.logika.ovladac.OvladacHash;
 import cz.app.restauracka.demo.logika.zam.Zamestnanci;
 import cz.app.restauracka.demo.logika.zam.Zamestnanec;
 import javafx.event.ActionEvent;
@@ -29,6 +30,8 @@ public class LoginController implements Initializable {
     GUI gui;
     @Autowired
     FxWeaver fxWeaver;
+    @Autowired
+    OvladacHash ovladacHash;
 
     private Zamestnanec loggedZam;
 
@@ -47,7 +50,7 @@ public class LoginController implements Initializable {
         loggedZam = zamestnanci.getZamestnanecPodleUzJmeno(loginJmeno.getText());
 
         if (loggedZam!=null) {
-            if(loggedZam.getHeslo().equals(loginHeslo.getText())){
+            if (loggedZam.getHeslo().equals(ovladacHash.sha512hash(loginHeslo.getText()))) {
                 loginInfoText.setText("Prihlasen!");
                 System.out.println(loggedZam.getJmeno());
                 startMain();
