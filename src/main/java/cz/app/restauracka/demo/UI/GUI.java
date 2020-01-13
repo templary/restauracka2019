@@ -1,13 +1,6 @@
 package cz.app.restauracka.demo.UI;
 
-import cz.app.restauracka.demo.logika.Data.UlozDataObjednavek;
-import cz.app.restauracka.demo.logika.obj.MenuJidla;
-import cz.app.restauracka.demo.logika.obj.Objednavky;
-import cz.app.restauracka.demo.logika.obj.Stoly;
 import cz.app.restauracka.demo.logika.ovladac.OvladacData;
-import cz.app.restauracka.demo.logika.ovladac.OvladacHash;
-import cz.app.restauracka.demo.logika.ovladac.OvladacZam;
-import cz.app.restauracka.demo.logika.zam.Zamestnanci;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Parent;
@@ -31,23 +24,8 @@ public class GUI extends Application {
                 .sources(RUN.class)
                 .run(args);
 
-        Zamestnanci zamestnanci = applicationContext.getBean(Zamestnanci.class);
-        //TestovaciEntity testovaciEntity = applicationContext.getBean(TestovaciEntity.class);
-        Stoly stoly = applicationContext.getBean(Stoly.class);
-        MenuJidla menuJidla = applicationContext.getBean(MenuJidla.class);
-        Objednavky objednavky = applicationContext.getBean(Objednavky.class);
-        OvladacZam ovladacZam = applicationContext.getBean(OvladacZam.class);
-        UlozDataObjednavek ulozDataObjednavek = applicationContext.getBean(UlozDataObjednavek.class);
         OvladacData ovladacData = applicationContext.getBean(OvladacData.class);
         ovladacData.nactiData();
-
-        OvladacHash ovladacHash = applicationContext.getBean(OvladacHash.class);
-
-        //testovaciEntity.vlozZamestnance();
-        //testovaciEntity.vlozJidloDoMenu();
-        //testovaciEntity.vlozStulDoStolu();
-        //testovaciEntity.vytvorObjednavku();
-
     }
 
     @Override
@@ -57,7 +35,7 @@ public class GUI extends Application {
         Parent root = fxWeaver.loadView(LoginController.class);
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.setResizable(false);
+        stage.setResizable(true);
         stage.show();
     }
 

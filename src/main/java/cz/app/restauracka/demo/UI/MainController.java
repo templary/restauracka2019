@@ -21,7 +21,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Component
-@FxmlView("main-scene.fxml")
+@FxmlView("main-scene-new.fxml")
 public class MainController {
     @Autowired
     LoginController loginController;
@@ -79,39 +79,61 @@ public class MainController {
 
     }
 
+    private int zvolenyStul = 0;
+
     public void logOut(ActionEvent actionEvent) {
         startMain();
         ovladacData.ulozData();
+    }
 
+    public int getZvolenyStul() {
+        return zvolenyStul;
     }
 
     public void akceStul1(ActionEvent actionEvent) {
         objednanePolozky.setItems(listSetter(stoly.getStulPodleID(1).getObjednavka().getNazeJidlaACenu()));
         nactiMenu();
+        zvolenyStul = 1;
     }
 
     public void akceStul2(ActionEvent actionEvent) {
+        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(2).getObjednavka().getNazeJidlaACenu()));
+        zvolenyStul = 2;
     }
 
     public void akceStul3(ActionEvent actionEvent) {
+        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(3).getObjednavka().getNazeJidlaACenu()));
+        zvolenyStul = 3;
     }
 
     public void akceStul4(ActionEvent actionEvent) {
+        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(4).getObjednavka().getNazeJidlaACenu()));
+        zvolenyStul = 4;
     }
 
     public void akceStul5(ActionEvent actionEvent) {
+        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(5).getObjednavka().getNazeJidlaACenu()));
+        zvolenyStul = 5;
     }
 
     public void akceStul6(ActionEvent actionEvent) {
+        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(6).getObjednavka().getNazeJidlaACenu()));
+        zvolenyStul = 6;
     }
 
     public void akceStul7(ActionEvent actionEvent) {
+        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(7).getObjednavka().getNazeJidlaACenu()));
+        zvolenyStul = 7;
     }
 
     public void akceStul8(ActionEvent actionEvent) {
+        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(8).getObjednavka().getNazeJidlaACenu()));
+        zvolenyStul = 8;
     }
 
     public void akceStul9(ActionEvent actionEvent) {
+        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(9).getObjednavka().getNazeJidlaACenu()));
+        zvolenyStul = 9;
     }
 
     private void startMain() {

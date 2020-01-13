@@ -2,10 +2,12 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="1080.0" maxWidth="1920.0" minHeight="1080.0"
-            minWidth="1920.0" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8"
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="700.0" maxWidth="1500.0" minHeight="700.0" minWidth="1500.0"
+            prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8"
             fx:controller="cz.app.restauracka.demo.UI.MainController">
     <children>
         <GridPane prefHeight="1080.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
@@ -21,16 +23,20 @@
             </rowConstraints>
             <children>
                 <HBox alignment="CENTER_RIGHT" prefHeight="126.0" prefWidth="853.0"
-                      style="-fx-background-color: #5AB9EA;" GridPane.columnIndex="2">
+                      style="-fx-background-color: #d3d8ec;" GridPane.columnIndex="2">
                     <children>
-                        <VBox alignment="CENTER" prefHeight="103.0" prefWidth="142.0">
+                        <VBox alignment="CENTER" prefHeight="103.0" prefWidth="142.0"
+                              style="-fx-background-color: #d3d8ec;">
                             <children>
                                 <Button mnemonicParsing="false" prefHeight="103.0" prefWidth="138.0"
-                                        style="-fx-background-color: #C1C8E4; -fx-border-color: black; -fx-border-radius: 5; -fx-border-width: 1.5; -fx-background-radius: 5;"
-                                        text="Uzávěrka">
+                                        style="-fx-background-color: #83a2ef; -fx-background-radius: 10;"
+                                        text="UZÁVĚRKA">
                                     <VBox.margin>
                                         <Insets/>
                                     </VBox.margin>
+                                    <font>
+                                        <Font size="15.0"/>
+                                    </font>
                                 </Button>
                             </children>
                             <HBox.margin>
@@ -39,8 +45,14 @@
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="103.0" prefWidth="142.0">
                             <children>
-                                <Button mnemonicParsing="false" prefHeight="103.0" prefWidth="138.0"
-                                        style="-fx-background-color: #C1C8E4;" text="Přidat Zaměstnance"/>
+                                <Button mnemonicParsing="false" onAction="#pridejUzivatele" prefHeight="103.0"
+                                        prefWidth="138.0"
+                                        style="-fx-background-color: #83a2ef; -fx-background-radius: 10;"
+                                        text="PŘIDAT &#10;ZAMĚSTNANCE" textAlignment="CENTER">
+                                    <font>
+                                        <Font size="15.0"/>
+                                    </font>
+                                </Button>
                             </children>
                             <HBox.margin>
                                 <Insets left="20.0" right="55.0"/>
@@ -48,8 +60,14 @@
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="103.0" prefWidth="142.0">
                             <children>
-                                <Button mnemonicParsing="false" prefHeight="103.0" prefWidth="138.0"
-                                        text="Přidat Menu"/>
+                                <Button mnemonicParsing="false" onAction="#pridejMenu" prefHeight="103.0"
+                                        prefWidth="138.0"
+                                        style="-fx-background-color: #83a2ef; -fx-background-radius: 10;"
+                                        text="PŘIDAT MENU">
+                                    <font>
+                                        <Font size="15.0"/>
+                                    </font>
+                                </Button>
                             </children>
                             <HBox.margin>
                                 <Insets right="35.0"/>
@@ -57,7 +75,14 @@
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="103.0" prefWidth="142.0">
                             <children>
-                                <Button mnemonicParsing="false" prefHeight="103.0" prefWidth="138.0" text="LogOut"/>
+                                <Button fx:id="buttonLogout" mnemonicParsing="false" onAction="#logOut"
+                                        prefHeight="103.0" prefWidth="138.0"
+                                        style="-fx-background-color: #d03856; -fx-background-radius: 10;"
+                                        text="LOG OUT">
+                                    <font>
+                                        <Font size="15.0"/>
+                                    </font>
+                                </Button>
                             </children>
                             <HBox.margin>
                                 <Insets left="20.0" right="27.0"/>
@@ -74,7 +99,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
                     </rowConstraints>
                     <children>
-                        <GridPane GridPane.columnIndex="1">
+                        <GridPane style="-fx-border-color: Black; -fx-border-width: 3 0 0 1;" GridPane.columnIndex="1">
                             <columnConstraints>
                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
                                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
@@ -93,8 +118,14 @@
                                         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
                                     </GridPane.margin>
                                     <children>
-                                        <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
-                                                text="Button"/>
+                                        <Button id="STUL" mnemonicParsing="false" onAction="#akceStul1"
+                                                prefHeight="112.0" prefWidth="138.0"
+                                                style="-fx-background-color: #9ad7ef; -fx-background-radius: 10;"
+                                                text="STŮL 1" textAlignment="CENTER">
+                                            <font>
+                                                <Font size="22.0"/>
+                                            </font>
+                                        </Button>
                                     </children>
                                 </VBox>
                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
@@ -102,8 +133,14 @@
                                         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
                                     </GridPane.margin>
                                     <children>
-                                        <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
-                                                text="Button"/>
+                                        <Button mnemonicParsing="false" onAction="#akceStul2" prefHeight="112.0"
+                                                prefWidth="138.0"
+                                                style="-fx-background-color: #9ad7ef; -fx-background-radius: 10;"
+                                                text="STŮL 2">
+                                            <font>
+                                                <Font size="22.0"/>
+                                            </font>
+                                        </Button>
                                     </children>
                                 </VBox>
                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
@@ -111,8 +148,14 @@
                                         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
                                     </GridPane.margin>
                                     <children>
-                                        <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
-                                                text="Button"/>
+                                        <Button mnemonicParsing="false" onAction="#akceStul3" prefHeight="112.0"
+                                                prefWidth="138.0"
+                                                style="-fx-background-color: #9ad7ef; -fx-background-radius: 10;"
+                                                text="STŮL 3">
+                                            <font>
+                                                <Font size="22.0"/>
+                                            </font>
+                                        </Button>
                                     </children>
                                 </VBox>
                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
@@ -120,8 +163,14 @@
                                         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
                                     </GridPane.margin>
                                     <children>
-                                        <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
-                                                text="Button"/>
+                                        <Button id="STUL" mnemonicParsing="false" onAction="#akceStul4"
+                                                prefHeight="112.0" prefWidth="138.0"
+                                                style="-fx-background-color: #9ad7ef; -fx-background-radius: 10;"
+                                                text="STŮL 4" textAlignment="CENTER">
+                                            <font>
+                                                <Font size="22.0"/>
+                                            </font>
+                                        </Button>
                                     </children>
                                 </VBox>
                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1"
@@ -130,8 +179,14 @@
                                         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
                                     </GridPane.margin>
                                     <children>
-                                        <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
-                                                text="Button"/>
+                                        <Button id="STUL" mnemonicParsing="false" onAction="#akceStul5"
+                                                prefHeight="112.0" prefWidth="138.0"
+                                                style="-fx-background-color: #9ad7ef; -fx-background-radius: 10;"
+                                                text="STŮL 5" textAlignment="CENTER">
+                                            <font>
+                                                <Font size="22.0"/>
+                                            </font>
+                                        </Button>
                                     </children>
                                 </VBox>
                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2"
@@ -140,8 +195,14 @@
                                         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
                                     </GridPane.margin>
                                     <children>
-                                        <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
-                                                text="Button"/>
+                                        <Button id="STUL" mnemonicParsing="false" onAction="#akceStul6"
+                                                prefHeight="112.0" prefWidth="138.0"
+                                                style="-fx-background-color: #9ad7ef; -fx-background-radius: 10;"
+                                                text="STŮL 6" textAlignment="CENTER">
+                                            <font>
+                                                <Font size="22.0"/>
+                                            </font>
+                                        </Button>
                                     </children>
                                 </VBox>
                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
@@ -149,8 +210,14 @@
                                         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
                                     </GridPane.margin>
                                     <children>
-                                        <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
-                                                text="Button"/>
+                                        <Button id="STUL" mnemonicParsing="false" onAction="#akceStul7"
+                                                prefHeight="112.0" prefWidth="138.0"
+                                                style="-fx-background-color: #9ad7ef; -fx-background-radius: 10;"
+                                                text="STŮL 7" textAlignment="CENTER">
+                                            <font>
+                                                <Font size="22.0"/>
+                                            </font>
+                                        </Button>
                                     </children>
                                 </VBox>
                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1"
@@ -159,8 +226,14 @@
                                         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
                                     </GridPane.margin>
                                     <children>
-                                        <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
-                                                text="Button"/>
+                                        <Button id="STUL" mnemonicParsing="false" onAction="#akceStul8"
+                                                prefHeight="112.0" prefWidth="138.0"
+                                                style="-fx-background-color: #9ad7ef; -fx-background-radius: 10;"
+                                                text="STŮL 8" textAlignment="CENTER">
+                                            <font>
+                                                <Font size="22.0"/>
+                                            </font>
+                                        </Button>
                                     </children>
                                 </VBox>
                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2"
@@ -169,8 +242,14 @@
                                         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
                                     </GridPane.margin>
                                     <children>
-                                        <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
-                                                text="Button"/>
+                                        <Button id="STUL" mnemonicParsing="false" onAction="#akceStul9"
+                                                prefHeight="112.0" prefWidth="138.0"
+                                                style="-fx-background-color: #9ad7ef; -fx-background-radius: 10;"
+                                                text="STŮL 9" textAlignment="CENTER">
+                                            <font>
+                                                <Font size="22.0"/>
+                                            </font>
+                                        </Button>
                                     </children>
                                 </VBox>
                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
@@ -178,8 +257,13 @@
                                         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
                                     </GridPane.margin>
                                     <children>
-                                        <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
-                                                text="Button"/>
+                                        <Button id="STUL" mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
+                                                style="-fx-background-color: #9ad7ef; -fx-background-radius: 10;"
+                                                text="STŮL 10" textAlignment="CENTER">
+                                            <font>
+                                                <Font size="22.0"/>
+                                            </font>
+                                        </Button>
                                     </children>
                                 </VBox>
                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1"
@@ -188,8 +272,13 @@
                                         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
                                     </GridPane.margin>
                                     <children>
-                                        <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
-                                                text="Button"/>
+                                        <Button id="STUL" mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
+                                                style="-fx-background-color: #9ad7ef; -fx-background-radius: 10;"
+                                                text="STŮL 11" textAlignment="CENTER">
+                                            <font>
+                                                <Font size="22.0"/>
+                                            </font>
+                                        </Button>
                                     </children>
                                 </VBox>
                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2"
@@ -198,8 +287,13 @@
                                         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
                                     </GridPane.margin>
                                     <children>
-                                        <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
-                                                text="Button"/>
+                                        <Button id="STUL" mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
+                                                style="-fx-background-color: #9ad7ef; -fx-background-radius: 10;"
+                                                text="STŮL 12" textAlignment="CENTER">
+                                            <font>
+                                                <Font size="22.0"/>
+                                            </font>
+                                        </Button>
                                     </children>
                                 </VBox>
                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="4">
@@ -207,8 +301,13 @@
                                         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
                                     </GridPane.margin>
                                     <children>
-                                        <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
-                                                text="Button"/>
+                                        <Button id="STUL" mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
+                                                style="-fx-background-color: #9ad7ef; -fx-background-radius: 10;"
+                                                text="STŮL 13" textAlignment="CENTER">
+                                            <font>
+                                                <Font size="22.0"/>
+                                            </font>
+                                        </Button>
                                     </children>
                                 </VBox>
                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1"
@@ -217,8 +316,13 @@
                                         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
                                     </GridPane.margin>
                                     <children>
-                                        <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
-                                                text="Button"/>
+                                        <Button id="STUL" mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
+                                                style="-fx-background-color: #9ad7ef; -fx-background-radius: 10;"
+                                                text="STŮL 14" textAlignment="CENTER">
+                                            <font>
+                                                <Font size="22.0"/>
+                                            </font>
+                                        </Button>
                                     </children>
                                 </VBox>
                                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2"
@@ -227,8 +331,13 @@
                                         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
                                     </GridPane.margin>
                                     <children>
-                                        <Button mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
-                                                text="Button"/>
+                                        <Button id="STUL" mnemonicParsing="false" prefHeight="112.0" prefWidth="138.0"
+                                                style="-fx-background-color: #9ad7ef; -fx-background-radius: 10;"
+                                                text="STŮL 15" textAlignment="CENTER">
+                                            <font>
+                                                <Font size="22.0"/>
+                                            </font>
+                                        </Button>
                                     </children>
                                 </VBox>
                             </children>
@@ -243,23 +352,27 @@
                                                 vgrow="SOMETIMES"/>
                             </rowConstraints>
                             <children>
-                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
                                     <children>
-                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Výběr jídla">
-                                            <font>
-                                                <Font size="35.0"/>
-                                            </font>
-                                        </Text>
+                                        <HBox alignment="CENTER" prefHeight="49.0" prefWidth="265.0"
+                                              style="-fx-background-color: #d3d8ec; -fx-border-width: 3 0 0 0; -fx-border-color: black;">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Výběr jídla">
+                                                    <font>
+                                                        <Font size="35.0"/>
+                                                    </font>
+                                                </Text>
+                                            </children>
+                                        </HBox>
+                                        <TableView prefHeight="517.0" prefWidth="265.0">
+                                            <columns>
+                                                <TableColumn prefWidth="141.0" text="Název"/>
+                                                <TableColumn prefWidth="90.0" text="Cena"/>
+                                                <TableColumn prefWidth="33.0" text="ID"/>
+                                            </columns>
+                                        </TableView>
                                     </children>
-                                </HBox>
-                                <ListView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1"/>
-                                <TableView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-                                    <columns>
-                                        <TableColumn prefWidth="126.0" text="Název"/>
-                                        <TableColumn prefWidth="103.0" text="Cena"/>
-                                        <TableColumn prefWidth="140.0" text="???"/>
-                                    </columns>
-                                </TableView>
+                                </VBox>
                             </children>
                         </GridPane>
                     </children>
@@ -278,101 +391,247 @@
                                 <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0"
                                       prefWidth="200.0">
                                     <children>
-                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                        <VBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="82.0">
                                             <HBox.margin>
-                                                <Insets right="20.0"/>
+                                                <Insets/>
                                             </HBox.margin>
                                             <children>
-                                                <Button mnemonicParsing="false" text="Button"/>
+                                                <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="81.0"
+                                                        style="-fx-background-color: #9ab3f2; -fx-border-color: black;"
+                                                        text="Tab"/>
                                             </children>
                                         </VBox>
-                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="76.0">
                                             <HBox.margin>
-                                                <Insets right="20.0"/>
+                                                <Insets left="2.0"/>
                                             </HBox.margin>
                                             <children>
-                                                <Button mnemonicParsing="false" text="Button"/>
+                                                <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="76.0"
+                                                        style="-fx-background-color: #9ab3f2; -fx-border-color: black;"
+                                                        text="+Položka">
+                                                    <font>
+                                                        <Font size="12.0"/>
+                                                    </font>
+                                                </Button>
                                             </children>
                                         </VBox>
-                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="76.0">
                                             <HBox.margin>
-                                                <Insets right="20.0"/>
+                                                <Insets left="2.0"/>
                                             </HBox.margin>
                                             <children>
-                                                <Button mnemonicParsing="false" text="Button"/>
+                                                <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="76.0"
+                                                        style="-fx-background-color: #9ab3f2; -fx-border-color: black;"
+                                                        text="Rozdělit">
+                                                    <font>
+                                                        <Font size="12.0"/>
+                                                    </font>
+                                                </Button>
                                             </children>
                                         </VBox>
-                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="76.0">
                                             <HBox.margin>
-                                                <Insets right="20.0"/>
+                                                <Insets left="2.0"/>
                                             </HBox.margin>
                                             <children>
-                                                <Button mnemonicParsing="false" text="Button"/>
+                                                <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="76.0"
+                                                        style="-fx-background-color: #9ab3f2; -fx-border-color: black;"
+                                                        text="Zrušit"/>
                                             </children>
                                         </VBox>
-                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="76.0">
                                             <HBox.margin>
-                                                <Insets right="20.0"/>
+                                                <Insets left="2.0"/>
                                             </HBox.margin>
                                             <children>
-                                                <Button mnemonicParsing="false" text="Button"/>
+                                                <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="76.0"
+                                                        style="-fx-background-color: #9ab3f2; -fx-border-color: black;"
+                                                        text="Čekat"/>
                                             </children>
+                                        </VBox>
+                                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="76.0">
+                                            <children>
+                                                <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="76.0"
+                                                        style="-fx-background-color: #9ab3f2; -fx-border-color: black;"
+                                                        text="Zůstat"/>
+                                            </children>
+                                            <HBox.margin>
+                                                <Insets left="2.0"/>
+                                            </HBox.margin>
+                                        </VBox>
+                                        <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="76.0">
+                                            <children>
+                                                <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="77.0"
+                                                        style="-fx-background-color: #9ab3f2; -fx-border-color: black;"
+                                                        text="Poslat"/>
+                                            </children>
+                                            <HBox.margin>
+                                                <Insets left="2.0"/>
+                                            </HBox.margin>
                                         </VBox>
                                     </children>
                                 </HBox>
-                                <HBox alignment="CENTER" prefHeight="155.0" prefWidth="958.0">
+                                <HBox alignment="CENTER" prefHeight="231.0" prefWidth="958.0">
                                     <children>
-                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="250.0">
-                                            <HBox.margin>
-                                                <Insets right="30.0"/>
-                                            </HBox.margin>
+                                        <HBox prefHeight="166.0" prefWidth="273.0"
+                                              style="-fx-background-color: #DCDCDC;">
                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cena objednávky"/>
+                                                <VBox prefHeight="138.0" prefWidth="151.0"
+                                                      style="-fx-background-color: #DCDCDC; -fx-border-width: 0 0 0 1; -fx-border-color: black;">
+                                                    <children>
+                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kredit:">
+                                                            <font>
+                                                                <Font size="25.0"/>
+                                                            </font>
+                                                        </Text>
+                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sleva:">
+                                                            <font>
+                                                                <Font size="25.0"/>
+                                                            </font>
+                                                        </Text>
+                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0"
+                                                              text="Spropitné(0%):">
+                                                            <font>
+                                                                <Font size="25.0"/>
+                                                            </font>
+                                                        </Text>
+                                                    </children>
+                                                    <opaqueInsets>
+                                                        <Insets/>
+                                                    </opaqueInsets>
+                                                </VBox>
+                                                <VBox alignment="TOP_RIGHT" prefHeight="138.0" prefWidth="119.0"
+                                                      style="-fx-background-color: #DCDCDC;">
+                                                    <children>
+                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="0.00">
+                                                            <font>
+                                                                <Font size="25.0"/>
+                                                            </font>
+                                                        </Text>
+                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="0.00">
+                                                            <font>
+                                                                <Font size="25.0"/>
+                                                            </font>
+                                                        </Text>
+                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="0.00"
+                                                              wrappingWidth="55.83441162109375">
+                                                            <font>
+                                                                <Font size="25.0"/>
+                                                            </font>
+                                                        </Text>
+                                                    </children>
+                                                </VBox>
                                             </children>
-                                        </VBox>
-                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="250.0">
-                                            <HBox.margin>
-                                                <Insets right="30.0"/>
-                                            </HBox.margin>
+                                            <padding>
+                                                <Insets right="15.0"/>
+                                            </padding>
+                                        </HBox>
+                                        <HBox prefHeight="166.0" prefWidth="273.0"
+                                              style="-fx-background-color: #DCDCDC;">
                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="nějaký součet??"/>
+                                                <VBox prefHeight="166.0" prefWidth="142.0"
+                                                      style="-fx-background-color: #DCDCDC;">
+                                                    <children>
+                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mezisoučet:">
+                                                            <font>
+                                                                <Font size="25.0"/>
+                                                            </font>
+                                                        </Text>
+                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daň:">
+                                                            <font>
+                                                                <Font size="25.0"/>
+                                                            </font>
+                                                        </Text>
+                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nedoplatek:">
+                                                            <font>
+                                                                <Font size="25.0"/>
+                                                            </font>
+                                                        </Text>
+                                                        <Text fill="#e51212" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                              text="Celkem:">
+                                                            <font>
+                                                                <Font size="29.0"/>
+                                                            </font>
+                                                            <VBox.margin>
+                                                                <Insets top="10.0"/>
+                                                            </VBox.margin>
+                                                        </Text>
+                                                    </children>
+                                                </VBox>
+                                                <VBox alignment="TOP_RIGHT" prefHeight="166.0" prefWidth="132.0"
+                                                      style="-fx-background-color: #DCDCDC; -fx-border-width: 0 1 0 0; -fx-border-color: black;">
+                                                    <children>
+                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="0.00">
+                                                            <font>
+                                                                <Font size="25.0"/>
+                                                            </font>
+                                                        </Text>
+                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="0.00">
+                                                            <font>
+                                                                <Font size="25.0"/>
+                                                            </font>
+                                                        </Text>
+                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="0.00">
+                                                            <font>
+                                                                <Font size="25.0"/>
+                                                            </font>
+                                                        </Text>
+                                                        <Text fill="#e41414" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                              text="0.00">
+                                                            <font>
+                                                                <Font size="32.0"/>
+                                                            </font>
+                                                            <VBox.margin>
+                                                                <Insets top="10.0"/>
+                                                            </VBox.margin>
+                                                        </Text>
+                                                    </children>
+                                                </VBox>
                                             </children>
-                                        </VBox>
+                                            <padding>
+                                                <Insets left="15.0"/>
+                                            </padding>
+                                        </HBox>
                                     </children>
                                 </HBox>
-                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                <HBox alignment="CENTER" prefHeight="248.0" prefWidth="958.0">
                                     <children>
-                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                                            <HBox.margin>
-                                                <Insets right="20.0"/>
-                                            </HBox.margin>
+                                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="134.0">
                                             <children>
-                                                <Button mnemonicParsing="false" text="Button"/>
+                                                <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="138.0"
+                                                        style="-fx-background-color: #9ab3f2; -fx-border-color: black;"
+                                                        text="1  HOST"/>
                                             </children>
                                         </VBox>
-                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                                            <HBox.margin>
-                                                <Insets right="20.0"/>
-                                            </HBox.margin>
+                                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="134.0">
                                             <children>
-                                                <Button mnemonicParsing="false" text="Button"/>
+                                                <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="133.0"
+                                                        style="-fx-background-color: #9ab3f2; -fx-border-color: black;"
+                                                        text="S SEBOU"/>
                                             </children>
+                                            <HBox.margin>
+                                                <Insets left="2.0"/>
+                                            </HBox.margin>
                                         </VBox>
-                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                                            <HBox.margin>
-                                                <Insets right="20.0"/>
-                                            </HBox.margin>
+                                        <VBox alignment="TOP_CENTER" prefHeight="80.0" prefWidth="134.0">
                                             <children>
-                                                <Button mnemonicParsing="false" text="Button"/>
+                                                <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="137.0"
+                                                        style="-fx-background-color: #9ab3f2; -fx-border-color: black;"
+                                                        text="TISKNOUT"/>
                                             </children>
+                                            <HBox.margin>
+                                                <Insets left="2.0"/>
+                                            </HBox.margin>
                                         </VBox>
-                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                                            <HBox.margin>
-                                                <Insets right="20.0"/>
-                                            </HBox.margin>
+                                        <VBox alignment="TOP_CENTER" prefHeight="95.0" prefWidth="134.0">
                                             <children>
-                                                <Button mnemonicParsing="false" text="Button"/>
+                                                <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="151.0"
+                                                        style="-fx-background-color: #e51212; -fx-border-color: black;"
+                                                        text="ZAPLATIT"/>
                                             </children>
+                                            <HBox.margin>
+                                                <Insets left="2.0"/>
+                                            </HBox.margin>
                                         </VBox>
                                     </children>
                                 </HBox>
@@ -380,21 +639,62 @@
                         </VBox>
                         <VBox prefHeight="200.0" prefWidth="100.0">
                             <children>
-                                <HBox alignment="CENTER" prefHeight="56.0" prefWidth="958.0">
+                                <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="958.0">
                                     <children>
-                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Info o stolu">
-                                            <font>
-                                                <Font size="28.0"/>
-                                            </font>
-                                        </Text>
+                                        <VBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="72.0"
+                                              style="-fx-background-color: #83a2ef; -fx-border-width: 3 0 0 0; -fx-border-color: black;">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="#42"
+                                                      textAlignment="CENTER">
+                                                    <font>
+                                                        <Font size="20.0"/>
+                                                    </font>
+                                                </Text>
+                                            </children>
+                                            <padding>
+                                                <Insets left="10.0"/>
+                                            </padding>
+                                        </VBox>
+                                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0"
+                                              style="-fx-background-color: #9ab3f2; -fx-border-width: 3 0 0 0; -fx-border-color: black;">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Table 42"
+                                                      wrappingWidth="120.1614761352539">
+                                                    <font>
+                                                        <Font size="20.0"/>
+                                                    </font>
+                                                </Text>
+                                            </children>
+                                            <padding>
+                                                <Insets left="10.0"/>
+                                            </padding>
+                                        </VBox>
+                                        <HBox alignment="TOP_RIGHT" prefHeight="49.0" prefWidth="756.0"
+                                              style="-fx-background-color: #d3d8ec; -fx-border-color: black; -fx-border-width: 3 0 0 0;">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="48.0" prefWidth="181.0"
+                                                      style="-fx-background-color: #d3d8ec;">
+                                                    <children>
+                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0"
+                                                              text="Sharon Hansen" wrappingWidth="264.620361328125">
+                                                            <font>
+                                                                <Font size="24.0"/>
+                                                            </font>
+                                                        </Text>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
                                     </children>
                                 </HBox>
                                 <HBox prefHeight="579.0" prefWidth="958.0">
                                     <children>
                                         <TableView prefHeight="572.0" prefWidth="958.0">
                                             <columns>
-                                                <TableColumn prefWidth="75.0" text="C1"/>
-                                                <TableColumn prefWidth="75.0" text="C2"/>
+                                                <TableColumn prefWidth="380.0" text="Name"/>
+                                                <TableColumn minWidth="0.0" prefWidth="104.0" text="Qty"/>
+                                                <TableColumn minWidth="0.0" prefWidth="100.0" text="Each"/>
+                                                <TableColumn minWidth="0.0" prefWidth="181.0" text="Total"/>
                                             </columns>
                                         </TableView>
                                     </children>
@@ -403,7 +703,27 @@
                         </VBox>
                     </children>
                 </GridPane>
-                <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #5AB9EA;"/>
+                <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #d3d8ec;">
+                    <children>
+                        <ImageView fitHeight="134.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true"
+                                   style="-fx-translate-x: 60; -fx-translate-y: 10;">
+                            <image>
+                                <Image url="@icons/chef.png"/>
+                            </image>
+                        </ImageView>
+                        <VBox prefHeight="126.0" prefWidth="216.0">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0"
+                                      style="-fx-translate-x: 90; -fx-translate-y: 40;" text="RESTAURAČKA"
+                                      textAlignment="CENTER">
+                                    <font>
+                                        <Font size="39.0"/>
+                                    </font>
+                                </Text>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
             </children>
         </GridPane>
     </children>
