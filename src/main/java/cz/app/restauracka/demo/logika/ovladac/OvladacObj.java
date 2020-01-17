@@ -16,7 +16,7 @@ public class OvladacObj {
     }
 
     public void vytvorNoveJidlo(int id, String nazev, String popis, int cena) {
-        Jidlo jidlo = new Jidlo(id, nazev, popis, cena);
+        Jidlo jidlo = new Jidlo(nazev, id, popis, cena);
         menuJidla.vlozJidloDoMenu(jidlo);
     }
 }

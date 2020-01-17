@@ -2,31 +2,31 @@
   {
     "id": 3,
     "nazev": "Rizek",
-    "popis": "Dobré jídlo",
+    "popis": "Rizek",
     "cena": 110
   },
   {
     "id": 2,
     "nazev": "Burger",
-    "popis": "Dobré jídlo",
+    "popis": "Burger",
     "cena": 120
   },
   {
     "id": 1,
     "nazev": "Svíčková",
-    "popis": "Dobré jídlo",
+    "popis": "Svíčková",
     "cena": 100
   },
   {
     "id": 4,
     "nazev": "řízek",
-    "popis": "pop",
+    "popis": "řízek",
     "cena": 23
   },
   {
     "id": 5,
     "nazev": "Rizek",
-    "popis": "pop",
+    "popis": "Rizek",
     "cena": 123
   }
 ]

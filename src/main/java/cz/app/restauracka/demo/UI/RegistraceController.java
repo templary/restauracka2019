@@ -62,10 +62,6 @@ public class RegistraceController implements Initializable {
     private TableColumn<Zamestnanec, Integer> registraceTabulkaID = new TableColumn();
 
 
-    public void setup() {
-
-    }
-
     private void startMain() {
         Stage stage = (Stage) buttonVytvor.getScene().getWindow();
 

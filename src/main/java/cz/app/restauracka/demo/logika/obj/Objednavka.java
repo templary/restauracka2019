@@ -10,18 +10,14 @@ public class Objednavka {
 
     @Autowired
     MenuJidla menuJidla;
+    int idStolu;
 
     private int cenaObjednavky = 0;
     private Set<Jidlo> jidloVObjednavce = new HashSet<>();
-    private int id;
 
-    public Objednavka(Set<Jidlo> jidloVObjednavce, int id) {
+    public Objednavka(Set<Jidlo> jidloVObjednavce, int idStolu) {
         this.jidloVObjednavce = jidloVObjednavce;
-        this.id = id; //TODO všude generovat automaticky ID - vymyslet.
-    }
-
-    int getId() {
-        return id;
+        this.idStolu = idStolu;
     }
 
     public Set<String> getNazvyJidel() {

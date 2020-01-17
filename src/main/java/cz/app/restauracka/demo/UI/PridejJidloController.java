@@ -5,7 +5,6 @@ import cz.app.restauracka.demo.logika.Data.UlozDataMenu;
 import cz.app.restauracka.demo.logika.obj.Jidlo;
 import cz.app.restauracka.demo.logika.obj.MenuJidla;
 import cz.app.restauracka.demo.logika.ovladac.OvladacObj;
-import cz.app.restauracka.demo.logika.zam.Zamestnanec;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -51,11 +50,11 @@ public class PridejJidloController implements Initializable {
     private TableView tabulkaJidla = new TableView<>();
 
     @FXML
-    private TableColumn<Zamestnanec, String> vytvorJidloTabulkaNazev = new TableColumn();
+    private TableColumn<Jidlo, String> vytvorJidloTabulkaNazev = new TableColumn();
     @FXML
-    private TableColumn<Zamestnanec, Integer> vytvorJidloTabulkaCena = new TableColumn();
+    private TableColumn<Jidlo, Integer> vytvorJidloTabulkaCena = new TableColumn();
     @FXML
-    private TableColumn<Zamestnanec, Integer> vytvorJidloTabulkaID = new TableColumn();
+    private TableColumn<Jidlo, Integer> vytvorJidloTabulkaID = new TableColumn();
 
 
     private void startMain() {
@@ -112,7 +111,7 @@ public class PridejJidloController implements Initializable {
     }
 
     private void zobrazJidla() {
-        vytvorJidloTabulkaNazev.setCellValueFactory(new PropertyValueFactory<>("nazev"));
+        vytvorJidloTabulkaNazev.setCellValueFactory(new PropertyValueFactory<>("popis"));
         vytvorJidloTabulkaCena.setCellValueFactory(new PropertyValueFactory<>("cena"));
         vytvorJidloTabulkaID.setCellValueFactory(new PropertyValueFactory<>("id"));
 

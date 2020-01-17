@@ -11,6 +11,9 @@ import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import net.rgielen.fxweaver.core.FxWeaver;
 import net.rgielen.fxweaver.core.FxmlView;
@@ -41,7 +44,13 @@ public class MainController {
     @FXML
     private ListView<String> objednanePolozky = new ListView<>();
     @FXML
-    private ListView<String> vyberPolozek = new ListView<>();
+    private TableView vyberPolozek = new TableView<>();
+    @FXML
+    private TableColumn<Jidlo, String> vyberNazev = new TableColumn();
+    @FXML
+    private TableColumn<Jidlo, Integer> vyberCena = new TableColumn();
+    @FXML
+    private TableColumn<Jidlo, Integer> vyberID = new TableColumn();
     @FXML
     private Button buttonLogout;
 
@@ -53,7 +62,14 @@ public class MainController {
     }
 
     private void nactiMenu() {
-        vyberPolozek.setItems(listSetter(menuJidla.getNazvyJidel()));
+        vyberNazev.setCellValueFactory(new PropertyValueFactory<>("popis")); //TODO proč funguje popis a ne název??
+        vyberCena.setCellValueFactory(new PropertyValueFactory<>("cena"));
+        vyberID.setCellValueFactory(new PropertyValueFactory<>("id"));
+
+        ObservableList<Jidlo> observableList = FXCollections.observableArrayList(
+                menuJidla.getMenuSet()
+        );
+        vyberPolozek.setItems(observableList);
     }
 
 
@@ -69,7 +85,7 @@ public class MainController {
 
     public void pridejUzivatele(ActionEvent actionEvent) {
         startRegistrace();
-        registraceController.setup();
+        // registraceController.setup();
     }
 
     public void uzaverka(ActionEvent actionEvent) {

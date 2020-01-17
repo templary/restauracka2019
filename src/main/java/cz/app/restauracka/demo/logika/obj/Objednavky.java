@@ -17,14 +17,14 @@ public class Objednavky {
         setObjednavek.remove(objednavka);
     }
 
-    public Objednavka getObjednavkaPodleID(int id) {
+/*    public Objednavka getObjednavkaPodleID(int id) {
         for (Objednavka objednavka : this.setObjednavek) {
             if (objednavka.getId() == id) {
                 return objednavka;
             }
         }
         return null;
-    }
+    }*/
 
     public Set<Objednavka> getSetObjednavek() {
         return setObjednavek;

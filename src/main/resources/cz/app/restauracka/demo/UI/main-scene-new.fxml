@@ -364,11 +364,11 @@
                                                 </Text>
                                             </children>
                                         </HBox>
-                                        <TableView prefHeight="517.0" prefWidth="265.0">
+                                        <TableView fx:id="vyberPolozek" prefHeight="517.0" prefWidth="265.0">
                                             <columns>
-                                                <TableColumn prefWidth="141.0" text="Název"/>
-                                                <TableColumn prefWidth="90.0" text="Cena"/>
-                                                <TableColumn prefWidth="33.0" text="ID"/>
+                                                <TableColumn fx:id="vyberNazev" prefWidth="141.0" text="Název"/>
+                                                <TableColumn fx:id="vyberCena" prefWidth="90.0" text="Cena"/>
+                                                <TableColumn fx:id="vyberID" prefWidth="33.0" text="ID"/>
                                             </columns>
                                         </TableView>
                                     </children>

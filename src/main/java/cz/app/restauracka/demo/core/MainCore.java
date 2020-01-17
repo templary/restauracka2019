@@ -41,9 +41,7 @@ public class MainCore {
         System.out.println("--" + zamestnanci.getZamestnanecPodleID(1).getPozice().equals(Kuchar));
 
 
-
-
-        stoly.getStulPodleID(1).setObjednavka(objednavky.getObjednavkaPodleID(1));
+        //stoly.getStulPodleID(1).setObjednavka(objednavky.getObjednavkaPodleID(1));
 
 
         System.out.println(stoly.getStulPodleID(1).getObjednavka().getObsahObjednavky());

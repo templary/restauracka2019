@@ -1,8 +1,5 @@
 package cz.app.restauracka.demo.logika.obj;
 
-/**
- * Pouze statická jídla která se přidají do Meníčka
- */
 public class Jidlo {
     private int id;
 
@@ -13,7 +10,7 @@ public class Jidlo {
     private int cena;
 
 
-    public Jidlo(int id, String nazev, String popis, int cena) {
+    public Jidlo(String nazev, int id, String popis, int cena) {
         this.id = id;
         this.nazev = nazev;
         this.popis = popis;
