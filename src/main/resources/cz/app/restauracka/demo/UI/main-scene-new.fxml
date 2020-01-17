@@ -364,7 +364,8 @@
                                                 </Text>
                                             </children>
                                         </HBox>
-                                        <TableView fx:id="vyberPolozek" prefHeight="517.0" prefWidth="265.0">
+                                        <TableView fx:id="vyberPolozek" onMouseClicked="#vyberPolozekOnClicked"
+                                                   prefHeight="517.0" prefWidth="265.0">
                                             <columns>
                                                 <TableColumn fx:id="vyberNazev" prefWidth="141.0" text="Název"/>
                                                 <TableColumn fx:id="vyberCena" prefWidth="90.0" text="Cena"/>
@@ -644,7 +645,7 @@
                                         <VBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="72.0"
                                               style="-fx-background-color: #83a2ef; -fx-border-width: 3 0 0 0; -fx-border-color: black;">
                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="#42"
+                                                <Text fx:id="cislo" strokeType="OUTSIDE" strokeWidth="0.0" text="#42"
                                                       textAlignment="CENTER">
                                                     <font>
                                                         <Font size="20.0"/>
@@ -658,8 +659,8 @@
                                         <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0"
                                               style="-fx-background-color: #9ab3f2; -fx-border-width: 3 0 0 0; -fx-border-color: black;">
                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Table 42"
-                                                      wrappingWidth="120.1614761352539">
+                                                <Text fx:id="cisloStolu" strokeType="OUTSIDE" strokeWidth="0.0"
+                                                      text="Table 42" wrappingWidth="120.1614761352539">
                                                     <font>
                                                         <Font size="20.0"/>
                                                     </font>
@@ -675,8 +676,9 @@
                                                 <VBox alignment="CENTER" prefHeight="48.0" prefWidth="181.0"
                                                       style="-fx-background-color: #d3d8ec;">
                                                     <children>
-                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0"
-                                                              text="Sharon Hansen" wrappingWidth="264.620361328125">
+                                                        <Text fx:id="jmenoZamMain" strokeType="OUTSIDE"
+                                                              strokeWidth="0.0" text="Sharon Hansen"
+                                                              wrappingWidth="264.620361328125">
                                                             <font>
                                                                 <Font size="24.0"/>
                                                             </font>

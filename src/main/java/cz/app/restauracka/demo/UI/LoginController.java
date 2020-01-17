@@ -32,6 +32,8 @@ public class LoginController implements Initializable {
     FxWeaver fxWeaver;
     @Autowired
     OvladacHash ovladacHash;
+    @Autowired
+    MainController mainController;
 
     private Zamestnanec loggedZam;
 
@@ -70,9 +72,10 @@ public class LoginController implements Initializable {
         stage.setScene(scene);
         stage.setTitle("Register Form");
         stage.show();
+            mainController.setUp();
     }
 
-    public Zamestnanec getLoggedZam() {
+    Zamestnanec getLoggedZam() {
         return loggedZam;
     }
 

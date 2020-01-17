@@ -14,6 +14,8 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import net.rgielen.fxweaver.core.FxWeaver;
 import net.rgielen.fxweaver.core.FxmlView;
@@ -53,7 +55,15 @@ public class MainController {
     private TableColumn<Jidlo, Integer> vyberID = new TableColumn();
     @FXML
     private Button buttonLogout;
+    @FXML
+    private Text jmenoZamMain;
+    @FXML
+    private Text cisloStolu;
+    @FXML
+    private Text cislo;
 
+
+    private Jidlo vybraneJidlo;
     Set<Jidlo> objednavkovySet = new HashSet<>();
 
 
@@ -106,50 +116,63 @@ public class MainController {
         return zvolenyStul;
     }
 
-    public void akceStul1(ActionEvent actionEvent) {
-        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(1).getObjednavka().getNazeJidlaACenu()));
+    private void setUpStolu() {
         nactiMenu();
+        nastavCislaStolu();
+    }
+
+    public void akceStul1(ActionEvent actionEvent) {
+        //objednanePolozky.setItems(listSetter(stoly.getStulPodleID(1).getObjednavka().getNazeJidlaACenu()));
         zvolenyStul = 1;
+        setUpStolu();
     }
 
     public void akceStul2(ActionEvent actionEvent) {
-        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(2).getObjednavka().getNazeJidlaACenu()));
+        //objednanePolozky.setItems(listSetter(stoly.getStulPodleID(2).getObjednavka().getNazeJidlaACenu()));
         zvolenyStul = 2;
+        setUpStolu();
     }
 
     public void akceStul3(ActionEvent actionEvent) {
-        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(3).getObjednavka().getNazeJidlaACenu()));
+        //  objednanePolozky.setItems(listSetter(stoly.getStulPodleID(3).getObjednavka().getNazeJidlaACenu()));
         zvolenyStul = 3;
+        setUpStolu();
     }
 
     public void akceStul4(ActionEvent actionEvent) {
-        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(4).getObjednavka().getNazeJidlaACenu()));
+//        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(4).getObjednavka().getNazeJidlaACenu()));
         zvolenyStul = 4;
+        setUpStolu();
     }
 
     public void akceStul5(ActionEvent actionEvent) {
-        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(5).getObjednavka().getNazeJidlaACenu()));
+//        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(5).getObjednavka().getNazeJidlaACenu()));
         zvolenyStul = 5;
+        setUpStolu();
     }
 
     public void akceStul6(ActionEvent actionEvent) {
-        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(6).getObjednavka().getNazeJidlaACenu()));
+//        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(6).getObjednavka().getNazeJidlaACenu()));
         zvolenyStul = 6;
+        setUpStolu();
     }
 
     public void akceStul7(ActionEvent actionEvent) {
-        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(7).getObjednavka().getNazeJidlaACenu()));
+        //       objednanePolozky.setItems(listSetter(stoly.getStulPodleID(7).getObjednavka().getNazeJidlaACenu()));
         zvolenyStul = 7;
+        setUpStolu();
     }
 
     public void akceStul8(ActionEvent actionEvent) {
-        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(8).getObjednavka().getNazeJidlaACenu()));
+//        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(8).getObjednavka().getNazeJidlaACenu()));
         zvolenyStul = 8;
+        setUpStolu();
     }
 
     public void akceStul9(ActionEvent actionEvent) {
-        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(9).getObjednavka().getNazeJidlaACenu()));
+//        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(9).getObjednavka().getNazeJidlaACenu()));
         zvolenyStul = 9;
+        setUpStolu();
     }
 
     private void startMain() {
@@ -161,6 +184,11 @@ public class MainController {
         stage.show();
     }
 
+    private void nastavCislaStolu() {
+        cisloStolu.setText("Stůl: " + zvolenyStul);
+        cislo.setText("# " + zvolenyStul);
+    }
+
     private void startRegistrace() {
         Stage stage = (Stage) buttonLogout.getScene().getWindow();
 
@@ -170,6 +198,29 @@ public class MainController {
         stage.show();
     }
 
+    private void nastavJmenoZam() {
+        String celeJmeno = loginController.getLoggedZam().getJmeno() + " " + loginController.getLoggedZam().getPrijmeni();
+        jmenoZamMain.setText(celeJmeno);
+    }
+
+    void setUp() {
+        nastavJmenoZam();
+    }
+
+    private void pridejJidloStolu() {
+        //TODO  Objednavka objednavka = new Objednavka() jak?????
+    }
+
+    @FXML
+    public void vyberPolozekOnClicked(MouseEvent event) {
+        if (event.getClickCount() == 2) {
+            //System.out.println(vyberPolozek.getSelectionModel().getSelectedItem());
+            vybraneJidlo = (Jidlo) vyberPolozek.getSelectionModel().getSelectedItem();
+            //System.out.println(vybraneJidlo.getPopis());
+        }
+    }
+
+
     private void startVytvorJidlo() {
         Stage stage = (Stage) buttonLogout.getScene().getWindow();
 
@@ -178,4 +229,5 @@ public class MainController {
         stage.setTitle("Pridaní jídla");
         stage.show();
     }
+
 }
