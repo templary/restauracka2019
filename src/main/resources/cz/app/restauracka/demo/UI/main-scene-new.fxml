@@ -691,12 +691,15 @@
                                 </HBox>
                                 <HBox prefHeight="579.0" prefWidth="958.0">
                                     <children>
-                                        <TableView prefHeight="572.0" prefWidth="958.0">
+                                        <TableView fx:id="objednaneJidla" prefHeight="572.0" prefWidth="958.0">
                                             <columns>
-                                                <TableColumn prefWidth="380.0" text="Name"/>
-                                                <TableColumn minWidth="0.0" prefWidth="104.0" text="Qty"/>
-                                                <TableColumn minWidth="0.0" prefWidth="100.0" text="Each"/>
-                                                <TableColumn minWidth="0.0" prefWidth="181.0" text="Total"/>
+                                                <TableColumn fx:id="nazevVybranehoJidla" prefWidth="380.0" text="Name"/>
+                                                <TableColumn fx:id="mnozstviVybranehoJidla" minWidth="0.0"
+                                                             prefWidth="104.0" text="Qty"/>
+                                                <TableColumn fx:id="jednotlivaCenaVybranehoJidla" minWidth="0.0"
+                                                             prefWidth="100.0" text="Each"/>
+                                                <TableColumn fx:id="celkovaCenaVybranehoJidla" minWidth="0.0"
+                                                             prefWidth="181.0" text="Total"/>
                                             </columns>
                                         </TableView>
                                     </children>

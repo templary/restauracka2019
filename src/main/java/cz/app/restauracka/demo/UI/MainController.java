@@ -1,8 +1,6 @@
 package cz.app.restauracka.demo.UI;
 
-import cz.app.restauracka.demo.logika.obj.Jidlo;
-import cz.app.restauracka.demo.logika.obj.MenuJidla;
-import cz.app.restauracka.demo.logika.obj.Stoly;
+import cz.app.restauracka.demo.logika.obj.*;
 import cz.app.restauracka.demo.logika.ovladac.OvladacData;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,7 +8,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -42,17 +39,29 @@ public class MainController {
     MenuJidla menuJidla;
     @Autowired
     OvladacData ovladacData;
+    @Autowired
+    VytvoreneObjednavky vytvoreneObjednavky;
 
     @FXML
-    private ListView<String> objednanePolozky = new ListView<>();
-    @FXML
     private TableView vyberPolozek = new TableView<>();
+    @FXML
+    private TableView objednaneJidla = new TableView<>();
     @FXML
     private TableColumn<Jidlo, String> vyberNazev = new TableColumn();
     @FXML
     private TableColumn<Jidlo, Integer> vyberCena = new TableColumn();
     @FXML
     private TableColumn<Jidlo, Integer> vyberID = new TableColumn();
+
+    @FXML
+    private TableColumn<ZobrazObjednavku, String> nazevVybranehoJidla = new TableColumn();
+    @FXML
+    private TableColumn<ZobrazObjednavku, Integer> mnozstviVybranehoJidla = new TableColumn();
+    @FXML
+    private TableColumn<ZobrazObjednavku, Integer> jednotlivaCenaVybranehoJidla = new TableColumn();
+    @FXML
+    private TableColumn<ZobrazObjednavku, Integer> celkovaCenaVybranehoJidla = new TableColumn();
+
     @FXML
     private Button buttonLogout;
     @FXML
@@ -72,7 +81,7 @@ public class MainController {
     }
 
     private void nactiMenu() {
-        vyberNazev.setCellValueFactory(new PropertyValueFactory<>("popis")); //TODO proč funguje popis a ne název??
+        vyberNazev.setCellValueFactory(new PropertyValueFactory<>("popis"));
         vyberCena.setCellValueFactory(new PropertyValueFactory<>("cena"));
         vyberID.setCellValueFactory(new PropertyValueFactory<>("id"));
 
@@ -207,17 +216,34 @@ public class MainController {
         nastavJmenoZam();
     }
 
-    private void pridejJidloStolu() {
-        //TODO  Objednavka objednavka = new Objednavka() jak?????
-    }
 
     @FXML
     public void vyberPolozekOnClicked(MouseEvent event) {
         if (event.getClickCount() == 2) {
             //System.out.println(vyberPolozek.getSelectionModel().getSelectedItem());
             vybraneJidlo = (Jidlo) vyberPolozek.getSelectionModel().getSelectedItem();
-            //System.out.println(vybraneJidlo.getPopis());
+            pridejObjednavkuKeStolu();
+            objednaneJidla();
+
         }
+    }
+
+    @FXML
+    private void objednaneJidla() {
+        nazevVybranehoJidla.setCellValueFactory(new PropertyValueFactory<>("jidlo"));
+        mnozstviVybranehoJidla.setCellValueFactory(new PropertyValueFactory<>("mnozstvi"));
+        jednotlivaCenaVybranehoJidla.setCellValueFactory(new PropertyValueFactory<>("cenaZaJednotku"));
+        celkovaCenaVybranehoJidla.setCellValueFactory(new PropertyValueFactory<>("celkem"));
+
+        ObservableList<VytvorObjednavku> observableList = FXCollections.observableArrayList(
+                vytvoreneObjednavky.getSetVytvorenychObjednavek()
+        );
+        objednaneJidla.setItems(observableList);
+    }
+
+    private void pridejObjednavkuKeStolu() {
+        VytvorObjednavku vytvorObjednavku = new VytvorObjednavku(vybraneJidlo, zvolenyStul);
+        vytvoreneObjednavky.vlozObjednavaku(vytvorObjednavku);
     }
 
 
