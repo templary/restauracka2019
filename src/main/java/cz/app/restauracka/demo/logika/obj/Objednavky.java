@@ -1,5 +1,8 @@
 package cz.app.restauracka.demo.logika.obj;
 
+import cz.app.restauracka.demo.logika.ovladac.ZobrazovacObjednavek;
+import cz.app.restauracka.demo.logika.ovladac.ZobrazovacObjednavekManager;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
@@ -7,30 +10,41 @@ import java.util.Set;
 
 @Component
 public class Objednavky {
-    private Set<Objednavka> setObjednavek = new HashSet<>();
 
-    public void vlozObjednavku(Objednavka objednavka) {
-        setObjednavek.add(objednavka);
+    @Autowired
+    ZobrazovacObjednavekManager zobrazovacObjednavekManager;
+
+    private Set<ObjednaneJidlo> setObjednanychJidel = new HashSet<>();
+
+    public void vlozObjednaneJidlo(ObjednaneJidlo objednaneJidlo) {
+        setObjednanychJidel.add(objednaneJidlo);
     }
 
-    public void odeberObjednavku(Objednavka objednavka) {
-        setObjednavek.remove(objednavka);
+    public void odeberObjednaneJidlo(ObjednaneJidlo objednaneJidlo) {
+        setObjednanychJidel.remove(objednaneJidlo);
     }
 
-    public Objednavka getObjednavkaPodleID(int id) {
-        for (Objednavka objednavka : this.setObjednavek) {
-            if (objednavka.getId() == id) {
-                return objednavka;
+    public Set<ObjednaneJidlo> getObjednaneJidloPodleStolu(int stul) {
+        Set<ObjednaneJidlo> setJidelUStolu = new HashSet<>();
+
+        for (ObjednaneJidlo objednaneJidlo : this.setObjednanychJidel) {
+            if (objednaneJidlo.getStul() == stul) {
+                setJidelUStolu.add(objednaneJidlo);
             }
         }
-        return null;
+        return setJidelUStolu;
     }
 
-    public Set<Objednavka> getSetObjednavek() {
-        return setObjednavek;
+    public void vlozObjednavkyDoZobrazovace(int stul) {
+        Set<ObjednaneJidlo> objednaneJidloSet = getObjednaneJidloPodleStolu(stul);
+
+        for (ObjednaneJidlo objednaneJidlo : objednaneJidloSet) {
+            ZobrazovacObjednavek zobrazovacObjednavek = new ZobrazovacObjednavek(objednaneJidlo.getJidlo().getNazev(), objednaneJidlo.getJidlo().getCena());
+            zobrazovacObjednavekManager.vlozZobrazovaneJidloDoSetu(zobrazovacObjednavek);
+        }
     }
 
-    public void setSetObjednavek(Set<Objednavka> setObjednavek) {
-        this.setObjednavek = setObjednavek;
+    public Set<ObjednaneJidlo> getSetObjednanychJidel() {
+        return setObjednanychJidel;
     }
 }

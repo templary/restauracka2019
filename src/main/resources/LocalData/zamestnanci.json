@@ -58,5 +58,14 @@
     "telefon": "78928",
     "mail": "mailos.mail",
     "heslo": "ba4aa5d6da7de19518c18027fafbda43428d74d3d84ae78a7711d4ad9d8e6e63aa62cf688cbad44b5170187b1c8a14aab6b2e225dbea19bb2e378c54decbff51"
+  },
+  {
+    "jmeno": "karel",
+    "prijmeni": "",
+    "uzJmeno": "",
+    "id": 7,
+    "telefon": "",
+    "mail": "",
+    "heslo": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e"
   }
 ]

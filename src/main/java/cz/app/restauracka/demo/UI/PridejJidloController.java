@@ -4,7 +4,6 @@ package cz.app.restauracka.demo.UI;
 import cz.app.restauracka.demo.logika.Data.UlozDataMenu;
 import cz.app.restauracka.demo.logika.obj.Jidlo;
 import cz.app.restauracka.demo.logika.obj.MenuJidla;
-import cz.app.restauracka.demo.logika.ovladac.OvladacObj;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -32,8 +31,6 @@ public class PridejJidloController implements Initializable {
     FxWeaver fxWeaver;
     @Autowired
     MainController mainController;
-    @Autowired
-    OvladacObj ovladacObj;
     @Autowired
     VarovaniController varovaniController;
     @Autowired
@@ -87,15 +84,11 @@ public class PridejJidloController implements Initializable {
         if (1 == 1) { //TODO dodělat ověření!!!!
             String nazev = vytvorJidloNazev.getText();
             String popis = vytvorJidloPopis.getText();
-            int cena = Integer.parseInt(vytvorJidloCena.getText());
-            int idJidla = ovladacObj.idGenerator();
-
-            ovladacObj.vytvorNoveJidlo(idJidla, nazev, popis, cena);
             ulozDataMenu.saveData();
             zobrazJidla();
         } else {
             startVarovani();
-            varovaniController.setVarovaniText("Chybně zadané parametry zaměstnance");
+            varovaniController.setVarovaniText("Chybně zadané parametry jidla");
 
         }
     }

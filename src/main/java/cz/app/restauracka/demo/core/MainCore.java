@@ -2,7 +2,6 @@ package cz.app.restauracka.demo.core;
 
 import cz.app.restauracka.demo.logika.Data.NactiDataZamestnancu;
 import cz.app.restauracka.demo.logika.obj.MenuJidla;
-import cz.app.restauracka.demo.logika.obj.Objednavky;
 import cz.app.restauracka.demo.logika.obj.Stoly;
 import cz.app.restauracka.demo.logika.ovladac.OvladacData;
 import cz.app.restauracka.demo.logika.zam.Zamestnanci;
@@ -22,7 +21,6 @@ public class MainCore {
         //TestovaciEntity testovaciEntity = context.getBean(TestovaciEntity.class);
         Stoly stoly = context.getBean(Stoly.class);
         MenuJidla menuJidla = context.getBean(MenuJidla.class);
-        Objednavky objednavky = context.getBean(Objednavky.class);
         OvladacData ovladacData = context.getBean(OvladacData.class);
         NactiDataZamestnancu nactiDataZamestnancu = context.getBean(NactiDataZamestnancu.class);
 
@@ -44,7 +42,7 @@ public class MainCore {
         //stoly.getStulPodleID(1).setObjednavka(objednavky.getObjednavkaPodleID(1));
 
 
-        System.out.println(stoly.getStulPodleID(1).getObjednavka().getObsahObjednavky());
+        //System.out.println(stoly.getStulPodleID(1).getObjednavka().getObsahObjednavky());
         System.out.println(menuJidla.getMenuSet());
         System.out.println(menuJidla.getNazvyJidel());
         //System.out.println(nactiDataZamestnancu.loadData());

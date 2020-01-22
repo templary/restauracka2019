@@ -23,7 +23,6 @@ public class MenuJidla {
         menuSet.remove(jidlo);
     }
 
-    //TODO až bude gui možná přdělat na něco vhodnějšího než String.
     public Jidlo getJidloPokudJeVMenu(String string) {
         for (Jidlo jidlo : this.menuSet) {
             if (jidlo.getNazev().equals(string)) {

@@ -8,8 +8,6 @@ import org.springframework.stereotype.Component;
 public class OvladacData {
 
     @Autowired
-    UlozDataObjednavek ulozDataObjednavek;
-    @Autowired
     UlozDataMenu ulozDataMenu;
     @Autowired
     UlozDataStolu ulozDataStolu;
@@ -20,12 +18,10 @@ public class OvladacData {
     @Autowired
     NactiDataMenu nactiDataMenu;
     @Autowired
-    NactiDataObjednavek nactiDataObjednavek;
-    @Autowired
     NactiDataStolu nactiDataStolu;
 
     public void ulozData() {
-        ulozDataObjednavek.saveData();
+        //TODO ulozit data objednavek
         ulozDataMenu.saveData();
         ulozDataStolu.saveData();
         ulozDataZamestnancu.saveData();
@@ -34,7 +30,7 @@ public class OvladacData {
     public void nactiData() {
         nactiDataZamestnancu.loadData();
         nactiDataMenu.loadData();
-        nactiDataObjednavek.loadData();
+        //TODO nacist data objednavek
         nactiDataStolu.loadData();
     }
 

@@ -1,7 +1,10 @@
 package cz.app.restauracka.demo.UI;
 
+import cz.app.restauracka.demo.ExterniFce.ActualTime;
 import cz.app.restauracka.demo.logika.obj.*;
 import cz.app.restauracka.demo.logika.ovladac.OvladacData;
+import cz.app.restauracka.demo.logika.ovladac.ZobrazovacObjednavek;
+import cz.app.restauracka.demo.logika.ovladac.ZobrazovacObjednavekManager;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -19,7 +22,6 @@ import net.rgielen.fxweaver.core.FxmlView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.HashSet;
 import java.util.Set;
 
 @Component
@@ -40,12 +42,26 @@ public class MainController {
     @Autowired
     OvladacData ovladacData;
     @Autowired
-    VytvoreneObjednavky vytvoreneObjednavky;
+    Objednavky objednavky;
+    @Autowired
+    ZobrazovacObjednavekManager zobrazovacObjednavekManager;
+
+    ActualTime actualTime = new ActualTime();
+
+
+    @FXML
+    private TableView objednaneJidla = new TableView<>();
+    @FXML
+    private TableColumn<ObjednaneJidlo, String> nazevVybranehoJidla = new TableColumn();
+    @FXML
+    private TableColumn<ObjednaneJidlo, Integer> mnozstviVybranehoJidla = new TableColumn();
+    @FXML
+    private TableColumn<ObjednaneJidlo, Integer> jednotlivaCenaVybranehoJidla = new TableColumn();
+    @FXML
+    private TableColumn<ObjednaneJidlo, Integer> celkovaCenaVybranehoJidla = new TableColumn<>();
 
     @FXML
     private TableView vyberPolozek = new TableView<>();
-    @FXML
-    private TableView objednaneJidla = new TableView<>();
     @FXML
     private TableColumn<Jidlo, String> vyberNazev = new TableColumn();
     @FXML
@@ -53,14 +69,6 @@ public class MainController {
     @FXML
     private TableColumn<Jidlo, Integer> vyberID = new TableColumn();
 
-    @FXML
-    private TableColumn<ZobrazObjednavku, String> nazevVybranehoJidla = new TableColumn();
-    @FXML
-    private TableColumn<ZobrazObjednavku, Integer> mnozstviVybranehoJidla = new TableColumn();
-    @FXML
-    private TableColumn<ZobrazObjednavku, Integer> jednotlivaCenaVybranehoJidla = new TableColumn();
-    @FXML
-    private TableColumn<ZobrazObjednavku, Integer> celkovaCenaVybranehoJidla = new TableColumn();
 
     @FXML
     private Button buttonLogout;
@@ -73,7 +81,6 @@ public class MainController {
 
 
     private Jidlo vybraneJidlo;
-    Set<Jidlo> objednavkovySet = new HashSet<>();
 
 
     private ObservableList<String> listSetter(Set<String> stringSet) {
@@ -110,7 +117,6 @@ public class MainController {
     public void uzaverka(ActionEvent actionEvent) {
         //TODO test
         ovladacData.nactiData();
-        System.out.println(stoly.getStulPodleID(1).getObjednavka());
 
     }
 
@@ -128,6 +134,11 @@ public class MainController {
     private void setUpStolu() {
         nactiMenu();
         nastavCislaStolu();
+        objednavky.vlozObjednavkyDoZobrazovace(zvolenyStul);
+        nactiObjednavkyStolu();
+        zobrazovacObjednavekManager.vymazSetZobrazovanychJidel();
+
+
     }
 
     public void akceStul1(ActionEvent actionEvent) {
@@ -220,30 +231,27 @@ public class MainController {
     @FXML
     public void vyberPolozekOnClicked(MouseEvent event) {
         if (event.getClickCount() == 2) {
-            //System.out.println(vyberPolozek.getSelectionModel().getSelectedItem());
             vybraneJidlo = (Jidlo) vyberPolozek.getSelectionModel().getSelectedItem();
-            pridejObjednavkuKeStolu();
-            objednaneJidla();
-
+            //System.out.println(vybraneJidlo.getPopis());
+            ObjednaneJidlo objednaneJidlo = new ObjednaneJidlo(vybraneJidlo, zvolenyStul, actualTime.getCurrentDate(), actualTime.getCurrentTime());
+            objednavky.vlozObjednaneJidlo(objednaneJidlo);
+            //System.out.println(objednaneJidlo);
+            objednavky.vlozObjednavkyDoZobrazovace(zvolenyStul);
+            nactiObjednavkyStolu();
+            zobrazovacObjednavekManager.vymazSetZobrazovanychJidel();
         }
     }
 
-    @FXML
-    private void objednaneJidla() {
-        nazevVybranehoJidla.setCellValueFactory(new PropertyValueFactory<>("jidlo"));
-        mnozstviVybranehoJidla.setCellValueFactory(new PropertyValueFactory<>("mnozstvi"));
-        jednotlivaCenaVybranehoJidla.setCellValueFactory(new PropertyValueFactory<>("cenaZaJednotku"));
-        celkovaCenaVybranehoJidla.setCellValueFactory(new PropertyValueFactory<>("celkem"));
+    private void nactiObjednavkyStolu() {
+        nazevVybranehoJidla.setCellValueFactory(new PropertyValueFactory<>("nazevJidla"));
+        //vyberCena.setCellValueFactory(new PropertyValueFactory<>("cena"));
+        //vyberID.setCellValueFactory(new PropertyValueFactory<>("id"));
 
-        ObservableList<VytvorObjednavku> observableList = FXCollections.observableArrayList(
-                vytvoreneObjednavky.getSetVytvorenychObjednavek()
+        ObservableList<ZobrazovacObjednavek> observableList = FXCollections.observableArrayList(
+                //objednavky.getObjednaneJidloPodleStolu(zvolenyStul)
+                zobrazovacObjednavekManager.getSetZobrazovanychJidel()
         );
         objednaneJidla.setItems(observableList);
-    }
-
-    private void pridejObjednavkuKeStolu() {
-        VytvorObjednavku vytvorObjednavku = new VytvorObjednavku(vybraneJidlo, zvolenyStul);
-        vytvoreneObjednavky.vlozObjednavaku(vytvorObjednavku);
     }
 
 
