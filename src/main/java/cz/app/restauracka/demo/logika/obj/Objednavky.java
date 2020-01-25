@@ -12,6 +12,8 @@ public class Objednavky {
 
     @Autowired
     ZobrazovacObjednavekManager zobrazovacObjednavekManager;
+    @Autowired
+    MenuJidla menuJidla;
 
     private Set<ObjednaneJidlo> setObjednanychJidel = new HashSet<>();
 
@@ -80,10 +82,20 @@ public class Objednavky {
             }
         }*/
 
-        for (ObjednaneJidlo objednaneJidlo : objednaneJidloSet) {
+        Map<Integer, Integer> pocetVeciVObjednavceMap2 = pocetVeciVObjednavce(stul);
+        pocetVeciVObjednavceMap2.forEach((k, v) -> {
+            Jidlo jidlo = menuJidla.getJidloPodleID(k);
+            ZobrazovacObjednavek zobrazovacObjednavek = new ZobrazovacObjednavek(jidlo.getNazev(), Integer.toString(v), jidlo.getCena(), jidlo.getCena() * v);
+            zobrazovacObjednavekManager.vlozZobrazovaneJidloDoSetu(zobrazovacObjednavek);
+            System.out.println("Key: " + k + ", Value: " + v);
+        });
+
+
+ /*       for (ObjednaneJidlo objednaneJidlo : objednaneJidloSet) {
             ZobrazovacObjednavek zobrazovacObjednavek = new ZobrazovacObjednavek(objednaneJidlo.getJidlo().getNazev(), objednaneJidlo.getJidlo().getCena());
             zobrazovacObjednavekManager.vlozZobrazovaneJidloDoSetu(zobrazovacObjednavek);
-        }
+
+        }*/
     }
 
     public Set<ObjednaneJidlo> getSetObjednanychJidel() {

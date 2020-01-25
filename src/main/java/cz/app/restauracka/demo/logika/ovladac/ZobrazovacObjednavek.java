@@ -6,7 +6,7 @@ public class ZobrazovacObjednavek {
     private int cenaZaJednotku;
     private int celkovaCena;
 
-    public ZobrazovacObjednavek(String nazevJidla /*,int mnozstviJidla*/, int cenaZaJednotku /*,int celkovaCena*/) {
+    public ZobrazovacObjednavek(String nazevJidla, String mnozstviJidla, int cenaZaJednotku, int celkovaCena) {
         this.nazevJidla = nazevJidla;
         //this.mnozstviJidla = mnozstviJidla;
         this.cenaZaJednotku = cenaZaJednotku;

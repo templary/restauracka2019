@@ -54,7 +54,7 @@ public class MainController {
     @FXML
     private TableColumn<ObjednaneJidlo, String> nazevVybranehoJidla = new TableColumn();
     @FXML
-    private TableColumn<ObjednaneJidlo, Integer> mnozstviVybranehoJidla = new TableColumn();
+    private TableColumn<ObjednaneJidlo, String> mnozstviVybranehoJidla = new TableColumn();
     @FXML
     private TableColumn<ObjednaneJidlo, Integer> jednotlivaCenaVybranehoJidla = new TableColumn();
     @FXML
@@ -254,7 +254,8 @@ public class MainController {
     private void nactiObjednavkyStolu() {
         nazevVybranehoJidla.setCellValueFactory(new PropertyValueFactory<>("nazevJidla"));
         jednotlivaCenaVybranehoJidla.setCellValueFactory(new PropertyValueFactory<>("cenaZaJednotku"));
-        //vyberID.setCellValueFactory(new PropertyValueFactory<>("id"));
+        mnozstviVybranehoJidla.setCellValueFactory(new PropertyValueFactory<>("mnozstviJidla"));
+        celkovaCenaVybranehoJidla.setCellValueFactory(new PropertyValueFactory<>("celkovaCena"));
 
         ObservableList<ZobrazovacObjednavek> observableList = FXCollections.observableArrayList(
                 //objednavky.getObjednaneJidloPodleStolu(zvolenyStul)
