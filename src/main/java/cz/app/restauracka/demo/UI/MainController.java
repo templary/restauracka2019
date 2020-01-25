@@ -78,8 +78,13 @@ public class MainController {
     private Text cisloStolu;
     @FXML
     private Text cislo;
-
-
+    private static double dan = 1.2;
+    @FXML
+    private Text mezisoucetText;
+    @FXML
+    private Text danText;
+    @FXML
+    private Text celkemCenaText;
     private Jidlo vybraneJidlo;
 
 
@@ -137,6 +142,7 @@ public class MainController {
         objednavky.vlozObjednavkyDoZobrazovace(zvolenyStul);
         nactiObjednavkyStolu();
         zobrazovacObjednavekManager.vymazSetZobrazovanychJidel();
+        zobrazCeny();
 
 
     }
@@ -191,8 +197,10 @@ public class MainController {
 
     public void akceStul9(ActionEvent actionEvent) {
 //        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(9).getObjednavka().getNazeJidlaACenu()));
-        zvolenyStul = 9;
-        setUpStolu();
+        //zvolenyStul = 9;
+        //setUpStolu();
+        System.out.println(objednavky.pocetVeciVObjednavce(1));
+        //System.out.println(objednavky.getIDJidelUStolu(1));
     }
 
     private void startMain() {
@@ -233,18 +241,19 @@ public class MainController {
         if (event.getClickCount() == 2) {
             vybraneJidlo = (Jidlo) vyberPolozek.getSelectionModel().getSelectedItem();
             //System.out.println(vybraneJidlo.getPopis());
-            ObjednaneJidlo objednaneJidlo = new ObjednaneJidlo(vybraneJidlo, zvolenyStul, actualTime.getCurrentDate(), actualTime.getCurrentTime());
+            ObjednaneJidlo objednaneJidlo = new ObjednaneJidlo(vybraneJidlo, zvolenyStul, actualTime.getCurrentDate(), actualTime.getCurrentTime(), vybraneJidlo.getId());
             objednavky.vlozObjednaneJidlo(objednaneJidlo);
             //System.out.println(objednaneJidlo);
             objednavky.vlozObjednavkyDoZobrazovace(zvolenyStul);
             nactiObjednavkyStolu();
             zobrazovacObjednavekManager.vymazSetZobrazovanychJidel();
+            zobrazCeny();
         }
     }
 
     private void nactiObjednavkyStolu() {
         nazevVybranehoJidla.setCellValueFactory(new PropertyValueFactory<>("nazevJidla"));
-        //vyberCena.setCellValueFactory(new PropertyValueFactory<>("cena"));
+        jednotlivaCenaVybranehoJidla.setCellValueFactory(new PropertyValueFactory<>("cenaZaJednotku"));
         //vyberID.setCellValueFactory(new PropertyValueFactory<>("id"));
 
         ObservableList<ZobrazovacObjednavek> observableList = FXCollections.observableArrayList(
@@ -262,6 +271,14 @@ public class MainController {
         stage.setScene(scene);
         stage.setTitle("Pridaní jídla");
         stage.show();
+    }
+
+    private void zobrazCeny() {
+
+        mezisoucetText.setText(Integer.toString(objednavky.getCenaObjednavky(zvolenyStul)));
+        double dane = objednavky.getCenaObjednavky(zvolenyStul) * dan - (objednavky.getCenaObjednavky(zvolenyStul));
+        danText.setText(String.valueOf(Math.round(dane)));
+        celkemCenaText.setText(String.valueOf(objednavky.getCenaObjednavky(zvolenyStul) + dane));
     }
 
 }

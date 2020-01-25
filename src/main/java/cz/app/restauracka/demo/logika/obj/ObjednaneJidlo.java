@@ -6,12 +6,14 @@ public class ObjednaneJidlo {
     private String date;
     private String time;
     private Boolean stav;
+    private int id;
 
-    public ObjednaneJidlo(Jidlo jidlo, int stul, String date, String time) {
+    public ObjednaneJidlo(Jidlo jidlo, int stul, String date, String time, int id) {
         this.jidlo = jidlo;
         this.stul = stul;
         this.date = date;
         this.time = time;
+        this.id = id;
         stav = false;
     }
 
@@ -33,5 +35,9 @@ public class ObjednaneJidlo {
 
     public Boolean getStav() {
         return stav;
+    }
+
+    public int getId() {
+        return id;
     }
 }

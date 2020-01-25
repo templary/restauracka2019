@@ -5,8 +5,7 @@ import cz.app.restauracka.demo.logika.ovladac.ZobrazovacObjednavekManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 @Component
 public class Objednavky {
@@ -35,8 +34,51 @@ public class Objednavky {
         return setJidelUStolu;
     }
 
+    public ArrayList getIDJidelUStolu(int stul) {
+        ArrayList arrayList = new ArrayList<Integer>();
+        for (ObjednaneJidlo objednaneJidlo : this.setObjednanychJidel) {
+            arrayList.add(objednaneJidlo.getId());
+        }
+        return arrayList;
+    }
+
+    public Map pocetVeciVObjednavce(int stul) {
+        Map<Integer, Integer> countMap = new HashMap<>();
+
+        for (ObjednaneJidlo item : getObjednaneJidloPodleStolu(stul)) {
+
+            if (countMap.containsKey(item.getId()))
+                countMap.put(item.getId(), countMap.get(item.getId()) + 1);
+            else
+                countMap.put(item.getId(), 1);
+        }
+        return countMap;
+    }
+
+    public int getCenaObjednavky(int stul) {
+        Set<ObjednaneJidlo> objednanaJidlaUStolu = getObjednaneJidloPodleStolu(stul);
+        int celkovaCena = 0;
+
+        for (ObjednaneJidlo objednaneJidlo : this.setObjednanychJidel) {
+            celkovaCena += objednaneJidlo.getJidlo().getCena();
+        }
+
+        return celkovaCena;
+    }
+
     public void vlozObjednavkyDoZobrazovace(int stul) {
         Set<ObjednaneJidlo> objednaneJidloSet = getObjednaneJidloPodleStolu(stul);
+/*        Set<ObjednaneJidlo> objednaneJidloSetBezDuplicit = new HashSet<>();
+        ArrayList list = new ArrayList<Integer>();
+
+        for (ObjednaneJidlo objednaneJidlo : objednaneJidloSet){
+            if (list.contains(objednaneJidlo.getId())){
+                System.out.println("Obsahuje");
+            }else {
+                list.add(objednaneJidlo.getId());
+                System.out.println("NEobsahuje");
+            }
+        }*/
 
         for (ObjednaneJidlo objednaneJidlo : objednaneJidloSet) {
             ZobrazovacObjednavek zobrazovacObjednavek = new ZobrazovacObjednavek(objednaneJidlo.getJidlo().getNazev(), objednaneJidlo.getJidlo().getCena());
