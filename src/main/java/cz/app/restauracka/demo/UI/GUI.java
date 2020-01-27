@@ -1,5 +1,6 @@
 package cz.app.restauracka.demo.UI;
 
+import cz.app.restauracka.demo.core.RUN_CORE;
 import cz.app.restauracka.demo.logika.ovladac.OvladacData;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -21,7 +22,7 @@ public class GUI extends Application {
         String[] args = getParameters().getRaw().toArray(new String[0]);
 
         this.applicationContext = new SpringApplicationBuilder()
-                .sources(RUN.class)
+                .sources(RUN_CORE.class)
                 .run(args);
 
         OvladacData ovladacData = applicationContext.getBean(OvladacData.class);

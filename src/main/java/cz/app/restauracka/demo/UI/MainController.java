@@ -52,22 +52,22 @@ public class MainController {
     @FXML
     private TableView objednaneJidla = new TableView<>();
     @FXML
-    private TableColumn<ObjednaneJidlo, String> nazevVybranehoJidla = new TableColumn();
+    private TableColumn<ObjednaneJidlo, String> nazevVybranehoJidla = new TableColumn<>();
     @FXML
-    private TableColumn<ObjednaneJidlo, String> mnozstviVybranehoJidla = new TableColumn();
+    private TableColumn<ObjednaneJidlo, String> mnozstviVybranehoJidla = new TableColumn<>();
     @FXML
-    private TableColumn<ObjednaneJidlo, Integer> jednotlivaCenaVybranehoJidla = new TableColumn();
+    private TableColumn<ObjednaneJidlo, Integer> jednotlivaCenaVybranehoJidla = new TableColumn<>();
     @FXML
     private TableColumn<ObjednaneJidlo, Integer> celkovaCenaVybranehoJidla = new TableColumn<>();
 
     @FXML
     private TableView vyberPolozek = new TableView<>();
     @FXML
-    private TableColumn<Jidlo, String> vyberNazev = new TableColumn();
+    private TableColumn<Jidlo, String> vyberNazev = new TableColumn<>();
     @FXML
-    private TableColumn<Jidlo, Integer> vyberCena = new TableColumn();
+    private TableColumn<Jidlo, Integer> vyberCena = new TableColumn<>();
     @FXML
-    private TableColumn<Jidlo, Integer> vyberID = new TableColumn();
+    private TableColumn<Jidlo, Integer> vyberID = new TableColumn<>();
 
 
     @FXML
@@ -78,14 +78,12 @@ public class MainController {
     private Text cisloStolu;
     @FXML
     private Text cislo;
-    private static double dan = 1.2;
     @FXML
     private Text mezisoucetText;
     @FXML
     private Text danText;
     @FXML
     private Text celkemCenaText;
-    private Jidlo vybraneJidlo;
 
 
     private ObservableList<String> listSetter(Set<String> stringSet) {
@@ -239,7 +237,7 @@ public class MainController {
     @FXML
     public void vyberPolozekOnClicked(MouseEvent event) {
         if (event.getClickCount() == 2) {
-            vybraneJidlo = (Jidlo) vyberPolozek.getSelectionModel().getSelectedItem();
+            Jidlo vybraneJidlo = (Jidlo) vyberPolozek.getSelectionModel().getSelectedItem();
             //System.out.println(vybraneJidlo.getPopis());
             ObjednaneJidlo objednaneJidlo = new ObjednaneJidlo(vybraneJidlo, zvolenyStul, actualTime.getCurrentDate(), actualTime.getCurrentTime(), vybraneJidlo.getId());
             objednavky.vlozObjednaneJidlo(objednaneJidlo);
@@ -258,7 +256,6 @@ public class MainController {
         celkovaCenaVybranehoJidla.setCellValueFactory(new PropertyValueFactory<>("celkovaCena"));
 
         ObservableList<ZobrazovacObjednavek> observableList = FXCollections.observableArrayList(
-                //objednavky.getObjednaneJidloPodleStolu(zvolenyStul)
                 zobrazovacObjednavekManager.getSetZobrazovanychJidel()
         );
         objednaneJidla.setItems(observableList);
@@ -277,6 +274,7 @@ public class MainController {
     private void zobrazCeny() {
 
         mezisoucetText.setText(Integer.toString(objednavky.getCenaObjednavky(zvolenyStul)));
+        double dan = 1.2;
         double dane = objednavky.getCenaObjednavky(zvolenyStul) * dan - (objednavky.getCenaObjednavky(zvolenyStul));
         danText.setText(String.valueOf(Math.round(dane)));
         celkemCenaText.setText(String.valueOf(objednavky.getCenaObjednavky(zvolenyStul) + dane));

@@ -34,7 +34,7 @@ public class Jidlo {
     }
 
     String getNazevACena() {
-        return nazev + " " + Integer.toString(cena);
+        return nazev + " " + cena;
     }
 
     public void setNazev(String nazev) {
