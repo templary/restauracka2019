@@ -69,36 +69,13 @@ public class Objednavky {
     }
 
     public void vlozObjednavkyDoZobrazovace(int stul) {
-        Set<ObjednaneJidlo> objednaneJidloSet = getObjednaneJidloPodleStolu(stul);
-/*        Set<ObjednaneJidlo> objednaneJidloSetBezDuplicit = new HashSet<>();
-        ArrayList list = new ArrayList<Integer>();
-
-        for (ObjednaneJidlo objednaneJidlo : objednaneJidloSet){
-            if (list.contains(objednaneJidlo.getId())){
-                System.out.println("Obsahuje");
-            }else {
-                list.add(objednaneJidlo.getId());
-                System.out.println("NEobsahuje");
-            }
-        }*/
-
         Map<Integer, Integer> pocetVeciVObjednavceMap2 = pocetVeciVObjednavce(stul);
         pocetVeciVObjednavceMap2.forEach((k, v) -> {
             Jidlo jidlo = menuJidla.getJidloPodleID(k);
-            ZobrazovacObjednavek zobrazovacObjednavek = new ZobrazovacObjednavek(jidlo.getNazev(), Integer.toString(v), jidlo.getCena(), jidlo.getCena() * v);
+            ZobrazovacObjednavek zobrazovacObjednavek = new ZobrazovacObjednavek(jidlo.getNazev(), v, jidlo.getCena(), jidlo.getCena() * v);
             zobrazovacObjednavekManager.vlozZobrazovaneJidloDoSetu(zobrazovacObjednavek);
             System.out.println("Key: " + k + ", Value: " + v);
         });
 
-
- /*       for (ObjednaneJidlo objednaneJidlo : objednaneJidloSet) {
-            ZobrazovacObjednavek zobrazovacObjednavek = new ZobrazovacObjednavek(objednaneJidlo.getJidlo().getNazev(), objednaneJidlo.getJidlo().getCena());
-            zobrazovacObjednavekManager.vlozZobrazovaneJidloDoSetu(zobrazovacObjednavek);
-
-        }*/
-    }
-
-    public Set<ObjednaneJidlo> getSetObjednanychJidel() {
-        return setObjednanychJidel;
     }
 }
