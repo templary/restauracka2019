@@ -1,8 +1,6 @@
-package cz.app.restauracka.demo.logika.obj;
+package cz.app.restauracka.demo.logika.zam;
 
 import cz.app.restauracka.demo.logika.Pozice;
-import cz.app.restauracka.demo.logika.zam.Zamestnanci;
-import cz.app.restauracka.demo.logika.zam.Zamestnanec;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;

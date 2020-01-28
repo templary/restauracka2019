@@ -3,7 +3,10 @@ package cz.app.restauracka.demo.logika.obj;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 @Component
 public class Objednavky {
@@ -34,13 +37,6 @@ public class Objednavky {
         return setJidelUStolu;
     }
 
-    public ArrayList getIDJidelUStolu(int stul) {
-        ArrayList arrayList = new ArrayList<Integer>();
-        for (ObjednaneJidlo objednaneJidlo : this.setObjednanychJidel) {
-            arrayList.add(objednaneJidlo.getId());
-        }
-        return arrayList;
-    }
 
     public Map pocetVeciVObjednavce(int stul) {
         Map<Integer, Integer> countMap = new HashMap<>();
@@ -72,8 +68,12 @@ public class Objednavky {
             Jidlo jidlo = menuJidla.getJidloPodleID(k);
             ZobrazovacObjednavek zobrazovacObjednavek = new ZobrazovacObjednavek(jidlo.getNazev(), v, jidlo.getCena(), jidlo.getCena() * v);
             zobrazovacObjednavekManager.vlozZobrazovaneJidloDoSetu(zobrazovacObjednavek);
-            System.out.println("Key: " + k + ", Value: " + v);
+            //System.out.println("Key: " + k + ", Value: " + v);
         });
 
+    }
+
+    public Set<ObjednaneJidlo> getSetObjednanychJidel() {
+        return setObjednanychJidel;
     }
 }

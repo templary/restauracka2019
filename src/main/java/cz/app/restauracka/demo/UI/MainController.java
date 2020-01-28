@@ -20,8 +20,6 @@ import net.rgielen.fxweaver.core.FxmlView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.Set;
-
 @Component
 @FxmlView("main-scene-new.fxml")
 public class MainController {
@@ -84,10 +82,6 @@ public class MainController {
     private Text celkemCenaText;
     private int zvolenyStul = 0;
 
-    private ObservableList<String> listSetter(Set<String> stringSet) {
-        return FXCollections.observableArrayList(stringSet);
-    }
-
     private void nactiMenu() {
         vyberNazev.setCellValueFactory(new PropertyValueFactory<>("popis"));
         vyberCena.setCellValueFactory(new PropertyValueFactory<>("cena"));
@@ -111,7 +105,6 @@ public class MainController {
 
     public void pridejUzivatele(ActionEvent actionEvent) {
         startRegistrace();
-        // registraceController.setup();
     }
 
     public void uzaverka(ActionEvent actionEvent) {
@@ -233,10 +226,8 @@ public class MainController {
     public void vyberPolozekOnClicked(MouseEvent event) {
         if (event.getClickCount() == 2) {
             Jidlo vybraneJidlo = (Jidlo) vyberPolozek.getSelectionModel().getSelectedItem();
-            //System.out.println(vybraneJidlo.getPopis());
             ObjednaneJidlo objednaneJidlo = new ObjednaneJidlo(vybraneJidlo, zvolenyStul, actualTime.getCurrentDate(), actualTime.getCurrentTime(), vybraneJidlo.getId());
             objednavky.vlozObjednaneJidlo(objednaneJidlo);
-            //System.out.println(objednaneJidlo);
             objednavky.vlozObjednavkyDoZobrazovace(zvolenyStul);
             nactiObjednavkyStolu();
             zobrazovacObjednavekManager.vymazSetZobrazovanychJidel();
