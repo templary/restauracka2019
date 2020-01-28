@@ -1,6 +1,6 @@
-package cz.app.restauracka.demo.UI;
+package cz.app.restauracka.demo.core;
 
-import cz.app.restauracka.demo.core.RUN_CORE;
+import cz.app.restauracka.demo.UI.LoginController;
 import cz.app.restauracka.demo.logika.ovladac.OvladacData;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -13,7 +13,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Component;
 
 @Component
-public class GUI extends Application {
+public class GUI_START extends Application {
 
     private ConfigurableApplicationContext applicationContext;
 

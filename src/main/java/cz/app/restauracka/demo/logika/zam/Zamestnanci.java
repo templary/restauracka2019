@@ -33,14 +33,6 @@ public class Zamestnanci {
         zamestnanciSet.remove(zamestnanec);
     }
 
-    public Zamestnanec getZamestnanecPodleJmena(String jmeno) {
-        for (Zamestnanec zamestnanec : this.zamestnanciSet) {
-            if (zamestnanec.getJmeno().equals(jmeno)) {
-                return zamestnanec;
-            }
-        }
-        return null;
-    }
 
     public Zamestnanec getZamestnanecPodleUzJmeno(String uzJmeno) {
         for (Zamestnanec zamestnanec : this.zamestnanciSet) {

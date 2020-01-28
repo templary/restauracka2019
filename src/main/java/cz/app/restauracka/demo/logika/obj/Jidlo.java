@@ -29,16 +29,16 @@ public class Jidlo {
         return nazev;
     }
 
+    public void setNazev(String nazev) {
+        this.nazev = nazev;
+    }
+
     String getCenaString() {
         return Integer.toString(cena);
     }
 
     String getNazevACena() {
         return nazev + " " + cena;
-    }
-
-    public void setNazev(String nazev) {
-        this.nazev = nazev;
     }
 
     public String getPopis() {

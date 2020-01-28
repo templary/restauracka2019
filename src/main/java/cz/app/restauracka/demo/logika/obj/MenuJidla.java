@@ -15,6 +15,10 @@ public class MenuJidla {
         return menuSet;
     }
 
+    public void setMenuSet(Set<Jidlo> menuSet) {
+        this.menuSet = menuSet;
+    }
+
     public void vlozJidloDoMenu(Jidlo jidlo) {
         menuSet.add(jidlo);
     }
@@ -39,10 +43,6 @@ public class MenuJidla {
             }
         }
         return null;
-    }
-
-    public void setMenuSet(Set<Jidlo> menuSet) {
-        this.menuSet = menuSet;
     }
 
     public Set getNazvyJidel() {

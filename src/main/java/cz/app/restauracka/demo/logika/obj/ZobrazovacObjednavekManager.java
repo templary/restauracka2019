@@ -1,4 +1,4 @@
-package cz.app.restauracka.demo.logika.ovladac;
+package cz.app.restauracka.demo.logika.obj;
 
 import org.springframework.stereotype.Component;
 

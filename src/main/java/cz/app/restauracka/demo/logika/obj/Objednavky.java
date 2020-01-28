@@ -1,7 +1,5 @@
 package cz.app.restauracka.demo.logika.obj;
 
-import cz.app.restauracka.demo.logika.ovladac.ZobrazovacObjednavek;
-import cz.app.restauracka.demo.logika.ovladac.ZobrazovacObjednavekManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

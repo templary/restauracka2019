@@ -1,4 +1,4 @@
-package cz.app.restauracka.demo.logika.ovladac;
+package cz.app.restauracka.demo.logika.obj;
 
 public class ZobrazovacObjednavek {
     private String nazevJidla;

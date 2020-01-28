@@ -3,8 +3,6 @@ package cz.app.restauracka.demo.UI;
 import cz.app.restauracka.demo.ExterniFce.ActualTime;
 import cz.app.restauracka.demo.logika.obj.*;
 import cz.app.restauracka.demo.logika.ovladac.OvladacData;
-import cz.app.restauracka.demo.logika.ovladac.ZobrazovacObjednavek;
-import cz.app.restauracka.demo.logika.ovladac.ZobrazovacObjednavekManager;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -84,7 +82,7 @@ public class MainController {
     private Text danText;
     @FXML
     private Text celkemCenaText;
-
+    private int zvolenyStul = 0;
 
     private ObservableList<String> listSetter(Set<String> stringSet) {
         return FXCollections.observableArrayList(stringSet);
@@ -100,7 +98,6 @@ public class MainController {
         );
         vyberPolozek.setItems(observableList);
     }
-
 
     public void objednej(ActionEvent actionEvent) {
     }
@@ -122,8 +119,6 @@ public class MainController {
         ovladacData.nactiData();
 
     }
-
-    private int zvolenyStul = 0;
 
     public void logOut(ActionEvent actionEvent) {
         startMain();

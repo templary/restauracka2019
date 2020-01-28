@@ -10,7 +10,7 @@ public class Stul {
         this.pocetMist = pocetMist;
     }
 
-    int getId() {
+    public int getId() {
         return id;
     }
 

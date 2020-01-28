@@ -1,5 +1,6 @@
 package cz.app.restauracka.demo.UI;
 
+import cz.app.restauracka.demo.core.GUI_START;
 import cz.app.restauracka.demo.logika.ovladac.OvladacHash;
 import cz.app.restauracka.demo.logika.zam.Zamestnanci;
 import cz.app.restauracka.demo.logika.zam.Zamestnanec;
@@ -27,7 +28,7 @@ public class LoginController implements Initializable {
     @Autowired
     Zamestnanci zamestnanci;
     @Autowired
-    GUI gui;
+    GUI_START guiRUN;
     @Autowired
     FxWeaver fxWeaver;
     @Autowired
@@ -51,28 +52,28 @@ public class LoginController implements Initializable {
     public void handleButtonLogin(ActionEvent actionEvent) {
         loggedZam = zamestnanci.getZamestnanecPodleUzJmeno(loginJmeno.getText());
 
-        if (loggedZam!=null) {
+        if (loggedZam != null) {
             if (loggedZam.getHeslo().equals(ovladacHash.sha512hash(loginHeslo.getText()))) {
                 loginInfoText.setText("Prihlasen!");
                 System.out.println(loggedZam.getJmeno());
                 startMain();
-            }else {
+            } else {
                 loginInfoText.setText("Chybné jméno nebo heslo");
             }
-        }else {
+        } else {
             loginInfoText.setText("Chybné jméno nebo heslo");
         }
 
     }
 
-        private void startMain() {
+    private void startMain() {
         Stage stage = (Stage) loginButton.getScene().getWindow();
 
         Scene scene = new Scene(this.fxWeaver.loadView(MainController.class));
         stage.setScene(scene);
         stage.setTitle("Register Form");
         stage.show();
-            mainController.setUp();
+        mainController.setUp();
     }
 
     Zamestnanec getLoggedZam() {
