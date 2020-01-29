@@ -73,6 +73,10 @@ public class Objednavky {
 
     }
 
+    public void setSetObjednanychJidel(Set<ObjednaneJidlo> setObjednanychJidel) {
+        this.setObjednanychJidel = setObjednanychJidel;
+    }
+
     public Set<ObjednaneJidlo> getSetObjednanychJidel() {
         return setObjednanychJidel;
     }

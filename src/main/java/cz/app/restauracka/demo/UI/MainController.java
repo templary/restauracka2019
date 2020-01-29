@@ -1,6 +1,8 @@
 package cz.app.restauracka.demo.UI;
 
 import cz.app.restauracka.demo.Funkce.ActualTime;
+import cz.app.restauracka.demo.logika.Data.NactiDataObjednavek;
+import cz.app.restauracka.demo.logika.Data.UlozDataObjednavek;
 import cz.app.restauracka.demo.logika.obj.*;
 import cz.app.restauracka.demo.logika.ovladac.OvladacData;
 import javafx.collections.FXCollections;
@@ -41,6 +43,10 @@ public class MainController {
     Objednavky objednavky;
     @Autowired
     ZobrazovacObjednavekManager zobrazovacObjednavekManager;
+    @Autowired
+    NactiDataObjednavek nactiDataObjednavek;
+    @Autowired
+    UlozDataObjednavek ulozDataObjednavek;
 
     ActualTime actualTime = new ActualTime();
 
@@ -129,6 +135,7 @@ public class MainController {
         nactiObjednavkyStolu();
         zobrazovacObjednavekManager.vymazSetZobrazovanychJidel();
         zobrazCeny();
+        //nactiDataObjednavek.loadData();
 
 
     }
@@ -229,6 +236,7 @@ public class MainController {
             ObjednaneJidlo objednaneJidlo = new ObjednaneJidlo(vybraneJidlo, zvolenyStul, actualTime.getCurrentDate(), actualTime.getCurrentTime(), vybraneJidlo.getId());
             objednavky.vlozObjednaneJidlo(objednaneJidlo);
             objednavky.vlozObjednavkyDoZobrazovace(zvolenyStul);
+            ulozDataObjednavek.saveData();
             nactiObjednavkyStolu();
             zobrazovacObjednavekManager.vymazSetZobrazovanychJidel();
             zobrazCeny();
