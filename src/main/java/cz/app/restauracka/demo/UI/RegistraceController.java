@@ -24,7 +24,6 @@ import org.springframework.stereotype.Component;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.Set;
 
 @Component
 @FxmlView("registrace-window.fxml")
@@ -108,7 +107,7 @@ public class RegistraceController implements Initializable {
         Pozice pozice = registracePozice.getValue();
         //TODO pokud uživatel udělá chybu, vrátit ho na stejnou obrazovku a vyplnit mu vše co vyplnil špatně.
 
-        if (!jmeno.isEmpty() && !prijmeni.isEmpty() && !nick.isEmpty() && !telefon.isEmpty() && !mail.isEmpty() && !heslo.isEmpty() && ovladacZam.checkUniqueNick(nick) && numeric.jeCislo(telefon) ){ //TODO dodělat overeni vybrani pozice.
+        if (!jmeno.isEmpty() && !prijmeni.isEmpty() && !nick.isEmpty() && !telefon.isEmpty() && !mail.isEmpty() && !heslo.isEmpty() && ovladacZam.checkUniqueNick(nick) && numeric.jeCislo(telefon)) { //TODO dodělat overeni vybrani pozice.
 
             idChecker.setId();
             int idZam = idChecker.getProperIDZamestnanec();
