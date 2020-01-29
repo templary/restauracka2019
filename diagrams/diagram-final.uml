@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>cz.app.restauracka.demo</OriginalElement>
+  <nodes>
+    <node x="4403.430555555557" y="746.5">cz.app.restauracka.demo.logika.Data.NactiDataMenu</node>
+    <node x="470.0" y="1161.5">cz.app.restauracka.demo.logika.ovladac.OvladacZam</node>
+    <node x="3238.4306022666856" y="1184.0">cz.app.restauracka.demo.Funkce.Numeric</node>
+    <node x="1344.263935600019" y="713.0">cz.app.restauracka.demo.logika.zam.Zamestnanci</node>
+    <node x="2359.0392754164973" y="1811.0">cz.app.restauracka.demo.logika.ovladac.OvladacData</node>
+    <node x="1343.473611111111" y="34.0">cz.app.restauracka.demo.logika.Pozice</node>
+    <node x="3221.0392754164973" y="1646.0">cz.app.restauracka.demo.UI.PridejJidloController</node>
+    <node x="1087.0" y="1150.5">cz.app.restauracka.demo.logika.Data.NactiDataZamestnancu</node>
+    <node x="1756.263935600019" y="1118.0">cz.app.restauracka.demo.logika.zam.ZamestnanciDatovyManagerTest</node>
+    <node x="6538.88645092759" y="758.0">cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavekManagerTest</node>
+    <node x="2894.8631390528612" y="385.0">cz.app.restauracka.demo.logika.obj.Stul</node>
+    <node x="4025.5392754164973" y="2523.0">cz.app.restauracka.demo.UI.MainController</node>
+    <node x="6292.986111111112" y="374.0">cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavekManager</node>
+    <node x="4973.986111111112" y="341.0">cz.app.restauracka.demo.logika.obj.ObjednaneJidlo</node>
+    <node x="5590.76145092759" y="1150.5">cz.app.restauracka.demo.logika.Data.UlozDataObjednavek</node>
+    <node x="4486.930555555557" y="352.0">cz.app.restauracka.demo.logika.obj.MenuJidla</node>
+    <node x="5467.986111111112" y="691.0">cz.app.restauracka.demo.logika.obj.Objednavky</node>
+    <node x="2972.4306022666856" y="1140.0">cz.app.restauracka.demo.logika.obj.DatovyManagerStolyTest</node>
+    <node x="4658.486111111112" y="758.0">cz.app.restauracka.demo.logika.obj.DatovyManagerJidlaTest</node>
+    <node x="5196.986111111112" y="1150.5">cz.app.restauracka.demo.logika.Data.NactiDataObjednavek</node>
+    <node x="3472.4306022666856" y="1084.0">cz.app.restauracka.demo.Funkce.IDChecker</node>
+    <node x="20.0" y="3084.5">cz.app.restauracka.demo.core.GUI_START</node>
+    <node x="4621.289275416497" y="1877.5">cz.app.restauracka.demo.Funkce.ActualTime</node>
+    <node x="1385.8125" y="1150.5">cz.app.restauracka.demo.logika.Data.UlozDataZamestnancu</node>
+    <node x="1501.472268933352" y="1569.0">cz.app.restauracka.demo.UI.RegistraceController</node>
+    <node x="5025.2198309720525" y="3063.0">cz.app.restauracka.demo.logika.obj.ObjednavkyTest</node>
+    <node x="5988.986111111112" y="374.5">cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavekTest</node>
+    <node x="3899.76145092759" y="1184.0">cz.app.restauracka.demo.logika.ovladac.OvladacHash</node>
+    <node x="2193.4306022666856" y="1150.5">cz.app.restauracka.demo.logika.Data.NactiDataStolu</node>
+    <node x="2861.4306022666856" y="746.5">cz.app.restauracka.demo.logika.obj.Stoly</node>
+    <node x="81.20838004446341" y="1888.5">cz.app.restauracka.demo.core.RUN_CORE</node>
+    <node x="2681.4306022666856" y="1117.0">cz.app.restauracka.demo.UI.VarovaniController</node>
+    <node x="4152.76145092759" y="1150.5">cz.app.restauracka.demo.logika.Data.UlozDataMenu</node>
+    <node x="2221.9354582312026" y="758.0">cz.app.restauracka.demo.logika.obj.TvorbaEntitTest</node>
+    <node x="6010.986111111112" y="22.5">cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavek</node>
+    <node x="4808.091374269006" y="0.0">cz.app.restauracka.demo.logika.obj.Jidlo</node>
+    <node x="2756.2392754164975" y="3868.0">cz.app.restauracka.demo.UI.LoginController</node>
+    <node x="1231.0690949630725" y="319.0">cz.app.restauracka.demo.logika.zam.Zamestnanec</node>
+    <node x="2437.4306022666856" y="1150.5">cz.app.restauracka.demo.logika.Data.UlozDataStolu</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="cz.app.restauracka.demo.UI.LoginController" target="cz.app.restauracka.demo.logika.ovladac.OvladacHash">
+      <point x="128.70000000000005" y="-182.5" />
+      <point x="3027.9392754164974" y="3848.0" />
+      <point x="4534.039275416497" y="3848.0" />
+      <point x="4534.039275416497" y="1459.0" />
+      <point x="4058.76145092759" y="1459.0" />
+      <point x="53.0" y="27.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.Stoly" target="cz.app.restauracka.demo.logika.obj.Stoly">
+      <point x="-86.14285714285711" y="61.0" />
+      <point x="2875.7877451238282" y="888.5" />
+      <point x="2841.4306022666856" y="888.5" />
+      <point x="2841.4306022666856" y="807.5" />
+      <point x="-100.5" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavekManagerTest" target="cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavekManager">
+      <point x="-40.875" y="-49.5" />
+      <point x="6661.51145092759" y="671.0" />
+      <point x="6688.986111111112" y="671.0" />
+      <point x="176.0" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.PridejJidloController" target="cz.app.restauracka.demo.Funkce.IDChecker">
+      <point x="-43.333333333333485" y="-270.0" />
+      <point x="3372.705942083164" y="1449.0" />
+      <point x="3670.763935600019" y="1449.0" />
+      <point x="79.33333333333348" y="127.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.NactiDataMenu" target="cz.app.restauracka.demo.logika.obj.Jidlo">
+      <point x="-51.0" y="-61.0" />
+      <point x="4454.430555555557" y="259.0" />
+      <point x="4861.144005847954" y="259.0" />
+      <point x="-58.94736842105249" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.MainController" target="cz.app.restauracka.demo.UI.PridejJidloController">
+      <point x="-79.68000000000029" y="-622.5" />
+      <point x="4194.8592754164965" y="2413.0" />
+      <point x="3338.0392754164973" y="2413.0" />
+      <point x="-78.0" y="270.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.LoginController" target="cz.app.restauracka.demo.UI.MainController">
+      <point x="14.299999999999955" y="-182.5" />
+      <point x="2913.5392754164977" y="3808.0" />
+      <point x="4174.939275416497" y="3808.0" />
+      <point x="-99.59999999999991" y="622.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.Funkce.IDChecker" target="cz.app.restauracka.demo.logika.obj.MenuJidla">
+      <point x="44.625000000000455" y="-127.5" />
+      <point x="3636.055602266686" y="984.0" />
+      <point x="4372.930555555557" y="984.0" />
+      <point x="4372.930555555557" y="671.0" />
+      <point x="4533.5972222222235" y="671.0" />
+      <point x="-93.33333333333303" y="83.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.zam.ZamestnanciDatovyManagerTest" target="cz.app.restauracka.demo.logika.zam.Zamestnanec">
+      <point x="0.0" y="-93.5" />
+      <point x="1906.263935600019" y="1064.0" />
+      <point x="1949.763935600019" y="1064.0" />
+      <point x="1949.763935600019" y="651.0" />
+      <point x="1574.7690949630723" y="651.0" />
+      <point x="98.19999999999982" y="116.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.Funkce.IDChecker" target="cz.app.restauracka.demo.logika.obj.ObjednaneJidlo">
+      <point x="74.37500000000045" y="-127.5" />
+      <point x="3665.805602266686" y="1044.0" />
+      <point x="4953.486111111112" y="1044.0" />
+      <point x="4953.486111111112" y="641.0" />
+      <point x="5023.486111111112" y="641.0" />
+      <point x="-115.5" y="94.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.RegistraceController" target="cz.app.restauracka.demo.Funkce.IDChecker">
+      <point x="169.125" y="-347.0" />
+      <point x="1896.097268933352" y="1439.0" />
+      <point x="3591.4306022666856" y="1439.0" />
+      <point x="0.0" y="127.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.ObjednavkyTest" target="cz.app.restauracka.demo.logika.obj.Stul">
+      <point x="-43.05000000000018" y="-82.5" />
+      <point x="5125.669830972052" y="2303.0" />
+      <point x="4769.789275416497" y="2303.0" />
+      <point x="4769.789275416497" y="1509.0" />
+      <point x="4628.289275416497" y="1509.0" />
+      <point x="4628.289275416497" y="974.0" />
+      <point x="4361.930555555557" y="974.0" />
+      <point x="4361.930555555557" y="611.0" />
+      <point x="3017.0449572346793" y="611.0" />
+      <point x="58.18181818181802" y="50.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.core.GUI_START" target="cz.app.restauracka.demo.logika.ovladac.OvladacData">
+      <point x="125.33333333333326" y="-61.0" />
+      <point x="333.33333333333303" y="2503.0" />
+      <point x="2533.0392754164973" y="2503.0" />
+      <point x="0.0" y="105.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.ovladac.OvladacZam" target="cz.app.restauracka.demo.logika.ovladac.OvladacZam">
+      <point x="-144.25" y="50.0" />
+      <point x="614.25" y="1281.5" />
+      <point x="450.0" y="1281.5" />
+      <point x="450.0" y="1211.5" />
+      <point x="-288.5" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.MainController" target="cz.app.restauracka.demo.logika.obj.Objednavky">
+      <point x="199.19999999999982" y="-622.5" />
+      <point x="4473.739275416498" y="2443.0" />
+      <point x="5811.26145092759" y="2443.0" />
+      <point x="5811.26145092759" y="1064.0" />
+      <point x="5761.128968253969" y="1064.0" />
+      <point x="65.14285714285688" y="116.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.ObjednavkyTest" target="cz.app.restauracka.demo.logika.obj.Objednavky">
+      <point x="43.05000000000018" y="-82.5" />
+      <point x="5211.769830972053" y="2453.0" />
+      <point x="5867.486111111112" y="2453.0" />
+      <point x="5867.486111111112" y="1064.0" />
+      <point x="5826.271825396826" y="1064.0" />
+      <point x="130.28571428571377" y="116.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.ovladac.OvladacZam" target="cz.app.restauracka.demo.logika.zam.Zamestnanci">
+      <point x="216.375" y="-50.0" />
+      <point x="974.875" y="1034.0" />
+      <point x="1409.430602266686" y="1034.0" />
+      <point x="-130.33333333333326" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.Jidlo" target="cz.app.restauracka.demo.logika.obj.Jidlo">
+      <point x="-106.10526315789468" y="94.5" />
+      <point x="4813.986111111112" y="209.0" />
+      <point x="4788.091374269006" y="209.0" />
+      <point x="4788.091374269006" y="94.5" />
+      <point x="-112.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.zam.Zamestnanec" target="cz.app.restauracka.demo.logika.Pozice">
+      <point x="122.75" y="-116.0" />
+      <point x="1599.3190949630725" y="299.0" />
+      <point x="1409.0450396825395" y="299.0" />
+      <point x="14.571428571428555" y="60.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.TvorbaEntitTest" target="cz.app.restauracka.demo.logika.zam.Zamestnanec">
+      <point x="-85.71428571428532" y="-49.5" />
+      <point x="2236.2211725169172" y="621.0" />
+      <point x="1672.9690949630726" y="621.0" />
+      <point x="196.4000000000001" y="116.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.UlozDataZamestnancu" target="cz.app.restauracka.demo.logika.zam.Zamestnanci">
+      <point x="0.0" y="-61.0" />
+      <point x="1495.3125" y="1064.0" />
+      <point x="1539.763935600019" y="1064.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.ovladac.OvladacData" target="cz.app.restauracka.demo.logika.Data.UlozDataMenu">
+      <point x="145.0" y="-105.0" />
+      <point x="2678.0392754164973" y="1479.0" />
+      <point x="4254.76145092759" y="1479.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.LoginController" target="cz.app.restauracka.demo.core.GUI_START">
+      <point x="-128.70000000000005" y="-182.5" />
+      <point x="2770.5392754164977" y="3848.0" />
+      <point x="208.0" y="3848.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.ovladac.OvladacData" target="cz.app.restauracka.demo.logika.Data.NactiDataMenu">
+      <point x="87.0" y="-105.0" />
+      <point x="2620.0392754164973" y="1469.0" />
+      <point x="4122.26145092759" y="1469.0" />
+      <point x="4122.26145092759" y="994.0" />
+      <point x="4556.430555555557" y="994.0" />
+      <point x="51.0" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavek" target="cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavek">
+      <point x="-144.0" y="72.0" />
+      <point x="6026.986111111112" y="186.5" />
+      <point x="5990.986111111112" y="186.5" />
+      <point x="5990.986111111112" y="94.5" />
+      <point x="-160.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.NactiDataMenu" target="cz.app.restauracka.demo.logika.Data.NactiDataMenu">
+      <point x="-51.0" y="61.0" />
+      <point x="4454.430555555557" y="888.5" />
+      <point x="4383.430555555557" y="888.5" />
+      <point x="4383.430555555557" y="807.5" />
+      <point x="-102.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.NactiDataObjednavek" target="cz.app.restauracka.demo.logika.Data.NactiDataObjednavek">
+      <point x="-54.75" y="61.0" />
+      <point x="5251.736111111112" y="1292.5" />
+      <point x="5176.986111111112" y="1292.5" />
+      <point x="5176.986111111112" y="1211.5" />
+      <point x="-109.5" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.ovladac.OvladacData" target="cz.app.restauracka.demo.logika.Data.UlozDataStolu">
+      <point x="29.0" y="-105.0" />
+      <point x="2562.0392754164973" y="1399.0" />
+      <point x="2590.4306022666856" y="1399.0" />
+      <point x="51.0" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavekTest" target="cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavek">
+      <point x="-66.0" y="-60.5" />
+      <point x="6054.986111111112" y="299.0" />
+      <point x="6154.986111111112" y="299.0" />
+      <point x="-16.0" y="72.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavekManager" target="cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavek">
+      <point x="110.0" y="-61.0" />
+      <point x="6622.986111111112" y="289.0" />
+      <point x="6250.986111111112" y="289.0" />
+      <point x="80.0" y="72.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.RegistraceController" target="cz.app.restauracka.demo.Funkce.Numeric">
+      <point x="131.54166666666663" y="-347.0" />
+      <point x="1858.5139356000186" y="1429.0" />
+      <point x="3286.9306022666856" y="1429.0" />
+      <point x="-48.5" y="27.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.MainController" target="cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavek">
+      <point x="219.1199999999999" y="-622.5" />
+      <point x="4493.659275416498" y="2493.0" />
+      <point x="5978.486111111112" y="2493.0" />
+      <point x="5978.486111111112" y="289.0" />
+      <point x="6122.986111111112" y="289.0" />
+      <point x="-48.0" y="72.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.MainController" target="cz.app.restauracka.demo.UI.LoginController">
+      <point x="199.19999999999982" y="622.5" />
+      <point x="4473.739275416498" y="3838.0" />
+      <point x="2999.3392754164975" y="3838.0" />
+      <point x="100.09999999999991" y="-182.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.RegistraceController" target="cz.app.restauracka.demo.UI.MainController">
+      <point x="90.20000000000005" y="347.0" />
+      <point x="1817.1722689333521" y="2473.0" />
+      <point x="4075.339275416497" y="2473.0" />
+      <point x="-199.20000000000027" y="-622.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.LoginController" target="cz.app.restauracka.demo.UI.LoginController">
+      <point x="0.0" y="182.5" />
+      <point x="2899.2392754164975" y="4253.0" />
+      <point x="2736.2392754164975" y="4253.0" />
+      <point x="2736.2392754164975" y="4050.5" />
+      <point x="-143.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.zam.ZamestnanciDatovyManagerTest" target="cz.app.restauracka.demo.logika.zam.Zamestnanci">
+      <point x="-120.0" y="-93.5" />
+      <point x="1786.263935600019" y="1064.0" />
+      <point x="1626.6528244889078" y="1064.0" />
+      <point x="86.88888888888891" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.PridejJidloController" target="cz.app.restauracka.demo.logika.Data.UlozDataMenu">
+      <point x="0.0" y="-270.0" />
+      <point x="3416.0392754164973" y="1489.0" />
+      <point x="4322.76145092759" y="1489.0" />
+      <point x="68.0" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.PridejJidloController" target="cz.app.restauracka.demo.Funkce.Numeric">
+      <point x="-86.66666666666697" y="-270.0" />
+      <point x="3329.3726087498303" y="1429.0" />
+      <point x="3383.9306022666856" y="1429.0" />
+      <point x="48.5" y="27.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.core.GUI_START" target="cz.app.restauracka.demo.core.RUN_CORE">
+      <point x="-125.33333333333326" y="-61.0" />
+      <point x="82.66666666666697" y="2503.0" />
+      <point x="122.70838004446341" y="2503.0" />
+      <point x="-41.5" y="27.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.NactiDataMenu" target="cz.app.restauracka.demo.logika.obj.MenuJidla">
+      <point x="51.0" y="-61.0" />
+      <point x="4556.430555555557" y="671.0" />
+      <point x="4564.708333333334" y="671.0" />
+      <point x="-62.222222222222626" y="83.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.RegistraceController" target="cz.app.restauracka.demo.UI.RegistraceController">
+      <point x="-180.4000000000001" y="347.0" />
+      <point x="1546.572268933352" y="2283.0" />
+      <point x="1481.472268933352" y="2283.0" />
+      <point x="1481.472268933352" y="1916.0" />
+      <point x="-225.5" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.MainController" target="cz.app.restauracka.demo.logika.obj.Jidlo">
+      <point x="139.44000000000005" y="-622.5" />
+      <point x="4413.979275416497" y="2413.0" />
+      <point x="5426.486111111112" y="2413.0" />
+      <point x="5426.486111111112" y="279.0" />
+      <point x="4979.038742690059" y="279.0" />
+      <point x="58.94736842105249" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.Objednavky" target="cz.app.restauracka.demo.logika.obj.ObjednaneJidlo">
+      <point x="-65.14285714285688" y="-116.5" />
+      <point x="5630.843253968255" y="611.0" />
+      <point x="5287.486111111112" y="611.0" />
+      <point x="148.5" y="94.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.PridejJidloController" target="cz.app.restauracka.demo.UI.MainController">
+      <point x="156.0" y="270.0" />
+      <point x="3572.0392754164973" y="2383.0" />
+      <point x="4254.619275416497" y="2383.0" />
+      <point x="-19.920000000000073" y="-622.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.LoginController" target="cz.app.restauracka.demo.logika.zam.Zamestnanci">
+      <point x="-14.299999999999955" y="-182.5" />
+      <point x="2884.9392754164974" y="3808.0" />
+      <point x="1325.5" y="3808.0" />
+      <point x="1325.5" y="1054.0" />
+      <point x="1496.3194911555747" y="1054.0" />
+      <point x="-43.44444444444434" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.Funkce.IDChecker" target="cz.app.restauracka.demo.Funkce.IDChecker">
+      <point x="-79.33333333333331" y="127.5" />
+      <point x="3512.097268933352" y="1359.0" />
+      <point x="3452.4306022666856" y="1359.0" />
+      <point x="3452.4306022666856" y="1211.5" />
+      <point x="-119.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.Objednavky" target="cz.app.restauracka.demo.logika.obj.MenuJidla">
+      <point x="-195.42857142857156" y="-116.5" />
+      <point x="5500.557539682541" y="631.0" />
+      <point x="4751.375000000001" y="631.0" />
+      <point x="124.44444444444434" y="83.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavekManager" target="cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavekManager">
+      <point x="-176.0" y="61.0" />
+      <point x="6336.986111111112" y="516.0" />
+      <point x="6272.986111111112" y="516.0" />
+      <point x="6272.986111111112" y="435.0" />
+      <point x="-220.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.UlozDataMenu" target="cz.app.restauracka.demo.logika.obj.MenuJidla">
+      <point x="0.0" y="-61.0" />
+      <point x="4254.76145092759" y="1004.0" />
+      <point x="4625.986111111112" y="1004.0" />
+      <point x="4625.986111111112" y="671.0" />
+      <point x="4595.819444444445" y="671.0" />
+      <point x="-31.111111111111313" y="83.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.ovladac.OvladacZam" target="cz.app.restauracka.demo.logika.zam.Zamestnanec">
+      <point x="-72.125" y="-50.0" />
+      <point x="686.375" y="1064.0" />
+      <point x="817.3333800444634" y="1064.0" />
+      <point x="817.3333800444634" y="641.0" />
+      <point x="1378.3690949630727" y="641.0" />
+      <point x="-98.19999999999982" y="116.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.ObjednavkyTest" target="cz.app.restauracka.demo.logika.obj.Jidlo">
+      <point x="100.44999999999982" y="-82.5" />
+      <point x="5269.169830972052" y="2473.0" />
+      <point x="5934.486111111112" y="2473.0" />
+      <point x="5934.486111111112" y="249.0" />
+      <point x="5014.4071637426905" y="249.0" />
+      <point x="94.31578947368416" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.PridejJidloController" target="cz.app.restauracka.demo.logika.obj.Jidlo">
+      <point x="86.66666666666697" y="-270.0" />
+      <point x="3502.7059420831642" y="1509.0" />
+      <point x="4617.289275416497" y="1509.0" />
+      <point x="4617.289275416497" y="1034.0" />
+      <point x="4914.986111111112" y="1034.0" />
+      <point x="4914.986111111112" y="299.0" />
+      <point x="4920.091374269006" y="299.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.NactiDataObjednavek" target="cz.app.restauracka.demo.logika.obj.ObjednaneJidlo">
+      <point x="-54.75" y="-61.0" />
+      <point x="5251.736111111112" y="671.0" />
+      <point x="5221.486111111112" y="671.0" />
+      <point x="82.5" y="94.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.Funkce.IDChecker" target="cz.app.restauracka.demo.logika.obj.Jidlo">
+      <point x="14.875000000000455" y="-127.5" />
+      <point x="3606.305602266686" y="974.0" />
+      <point x="3761.8402777777783" y="974.0" />
+      <point x="3761.8402777777783" y="249.0" />
+      <point x="4849.354532163743" y="249.0" />
+      <point x="-70.73684210526335" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.NactiDataZamestnancu" target="cz.app.restauracka.demo.logika.zam.Zamestnanci">
+      <point x="57.0" y="-61.0" />
+      <point x="1258.0" y="1044.0" />
+      <point x="1452.8750467111304" y="1044.0" />
+      <point x="-86.88888888888891" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.ovladac.OvladacData" target="cz.app.restauracka.demo.logika.Data.NactiDataStolu">
+      <point x="-29.0" y="-105.0" />
+      <point x="2504.0392754164973" y="1379.0" />
+      <point x="2346.4306022666856" y="1379.0" />
+      <point x="51.0" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.Funkce.IDChecker" target="cz.app.restauracka.demo.logika.zam.Zamestnanci">
+      <point x="-104.12499999999955" y="-127.5" />
+      <point x="3487.305602266686" y="1034.0" />
+      <point x="1713.541713377797" y="1034.0" />
+      <point x="173.77777777777783" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.NactiDataStolu" target="cz.app.restauracka.demo.logika.obj.Stul">
+      <point x="-51.0" y="-61.0" />
+      <point x="2244.4306022666856" y="1044.0" />
+      <point x="2432.4354582312026" y="1044.0" />
+      <point x="2432.4354582312026" y="651.0" />
+      <point x="2935.5904117801338" y="651.0" />
+      <point x="-23.27272727272748" y="50.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.TvorbaEntitTest" target="cz.app.restauracka.demo.logika.obj.Stul">
+      <point x="57.14285714285688" y="-49.5" />
+      <point x="2379.0783153740595" y="641.0" />
+      <point x="2923.9540481437703" y="641.0" />
+      <point x="-34.90909090909099" y="50.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.MainController" target="cz.app.restauracka.demo.UI.MainController">
+      <point x="-199.2" y="622.5" />
+      <point x="4075.3392754164975" y="3788.0" />
+      <point x="4005.5392754164973" y="3788.0" />
+      <point x="4005.5392754164973" y="3145.5" />
+      <point x="-249.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.MainController" target="cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavekManager">
+      <point x="239.03999999999996" y="-622.5" />
+      <point x="4513.579275416498" y="2503.0" />
+      <point x="6512.986111111112" y="2503.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.Funkce.IDChecker" target="cz.app.restauracka.demo.logika.obj.Objednavky">
+      <point x="104.12500000000045" y="-127.5" />
+      <point x="3695.555602266686" y="1054.0" />
+      <point x="5565.700396825398" y="1054.0" />
+      <point x="-130.28571428571468" y="116.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.DatovyManagerJidlaTest" target="cz.app.restauracka.demo.logika.obj.Jidlo">
+      <point x="30.75" y="-49.5" />
+      <point x="4812.236111111112" y="671.0" />
+      <point x="4837.486111111112" y="671.0" />
+      <point x="4837.486111111112" y="289.0" />
+      <point x="4896.5124269005855" y="289.0" />
+      <point x="-23.578947368420813" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.MainController" target="cz.app.restauracka.demo.logika.Data.NactiDataObjednavek">
+      <point x="119.51999999999998" y="-622.5" />
+      <point x="4394.059275416497" y="2403.0" />
+      <point x="5361.236111111112" y="2403.0" />
+      <point x="54.75" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.RegistraceController" target="cz.app.restauracka.demo.logika.ovladac.OvladacZam">
+      <point x="-93.95833333333337" y="-347.0" />
+      <point x="1633.0139356000186" y="1519.0" />
+      <point x="902.75" y="1519.0" />
+      <point x="144.25" y="50.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.UlozDataObjednavek" target="cz.app.restauracka.demo.logika.Data.UlozDataObjednavek">
+      <point x="-52.5" y="61.0" />
+      <point x="5643.26145092759" y="1292.5" />
+      <point x="5570.76145092759" y="1292.5" />
+      <point x="5570.76145092759" y="1211.5" />
+      <point x="-105.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.core.GUI_START" target="cz.app.restauracka.demo.core.GUI_START">
+      <point x="-125.33333333333348" y="61.0" />
+      <point x="82.66666666666652" y="3226.5" />
+      <point x="0.0" y="3226.5" />
+      <point x="0.0" y="3145.5" />
+      <point x="-188.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.core.GUI_START" target="cz.app.restauracka.demo.UI.LoginController">
+      <point x="125.33333333333303" y="61.0" />
+      <point x="333.33333333333303" y="3838.0" />
+      <point x="2799.139275416497" y="3838.0" />
+      <point x="-100.10000000000014" y="-182.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.VarovaniController" target="cz.app.restauracka.demo.UI.VarovaniController">
+      <point x="-115.71428571428578" y="94.5" />
+      <point x="2700.7163165524" y="1326.0" />
+      <point x="2661.4306022666856" y="1326.0" />
+      <point x="2661.4306022666856" y="1211.5" />
+      <point x="-135.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.ObjednaneJidlo" target="cz.app.restauracka.demo.logika.obj.ObjednaneJidlo">
+      <point x="-148.5" y="94.0" />
+      <point x="4990.486111111112" y="549.0" />
+      <point x="4953.986111111112" y="549.0" />
+      <point x="4953.986111111112" y="435.0" />
+      <point x="-165.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.RegistraceController" target="cz.app.restauracka.demo.logika.Data.UlozDataZamestnancu">
+      <point x="-56.375" y="-347.0" />
+      <point x="1670.597268933352" y="1509.0" />
+      <point x="1495.3125" y="1509.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.MenuJidla" target="cz.app.restauracka.demo.logika.obj.MenuJidla">
+      <point x="-124.44444444444446" y="83.0" />
+      <point x="4502.486111111112" y="538.0" />
+      <point x="4466.930555555557" y="538.0" />
+      <point x="4466.930555555557" y="435.0" />
+      <point x="-140.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.zam.Zamestnanec" target="cz.app.restauracka.demo.logika.zam.Zamestnanec">
+      <point x="-229.1333333333332" y="116.0" />
+      <point x="1247.4357616297393" y="571.0" />
+      <point x="1211.0690949630725" y="571.0" />
+      <point x="1211.0690949630725" y="435.0" />
+      <point x="-245.5" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.zam.Zamestnanci" target="cz.app.restauracka.demo.logika.zam.Zamestnanci">
+      <point x="-173.77777777777783" y="94.5" />
+      <point x="1365.9861578222412" y="922.0" />
+      <point x="1324.263935600019" y="922.0" />
+      <point x="1324.263935600019" y="807.5" />
+      <point x="-195.5" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.Objednavky" target="cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavekManager">
+      <point x="195.42857142857156" y="-116.5" />
+      <point x="5891.414682539684" y="671.0" />
+      <point x="6424.986111111112" y="671.0" />
+      <point x="-88.0" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.RegistraceController" target="cz.app.restauracka.demo.logika.ovladac.OvladacHash">
+      <point x="206.70833333333337" y="-347.0" />
+      <point x="1933.6806022666856" y="1459.0" />
+      <point x="3952.76145092759" y="1459.0" />
+      <point x="-53.0" y="27.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.ovladac.OvladacZam" target="cz.app.restauracka.demo.logika.Pozice">
+      <point x="-216.375" y="-50.0" />
+      <point x="542.125" y="1064.0" />
+      <point x="428.5" y="1064.0" />
+      <point x="428.5" y="289.0" />
+      <point x="1379.9021825396826" y="289.0" />
+      <point x="-14.571428571428442" y="60.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.NactiDataStolu" target="cz.app.restauracka.demo.logika.obj.Stoly">
+      <point x="51.0" y="-61.0" />
+      <point x="2346.4306022666856" y="1054.0" />
+      <point x="2904.502030838114" y="1054.0" />
+      <point x="-57.42857142857156" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.RegistraceController" target="cz.app.restauracka.demo.UI.VarovaniController">
+      <point x="56.375" y="-347.0" />
+      <point x="1783.347268933352" y="1409.0" />
+      <point x="2739.2877451238282" y="1409.0" />
+      <point x="-77.14285714285714" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.LoginController" target="cz.app.restauracka.demo.logika.zam.Zamestnanec">
+      <point x="-71.5" y="-182.5" />
+      <point x="2827.7392754164975" y="3828.0" />
+      <point x="406.5" y="3828.0" />
+      <point x="406.5" y="611.0" />
+      <point x="1280.1690949630724" y="611.0" />
+      <point x="-196.4000000000001" y="116.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.UlozDataStolu" target="cz.app.restauracka.demo.logika.obj.Stoly">
+      <point x="0.0" y="-61.0" />
+      <point x="2539.4306022666856" y="1064.0" />
+      <point x="2933.2163165524" y="1064.0" />
+      <point x="-28.71428571428578" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.NactiDataZamestnancu" target="cz.app.restauracka.demo.logika.zam.Zamestnanec">
+      <point x="-57.0" y="-61.0" />
+      <point x="1144.0" y="661.0" />
+      <point x="1443.835761629739" y="661.0" />
+      <point x="-32.733333333333576" y="116.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.Objednavky" target="cz.app.restauracka.demo.logika.obj.Objednavky">
+      <point x="-195.42857142857133" y="116.5" />
+      <point x="5500.557539682541" y="944.0" />
+      <point x="5447.986111111112" y="944.0" />
+      <point x="5447.986111111112" y="807.5" />
+      <point x="-228.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.ObjednaneJidlo" target="cz.app.restauracka.demo.logika.obj.Jidlo">
+      <point x="82.5" y="-94.0" />
+      <point x="5221.486111111112" y="289.0" />
+      <point x="4967.249269005849" y="289.0" />
+      <point x="47.157894736842536" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.zam.ZamestnanciDatovyManagerTest" target="cz.app.restauracka.demo.logika.Pozice">
+      <point x="120.0" y="-93.5" />
+      <point x="2026.263935600019" y="1064.0" />
+      <point x="2211.4354582312026" y="1064.0" />
+      <point x="2211.4354582312026" y="289.0" />
+      <point x="1423.6164682539684" y="289.0" />
+      <point x="29.142857142857338" y="60.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.ovladac.OvladacData" target="cz.app.restauracka.demo.logika.ovladac.OvladacData">
+      <point x="-116.0" y="105.0" />
+      <point x="2417.0392754164973" y="2041.0" />
+      <point x="2339.0392754164973" y="2041.0" />
+      <point x="2339.0392754164973" y="1916.0" />
+      <point x="-174.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.MainController" target="cz.app.restauracka.demo.UI.RegistraceController">
+      <point x="-219.12000000000035" y="-622.5" />
+      <point x="4055.419275416497" y="2483.0" />
+      <point x="1726.972268933352" y="2483.0" />
+      <point x="0.0" y="347.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.MainController" target="cz.app.restauracka.demo.logika.obj.ObjednaneJidlo">
+      <point x="19.920000000000073" y="-622.5" />
+      <point x="4294.459275416497" y="2353.0" />
+      <point x="4404.289275416497" y="2353.0" />
+      <point x="4404.289275416497" y="1539.0" />
+      <point x="4964.486111111112" y="1539.0" />
+      <point x="4964.486111111112" y="651.0" />
+      <point x="5056.486111111112" y="651.0" />
+      <point x="-82.5" y="94.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavekManagerTest" target="cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavek">
+      <point x="40.875" y="-49.5" />
+      <point x="6743.26145092759" y="671.0" />
+      <point x="6771.048611111112" y="671.0" />
+      <point x="6771.048611111112" y="279.0" />
+      <point x="6282.986111111112" y="279.0" />
+      <point x="112.0" y="72.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.VarovaniController" target="cz.app.restauracka.demo.UI.MainController">
+      <point x="38.571428571428555" y="94.5" />
+      <point x="2855.002030838114" y="2433.0" />
+      <point x="4155.019275416497" y="2433.0" />
+      <point x="-119.51999999999998" y="-622.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.Funkce.IDChecker" target="cz.app.restauracka.demo.logika.zam.Zamestnanec">
+      <point x="-74.37499999999955" y="-127.5" />
+      <point x="3517.055602266686" y="1024.0" />
+      <point x="2200.4354582312026" y="1024.0" />
+      <point x="2200.4354582312026" y="631.0" />
+      <point x="1640.2357616297395" y="631.0" />
+      <point x="163.66666666666697" y="116.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.RegistraceController" target="cz.app.restauracka.demo.logika.zam.Zamestnanci">
+      <point x="-18.79166666666697" y="-347.0" />
+      <point x="1708.1806022666851" y="1499.0" />
+      <point x="1615.3125" y="1499.0" />
+      <point x="1615.3125" y="1064.0" />
+      <point x="1583.2083800444634" y="1064.0" />
+      <point x="43.44444444444434" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.UlozDataStolu" target="cz.app.restauracka.demo.logika.Data.UlozDataStolu">
+      <point x="-51.0" y="61.0" />
+      <point x="2488.4306022666856" y="1292.5" />
+      <point x="2417.4306022666856" y="1292.5" />
+      <point x="2417.4306022666856" y="1211.5" />
+      <point x="-102.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.UlozDataZamestnancu" target="cz.app.restauracka.demo.logika.Data.UlozDataZamestnancu">
+      <point x="-73.0" y="61.0" />
+      <point x="1422.3125" y="1292.5" />
+      <point x="1365.8125" y="1292.5" />
+      <point x="1365.8125" y="1211.5" />
+      <point x="-109.5" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.ObjednavkyTest" target="cz.app.restauracka.demo.logika.obj.ObjednaneJidlo">
+      <point x="14.350000000000364" y="-82.5" />
+      <point x="5183.069830972053" y="2393.0" />
+      <point x="5166.486111111112" y="2393.0" />
+      <point x="5166.486111111112" y="671.0" />
+      <point x="5188.486111111112" y="671.0" />
+      <point x="49.5" y="94.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.NactiDataZamestnancu" target="cz.app.restauracka.demo.logika.Data.NactiDataZamestnancu">
+      <point x="-57.0" y="61.0" />
+      <point x="1144.0" y="1292.5" />
+      <point x="1067.0" y="1292.5" />
+      <point x="1067.0" y="1211.5" />
+      <point x="-114.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.PridejJidloController" target="cz.app.restauracka.demo.UI.PridejJidloController">
+      <point x="-156.0" y="270.0" />
+      <point x="3260.0392754164973" y="2206.0" />
+      <point x="3201.0392754164973" y="2206.0" />
+      <point x="3201.0392754164973" y="1916.0" />
+      <point x="-195.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.DatovyManagerJidlaTest" target="cz.app.restauracka.demo.logika.obj.MenuJidla">
+      <point x="-92.25" y="-49.5" />
+      <point x="62.222222222222626" y="83.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.Stul" target="cz.app.restauracka.demo.logika.obj.Stul">
+      <point x="-58.181818181818244" y="50.0" />
+      <point x="2900.6813208710428" y="505.0" />
+      <point x="2874.8631390528612" y="505.0" />
+      <point x="2874.8631390528612" y="435.0" />
+      <point x="-64.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.RegistraceController" target="cz.app.restauracka.demo.logika.Pozice">
+      <point x="-206.70833333333348" y="-347.0" />
+      <point x="1520.2639356000186" y="1549.0" />
+      <point x="384.5" y="1549.0" />
+      <point x="384.5" y="269.0" />
+      <point x="1350.7593253968253" y="269.0" />
+      <point x="-43.71428571428578" y="60.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.Funkce.IDChecker" target="cz.app.restauracka.demo.logika.obj.Stoly">
+      <point x="-44.624999999999545" y="-127.5" />
+      <point x="3546.805602266686" y="1014.0" />
+      <point x="3048.073459409543" y="1014.0" />
+      <point x="86.14285714285734" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.MainController" target="cz.app.restauracka.demo.logika.ovladac.OvladacData">
+      <point x="-159.36000000000013" y="-622.5" />
+      <point x="4115.179275416497" y="2453.0" />
+      <point x="2649.0392754164973" y="2453.0" />
+      <point x="116.0" y="105.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.Stoly" target="cz.app.restauracka.demo.logika.obj.Stul">
+      <point x="-50.25" y="-61.0" />
+      <point x="2911.6806022666856" y="661.0" />
+      <point x="2947.2267754164977" y="661.0" />
+      <point x="-11.636363636363512" y="50.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.MenuJidla" target="cz.app.restauracka.demo.logika.obj.Jidlo">
+      <point x="-70.0" y="-83.0" />
+      <point x="4556.930555555557" y="269.0" />
+      <point x="4872.933479532164" y="269.0" />
+      <point x="-47.157894736842536" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.ovladac.OvladacData" target="cz.app.restauracka.demo.logika.Data.NactiDataZamestnancu">
+      <point x="-145.0" y="-105.0" />
+      <point x="2388.0392754164973" y="1399.0" />
+      <point x="1258.0" y="1399.0" />
+      <point x="57.0" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.core.RUN_CORE" target="cz.app.restauracka.demo.core.GUI_START">
+      <point x="41.5" y="27.5" />
+      <point x="205.7083800444634" y="2503.0" />
+      <point x="208.0" y="2503.0" />
+      <point x="0.0" y="-61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.ovladac.OvladacData" target="cz.app.restauracka.demo.logika.Data.UlozDataZamestnancu">
+      <point x="-87.0" y="-105.0" />
+      <point x="2446.0392754164973" y="1389.0" />
+      <point x="1568.3125" y="1389.0" />
+      <point x="73.0" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.MainController" target="cz.app.restauracka.demo.logika.Data.UlozDataObjednavek">
+      <point x="179.2800000000002" y="-622.5" />
+      <point x="4453.8192754164975" y="2433.0" />
+      <point x="5748.26145092759" y="2433.0" />
+      <point x="52.5" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.DatovyManagerStolyTest" target="cz.app.restauracka.demo.logika.obj.Stoly">
+      <point x="-30.75" y="-71.5" />
+      <point x="3064.6806022666856" y="1064.0" />
+      <point x="3019.359173695257" y="1064.0" />
+      <point x="57.42857142857156" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.Objednavky" target="cz.app.restauracka.demo.logika.obj.Jidlo">
+      <point x="0.0" y="-116.5" />
+      <point x="5695.986111111112" y="259.0" />
+      <point x="5002.61769005848" y="259.0" />
+      <point x="82.5263157894733" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.TvorbaEntitTest" target="cz.app.restauracka.demo.logika.Pozice">
+      <point x="-28.57142857142844" y="-49.5" />
+      <point x="2293.364029659774" y="601.0" />
+      <point x="2225.0426010883452" y="601.0" />
+      <point x="2225.0426010883452" y="279.0" />
+      <point x="1438.1878968253968" y="279.0" />
+      <point x="43.71428571428578" y="60.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.MainController" target="cz.app.restauracka.demo.logika.obj.Stoly">
+      <point x="-99.60000000000036" y="-622.5" />
+      <point x="4174.9392754164965" y="2423.0" />
+      <point x="2961.9306022666856" y="2423.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.zam.Zamestnanci" target="cz.app.restauracka.demo.logika.zam.Zamestnanec">
+      <point x="-97.75" y="-94.5" />
+      <point x="1442.013935600019" y="671.0" />
+      <point x="1476.5690949630725" y="671.0" />
+      <point x="0.0" y="116.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.TvorbaEntitTest" target="cz.app.restauracka.demo.logika.obj.Jidlo">
+      <point x="85.71428571428532" y="-49.5" />
+      <point x="2407.649743945488" y="671.0" />
+      <point x="3033.3631390528612" y="671.0" />
+      <point x="3033.3631390528612" y="239.0" />
+      <point x="4837.565058479533" y="239.0" />
+      <point x="-82.5263157894733" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.ObjednavkyTest" target="cz.app.restauracka.demo.Funkce.ActualTime">
+      <point x="-100.44999999999982" y="-82.5" />
+      <point x="5068.269830972053" y="2323.0" />
+      <point x="4707.539275416497" y="2323.0" />
+      <point x="17.25" y="38.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.MainController" target="cz.app.restauracka.demo.logika.obj.MenuJidla">
+      <point x="0.0" y="-622.5" />
+      <point x="4274.539275416497" y="2343.0" />
+      <point x="4378.26145092759" y="2343.0" />
+      <point x="4378.26145092759" y="1024.0" />
+      <point x="4647.986111111112" y="1024.0" />
+      <point x="4647.986111111112" y="671.0" />
+      <point x="4658.041666666668" y="671.0" />
+      <point x="31.111111111111313" y="83.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.PridejJidloController" target="cz.app.restauracka.demo.logika.obj.MenuJidla">
+      <point x="43.33333333333303" y="-270.0" />
+      <point x="3459.3726087498303" y="1499.0" />
+      <point x="4367.26145092759" y="1499.0" />
+      <point x="4367.26145092759" y="1014.0" />
+      <point x="4636.986111111112" y="1014.0" />
+      <point x="4636.986111111112" y="661.0" />
+      <point x="4626.930555555557" y="661.0" />
+      <point x="0.0" y="83.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.PridejJidloController" target="cz.app.restauracka.demo.UI.VarovaniController">
+      <point x="-130.0" y="-270.0" />
+      <point x="3286.0392754164973" y="1409.0" />
+      <point x="2932.1448879809714" y="1409.0" />
+      <point x="115.71428571428567" y="94.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.Funkce.IDChecker" target="cz.app.restauracka.demo.logika.obj.Stul">
+      <point x="-14.874999999999545" y="-127.5" />
+      <point x="3576.555602266686" y="964.0" />
+      <point x="3750.8402777777783" y="964.0" />
+      <point x="3750.8402777777783" y="631.0" />
+      <point x="2993.7722299619522" y="631.0" />
+      <point x="34.90909090909099" y="50.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.NactiDataStolu" target="cz.app.restauracka.demo.logika.Data.NactiDataStolu">
+      <point x="-51.0" y="61.0" />
+      <point x="2244.4306022666856" y="1292.5" />
+      <point x="2173.4306022666856" y="1292.5" />
+      <point x="2173.4306022666856" y="1211.5" />
+      <point x="-102.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.UlozDataObjednavek" target="cz.app.restauracka.demo.logika.obj.Objednavky">
+      <point x="0.0" y="-61.0" />
+      <point x="0.0" y="116.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.RegistraceController" target="cz.app.restauracka.demo.logika.zam.Zamestnanec">
+      <point x="18.791666666666515" y="-347.0" />
+      <point x="1745.763935600019" y="661.0" />
+      <point x="1542.0357616297392" y="661.0" />
+      <point x="65.4666666666667" y="116.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.Objednavky" target="cz.app.restauracka.demo.logika.obj.ZobrazovacObjednavek">
+      <point x="130.28571428571468" y="-116.5" />
+      <point x="5826.271825396827" y="661.0" />
+      <point x="5967.486111111112" y="661.0" />
+      <point x="5967.486111111112" y="279.0" />
+      <point x="6090.986111111112" y="279.0" />
+      <point x="-80.0" y="72.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.UI.MainController" target="cz.app.restauracka.demo.Funkce.ActualTime">
+      <point x="59.76000000000022" y="-622.5" />
+      <point x="4334.299275416497" y="2373.0" />
+      <point x="4638.539275416497" y="2373.0" />
+      <point x="-51.75" y="38.5" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.obj.DatovyManagerStolyTest" target="cz.app.restauracka.demo.logika.obj.Stul">
+      <point x="92.25" y="-71.5" />
+      <point x="3187.6806022666856" y="1064.0" />
+      <point x="3405.5563208710428" y="1064.0" />
+      <point x="3405.5563208710428" y="641.0" />
+      <point x="2982.1358663255887" y="641.0" />
+      <point x="23.27272727272748" y="50.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.UlozDataMenu" target="cz.app.restauracka.demo.logika.Data.UlozDataMenu">
+      <point x="-68.0" y="61.0" />
+      <point x="4186.76145092759" y="1292.5" />
+      <point x="4132.76145092759" y="1292.5" />
+      <point x="4132.76145092759" y="1211.5" />
+      <point x="-102.0" y="-0.0" />
+    </edge>
+    <edge source="cz.app.restauracka.demo.logika.Data.NactiDataObjednavek" target="cz.app.restauracka.demo.logika.obj.Objednavky">
+      <point x="54.75" y="-61.0" />
+      <point x="5361.236111111112" y="1064.0" />
+      <point x="5630.843253968255" y="1064.0" />
+      <point x="-65.14285714285688" y="116.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="3019.5" y="2994.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
