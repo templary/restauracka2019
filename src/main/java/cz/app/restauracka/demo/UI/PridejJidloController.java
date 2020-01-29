@@ -2,6 +2,7 @@ package cz.app.restauracka.demo.UI;
 
 
 import cz.app.restauracka.demo.Funkce.IDChecker;
+import cz.app.restauracka.demo.Funkce.Numeric;
 import cz.app.restauracka.demo.logika.Data.UlozDataMenu;
 import cz.app.restauracka.demo.logika.obj.Jidlo;
 import cz.app.restauracka.demo.logika.obj.MenuJidla;
@@ -40,6 +41,8 @@ public class PridejJidloController implements Initializable {
     MenuJidla menuJidla;
     @Autowired
     IDChecker idChecker;
+    @Autowired
+    Numeric numeric;
 
 
     @FXML
@@ -84,12 +87,14 @@ public class PridejJidloController implements Initializable {
 
     @FXML
     private void handleButtonVytvor(ActionEvent actionEvent) {
-        if (1 == 1) { //TODO dodělat ověření!!!!
-            String nazev = vytvorJidloNazev.getText();
-            String popis = vytvorJidloPopis.getText();
-            int cena = Integer.parseInt(vytvorJidloCena.getText()); //TODO overeni jestli je to int
+        String nazev = vytvorJidloNazev.getText();
+        String popis = vytvorJidloPopis.getText();
+        String cena = vytvorJidloCena.getText();
+
+        if (!nazev.isEmpty() && !popis.isEmpty() && !cena.isEmpty() && numeric.jeCislo(cena)) {
+            int cenaInt = Integer.parseInt(vytvorJidloCena.getText());
             idChecker.setId();
-            Jidlo jidlo = new Jidlo(nazev, idChecker.getProperIDJidlo(), popis, cena);
+            Jidlo jidlo = new Jidlo(nazev, idChecker.getProperIDJidlo(), popis, cenaInt);
             menuJidla.vlozJidloDoMenu(jidlo);
             ulozDataMenu.saveData();
             zobrazJidla();

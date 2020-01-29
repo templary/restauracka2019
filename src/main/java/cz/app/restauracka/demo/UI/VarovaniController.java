@@ -10,6 +10,7 @@ import net.rgielen.fxweaver.core.FxWeaver;
 import net.rgielen.fxweaver.core.FxmlView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import sun.applet.Main;
 
 @Component
 @FxmlView("varovani-window.fxml")
@@ -31,7 +32,7 @@ public class VarovaniController {
     private void startRegistrace() {
         Stage stage = (Stage) buttonVarovaniOK.getScene().getWindow();
 
-        Scene scene = new Scene(this.fxWeaver.loadView(RegistraceController.class));
+        Scene scene = new Scene(this.fxWeaver.loadView(MainController.class));
         stage.setScene(scene);
         stage.setTitle("Register Form");
         stage.show();

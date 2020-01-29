@@ -1,6 +1,7 @@
 package cz.app.restauracka.demo.UI;
 
 import cz.app.restauracka.demo.Funkce.IDChecker;
+import cz.app.restauracka.demo.Funkce.Numeric;
 import cz.app.restauracka.demo.logika.Data.UlozDataZamestnancu;
 import cz.app.restauracka.demo.logika.Pozice;
 import cz.app.restauracka.demo.logika.ovladac.OvladacHash;
@@ -44,6 +45,8 @@ public class RegistraceController implements Initializable {
     OvladacHash ovladacHash;
     @Autowired
     IDChecker idChecker;
+    @Autowired
+    Numeric numeric;
 
 
     @FXML
@@ -92,22 +95,21 @@ public class RegistraceController implements Initializable {
         registraceTelefon.setText("");
     }
 
-    private Boolean overeniVstupu() {
-        //TODO - dodělat ověření.
-        return registraceJmeno.getText() == null && registracePrijmeni.getText() == null && registraceNick.getText() == null && registraceTelefon.getText() == null && registraceMail.getText() == null && registraceHeslo.getText() == null;
-    }
 
     @FXML
     private void handleButtonVytvor(ActionEvent actionEvent) {
-        if (1 == 1) { //TODO dodělat ověření!!!!
-            String jmeno = registraceJmeno.getText();
-            String prijmeni = registracePrijmeni.getText();
-            String nick = registraceNick.getText();
-            String telefon = registraceTelefon.getText();
-            String mail = registraceMail.getText();
-            String heslo = registraceHeslo.getText();
-            String shaHeslo = ovladacHash.sha512hash(heslo);
-            Pozice pozice = registracePozice.getValue();
+        String jmeno = registraceJmeno.getText();
+        String prijmeni = registracePrijmeni.getText();
+        String nick = registraceNick.getText();
+        String telefon = registraceTelefon.getText();
+        String mail = registraceMail.getText();
+        String heslo = registraceHeslo.getText();
+        String shaHeslo = ovladacHash.sha512hash(heslo);
+        Pozice pozice = registracePozice.getValue();
+        //TODO pokud uživatel udělá chybu, vrátit ho na stejnou obrazovku a vyplnit mu vše co vyplnil špatně.
+
+        if (!jmeno.isEmpty() && !prijmeni.isEmpty() && !nick.isEmpty() && !telefon.isEmpty() && !mail.isEmpty() && !heslo.isEmpty() && ovladacZam.checkUniqueNick(nick) && numeric.jeCislo(telefon) ){ //TODO dodělat overeni vybrani pozice.
+
             idChecker.setId();
             int idZam = idChecker.getProperIDZamestnanec();
 
@@ -119,7 +121,6 @@ public class RegistraceController implements Initializable {
             varovaniController.setVarovaniText("Chybně zadané parametry zaměstnance");
 
         }
-        //startMain();
     }
 
     @FXML
@@ -132,9 +133,6 @@ public class RegistraceController implements Initializable {
         startMain();
     }
 
-    private ObservableList<String> listSetter(Set<String> stringSet) {
-        return FXCollections.observableArrayList(stringSet);
-    }
 
     private void zobrazZamestnance() {
         registraceTabulkaJmeno.setCellValueFactory(new PropertyValueFactory<>("Jmeno"));
