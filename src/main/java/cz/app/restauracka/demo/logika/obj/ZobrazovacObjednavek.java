@@ -1,10 +1,10 @@
 package cz.app.restauracka.demo.logika.obj;
 
 public class ZobrazovacObjednavek {
-    private String nazevJidla;
-    private int mnozstviJidla;
-    private int cenaZaJednotku;
-    private int celkovaCena;
+    private final String nazevJidla;
+    private final int mnozstviJidla;
+    private final int cenaZaJednotku;
+    private final int celkovaCena;
 
     public ZobrazovacObjednavek(String nazevJidla, int mnozstviJidla, int cenaZaJednotku, int celkovaCena) {
         this.nazevJidla = nazevJidla;

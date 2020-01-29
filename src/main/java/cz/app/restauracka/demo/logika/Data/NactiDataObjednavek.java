@@ -2,8 +2,6 @@ package cz.app.restauracka.demo.logika.Data;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import cz.app.restauracka.demo.logika.obj.Jidlo;
-import cz.app.restauracka.demo.logika.obj.MenuJidla;
 import cz.app.restauracka.demo.logika.obj.ObjednaneJidlo;
 import cz.app.restauracka.demo.logika.obj.Objednavky;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +20,7 @@ public class NactiDataObjednavek {
     @Autowired
     Objednavky objednavky;
 
-    private Gson gson = new Gson();
+    private final Gson gson = new Gson();
 
     public void loadData() {
 

@@ -16,58 +16,6 @@
         <ColumnConstraints hgrow="ALWAYS" maxWidth="Infinity" minWidth="200.0" prefWidth="200.0">
         </ColumnConstraints>
     </columnConstraints>
-    <children>
-
-        <!-- Add Header Label -->
-        <Label text="Registrace" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER"
-               GridPane.rowIndex="0" GridPane.rowSpan="1">
-            <font>
-                <Font name="Arial" size="24"/>
-            </font>
-            <GridPane.margin>
-                <Insets bottom="20" left="0" right="0" top="20"/>
-            </GridPane.margin>
-        </Label>
-
-
-        <!-- Add Name Label -->
-        <Label text="Jmeno:" GridPane.columnIndex="0" GridPane.rowIndex="1">
-        </Label>
-        <!-- Add Name Text Field -->
-        <TextField fx:id="registraceJmeno" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-
-
-        <!-- Add Email Label -->
-        <Label text="Příjmení:" GridPane.columnIndex="0" GridPane.rowIndex="2">
-        </Label>
-        <!-- Add Email Text Field -->
-        <TextField fx:id="registracePrijmeni" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-
-
-        <!-- Add Password Label -->
-        <Label text="Nick name" GridPane.columnIndex="0" GridPane.rowIndex="3">
-        </Label>
-        <!-- Add Password Field -->
-        <TextField fx:id="registraceNick" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-
-
-        <!-- Add Submit Button -->
-        <Button fx:id="buttonVytvor" alignment="CENTER" contentDisplay="RIGHT" defaultButton="true"
-                onAction="#handleButtonVytvor" prefHeight="28.0" prefWidth="71.0" text="Vytvořit"
-                GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.rowSpan="1">
-            <GridPane.margin>
-                <Insets bottom="20" left="0" right="0" top="20"/>
-            </GridPane.margin>
-        </Button>
-        <Label text="telefon:" GridPane.rowIndex="4"/>
-        <Label text="Heslo:" GridPane.rowIndex="6"/>
-        <Label text="mail:" GridPane.rowIndex="5"/>
-        <TextField fx:id="registraceTelefon" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
-        <TextField fx:id="registraceMail" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
-        <PasswordField fx:id="registraceHeslo" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
-        <Button fx:id="buttonZrusit" alignment="CENTER" contentDisplay="RIGHT" defaultButton="true"
-                onAction="#handleButtonZrusit" prefHeight="28.0" prefWidth="71.0" text="Zrušit" GridPane.rowIndex="7"/>
-    </children>
     <rowConstraints>
         <RowConstraints minHeight="10.0" prefHeight="30.0"/>
         <RowConstraints minHeight="10.0" prefHeight="30.0"/>
@@ -78,4 +26,54 @@
         <RowConstraints minHeight="10.0" prefHeight="30.0"/>
         <RowConstraints minHeight="10.0" prefHeight="30.0"/>
     </rowConstraints>
+
+    <!-- Add Header Label -->
+    <Label text="Registrace" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER"
+           GridPane.rowIndex="0" GridPane.rowSpan="1">
+        <font>
+            <Font name="Arial" size="24"/>
+        </font>
+        <GridPane.margin>
+            <Insets bottom="20" top="20"/>
+        </GridPane.margin>
+    </Label>
+
+
+    <!-- Add Name Label -->
+    <Label text="Jmeno:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+    </Label>
+    <!-- Add Name Text Field -->
+    <TextField fx:id="registraceJmeno" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+
+    <!-- Add Email Label -->
+    <Label text="Příjmení:" GridPane.columnIndex="0" GridPane.rowIndex="2">
+    </Label>
+    <!-- Add Email Text Field -->
+    <TextField fx:id="registracePrijmeni" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+
+    <!-- Add Password Label -->
+    <Label text="Nick name" GridPane.columnIndex="0" GridPane.rowIndex="3">
+    </Label>
+    <!-- Add Password Field -->
+    <TextField fx:id="registraceNick" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+
+    <!-- Add Submit Button -->
+    <Button fx:id="buttonVytvor" alignment="CENTER" contentDisplay="RIGHT" defaultButton="true"
+            onAction="#handleButtonVytvor" prefHeight="28.0" prefWidth="71.0" text="Vytvořit"
+            GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.rowSpan="1">
+        <GridPane.margin>
+            <Insets bottom="20" top="20"/>
+        </GridPane.margin>
+    </Button>
+    <Label text="telefon:" GridPane.rowIndex="4"/>
+    <Label text="Heslo:" GridPane.rowIndex="6"/>
+    <Label text="mail:" GridPane.rowIndex="5"/>
+    <TextField fx:id="registraceTelefon" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    <TextField fx:id="registraceMail" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    <PasswordField fx:id="registraceHeslo" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    <Button fx:id="buttonZrusit" alignment="CENTER" contentDisplay="RIGHT" defaultButton="true"
+            onAction="#handleButtonZrusit" prefHeight="28.0" prefWidth="71.0" text="Zrušit" GridPane.rowIndex="7"/>
 </GridPane>

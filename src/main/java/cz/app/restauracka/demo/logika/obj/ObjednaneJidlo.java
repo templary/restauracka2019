@@ -1,12 +1,12 @@
 package cz.app.restauracka.demo.logika.obj;
 
 public class ObjednaneJidlo {
-    private Jidlo jidlo;
-    private int stul;
-    private String date;
-    private String time;
-    private Boolean stav;
-    private int id;
+    private final Jidlo jidlo;
+    private final int stul;
+    private final String date;
+    private final String time;
+    private final Boolean stav;
+    private final int id;
 
     public ObjednaneJidlo(Jidlo jidlo, int stul, String date, String time, int id) {
         this.jidlo = jidlo;

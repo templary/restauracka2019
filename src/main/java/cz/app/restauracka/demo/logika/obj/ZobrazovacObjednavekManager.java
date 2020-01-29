@@ -7,7 +7,7 @@ import java.util.Set;
 
 @Component
 public class ZobrazovacObjednavekManager {
-    private Set<ZobrazovacObjednavek> setZobrazovanychJidel = new HashSet<>();
+    private final Set<ZobrazovacObjednavek> setZobrazovanychJidel = new HashSet<>();
 
     public Set<ZobrazovacObjednavek> getSetZobrazovanychJidel() {
         return setZobrazovanychJidel;

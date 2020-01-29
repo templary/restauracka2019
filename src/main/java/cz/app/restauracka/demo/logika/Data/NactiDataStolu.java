@@ -20,7 +20,7 @@ public class NactiDataStolu {
     @Autowired
     Stoly stoly;
 
-    private Gson gson = new Gson();
+    private final Gson gson = new Gson();
 
     public void loadData() {
 

@@ -1,7 +1,6 @@
 package cz.app.restauracka.demo.logika.Data;
 
 import com.google.gson.Gson;
-import cz.app.restauracka.demo.logika.obj.MenuJidla;
 import cz.app.restauracka.demo.logika.obj.Objednavky;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -15,7 +14,7 @@ public class UlozDataObjednavek {
     private static final String SAVE_FILE_NAME = "src/main/resources/LocalData/objednavky.json";
     @Autowired
     Objednavky objednavky;
-    private Gson gson = new Gson();
+    private final Gson gson = new Gson();
 
 
     public void saveData() {

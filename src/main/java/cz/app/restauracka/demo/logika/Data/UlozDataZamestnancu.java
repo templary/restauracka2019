@@ -14,7 +14,7 @@ public class UlozDataZamestnancu {
     private static final String SAVE_FILE_NAME = "src/main/resources/LocalData/zamestnanci.json";
     @Autowired
     Zamestnanci zamestnanci;
-    private Gson gson = new Gson();
+    private final Gson gson = new Gson();
 
 
     public void saveData() {

@@ -48,7 +48,7 @@ public class MainController {
     @Autowired
     UlozDataObjednavek ulozDataObjednavek;
 
-    ActualTime actualTime = new ActualTime();
+    final ActualTime actualTime = new ActualTime();
 
 
     @FXML

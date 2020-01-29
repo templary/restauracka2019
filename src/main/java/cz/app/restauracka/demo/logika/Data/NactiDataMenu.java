@@ -20,7 +20,7 @@ public class NactiDataMenu {
     @Autowired
     MenuJidla menuJidla;
 
-    private Gson gson = new Gson();
+    private final Gson gson = new Gson();
 
     public void loadData() {
 

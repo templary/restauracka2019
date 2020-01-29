@@ -14,7 +14,7 @@ public class UlozDataMenu {
     private static final String SAVE_FILE_NAME = "src/main/resources/LocalData/menu.json";
     @Autowired
     MenuJidla menuJidla;
-    private Gson gson = new Gson();
+    private final Gson gson = new Gson();
 
 
     public void saveData() {

@@ -13,9 +13,6 @@ public class Numeric {
         } catch (NumberFormatException e) {
             numeric = false;
         }
-        if(numeric)
-            return true;
-        else
-            return false;
+        return numeric;
     }
 }

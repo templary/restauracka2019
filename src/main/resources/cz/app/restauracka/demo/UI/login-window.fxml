@@ -12,65 +12,47 @@
 <Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
       minWidth="-Infinity" prefHeight="417.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8"
       fx:controller="cz.app.restauracka.demo.UI.LoginController">
-   <children>
-      <VBox layoutX="-1.0" layoutY="-1.0" prefHeight="424.0" prefWidth="326.0" style="-fx-background-color: #C1C8E4;">
-         <children>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="335.0" style="-fx-background-color: #5AB9EA;">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="RESTAURAČKA">
-                     <font>
-                        <Font name="System Bold" size="27.0"/>
-                     </font>
-                  </Text>
-               </children>
-            </HBox>
-            <HBox prefHeight="11.0" prefWidth="326.0" style="-fx-background-color: white;"/>
-            <HBox alignment="BOTTOM_CENTER" prefHeight="99.0" prefWidth="326.0" style="-fx-padding: 10;">
-               <children>
-                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/user.png"/>
-                     </image>
-                     <HBox.margin>
-                        <Insets right="4.0"/>
-                     </HBox.margin>
-                  </ImageView>
-                  <TextField fx:id="loginJmeno" promptText="Přihlašovací jméno" text="adam12"/>
-               </children>
-            </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="326.0" style="-fx-padding: 10;">
-               <children>
-                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/login.png"/>
-                     </image>
-                     <HBox.margin>
-                        <Insets right="4.0"/>
-                     </HBox.margin>
-                  </ImageView>
-                  <PasswordField fx:id="loginHeslo" promptText="Heslo" text="1234"/>
-               </children>
-            </HBox>
-            <HBox prefHeight="7.0" prefWidth="326.0" style="-fx-background-color: white;"/>
-            <HBox alignment="CENTER" prefHeight="48.0" prefWidth="326.0" style="-fx-background-color: white;">
-               <children>
-                  <Text fx:id="loginInfoText" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;"
-                        text="Přihlášení do aplikace Restauračka" wrappingWidth="304.0"/>
-               </children>
-            </HBox>
-            <HBox prefHeight="7.0" prefWidth="326.0" style="-fx-background-color: white;"/>
-            <HBox prefHeight="1.0" prefWidth="326.0" style="-fx-background-color: white;"/>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="326.0">
-               <children>
-                  <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleButtonLogin"
-                          style="-fx-background-color: #5AB9EA;" text="Přihlásit">
-                     <font>
-                        <Font name="System Bold" size="18.0"/>
-                     </font>
-                  </Button>
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-   </children>
+    <VBox layoutX="-1.0" layoutY="-1.0" prefHeight="424.0" prefWidth="326.0" style="-fx-background-color: #C1C8E4;">
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="335.0" style="-fx-background-color: #5AB9EA;">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="RESTAURAČKA">
+                <font>
+                    <Font name="System Bold" size="27.0"/>
+                </font>
+            </Text>
+        </HBox>
+        <HBox prefHeight="11.0" prefWidth="326.0" style="-fx-background-color: white;"/>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="99.0" prefWidth="326.0" style="-fx-padding: 10;">
+            <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                <HBox.margin>
+                    <Insets right="4.0"/>
+                </HBox.margin>
+                <Image url="@icons/user.png"/>
+            </ImageView>
+            <TextField fx:id="loginJmeno" promptText="Přihlašovací jméno" text="adam12"/>
+        </HBox>
+        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="326.0" style="-fx-padding: 10;">
+            <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                <HBox.margin>
+                    <Insets right="4.0"/>
+                </HBox.margin>
+                <Image url="@icons/login.png"/>
+            </ImageView>
+            <PasswordField fx:id="loginHeslo" promptText="Heslo" text="1234"/>
+        </HBox>
+        <HBox prefHeight="7.0" prefWidth="326.0" style="-fx-background-color: white;"/>
+        <HBox alignment="CENTER" prefHeight="48.0" prefWidth="326.0" style="-fx-background-color: white;">
+            <Text fx:id="loginInfoText" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;"
+                  text="Přihlášení do aplikace Restauračka" wrappingWidth="304.0"/>
+        </HBox>
+        <HBox prefHeight="7.0" prefWidth="326.0" style="-fx-background-color: white;"/>
+        <HBox prefHeight="1.0" prefWidth="326.0" style="-fx-background-color: white;"/>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="326.0">
+            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleButtonLogin"
+                    style="-fx-background-color: #5AB9EA;" text="Přihlásit">
+                <font>
+                    <Font name="System Bold" size="18.0"/>
+                </font>
+            </Button>
+        </HBox>
+    </VBox>
 </Pane>

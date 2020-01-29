@@ -20,7 +20,7 @@ public class NactiDataZamestnancu {
     @Autowired
     Zamestnanci zamestnanci;
 
-    private Gson gson = new Gson();
+    private final Gson gson = new Gson();
 
     public void loadData() {
 

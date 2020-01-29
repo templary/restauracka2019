@@ -33,7 +33,7 @@ public class IDChecker {
 
     }
 
-    public int getProperIDStul() {
+    public void getProperIDStul() {
 
         for (Stul stul : stoly.getSetStolu()) {
             if (stul.getId() == id) {
@@ -42,11 +42,9 @@ public class IDChecker {
             }
         }
 
-        return id;
-
     }
 
-    public int getProperIDObjednavka() {
+    public void getProperIDObjednavka() {
 
         for (ObjednaneJidlo objednaneJidlo : objednavky.getSetObjednanychJidel()) {
             if (objednaneJidlo.getId() == id) {
@@ -54,8 +52,6 @@ public class IDChecker {
                 getProperIDObjednavka();
             }
         }
-
-        return id;
 
     }
 

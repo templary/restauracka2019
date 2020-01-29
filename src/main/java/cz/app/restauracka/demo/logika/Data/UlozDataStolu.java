@@ -14,7 +14,7 @@ public class UlozDataStolu {
     private static final String SAVE_FILE_NAME = "src/main/resources/LocalData/stoly.json";
     @Autowired
     Stoly stoly;
-    private Gson gson = new Gson();
+    private final Gson gson = new Gson();
 
 
     public void saveData() {
