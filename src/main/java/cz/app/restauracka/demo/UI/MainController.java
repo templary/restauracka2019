@@ -1,6 +1,6 @@
 package cz.app.restauracka.demo.UI;
 
-import cz.app.restauracka.demo.ExterniFce.ActualTime;
+import cz.app.restauracka.demo.Funkce.ActualTime;
 import cz.app.restauracka.demo.logika.obj.*;
 import cz.app.restauracka.demo.logika.ovladac.OvladacData;
 import javafx.collections.FXCollections;

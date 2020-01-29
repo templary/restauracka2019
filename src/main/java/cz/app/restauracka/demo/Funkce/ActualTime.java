@@ -1,4 +1,4 @@
-package cz.app.restauracka.demo.ExterniFce;
+package cz.app.restauracka.demo.Funkce;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

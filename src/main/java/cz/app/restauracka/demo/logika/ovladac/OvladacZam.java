@@ -18,14 +18,13 @@ public class OvladacZam {
         zamestnanci.vlozZamestnanceDoSetu(zamestnanec);
     }
 
-    public int idGenerator() {
-        int count = zamestnanci.getZamestnanciSet().size();
-        return count + 1;
-    }
-
-
-    public void prijmoutObjednavku() {
-
+    public boolean checkUniqueNick(String s) {
+        for (Zamestnanec zamestnanec : zamestnanci.getZamestnanciSet()) {
+            if (zamestnanec.getUzJmeno().equals(s)) {
+                return false;
+            }
+        }
+        return true;
     }
 
 

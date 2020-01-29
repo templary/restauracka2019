@@ -67,5 +67,65 @@
     "telefon": "",
     "mail": "",
     "heslo": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e"
+  },
+  {
+    "jmeno": "karel",
+    "prijmeni": "Novák",
+    "uzJmeno": "nick",
+    "id": 8,
+    "pozice": "Manager",
+    "telefon": "392093231",
+    "mail": "mail.c@mail.com",
+    "heslo": "5d17889d94fa86b9aa4bee35f35f776b5313e91bd2ec01963580d06283749a053e6001fa68bca6d38112dd2a7b2ca1c6cab0210b5866eed48a82d7988f32039"
+  },
+  {
+    "jmeno": "fds",
+    "prijmeni": "fds",
+    "uzJmeno": "fds",
+    "id": 5,
+    "pozice": "Manager",
+    "telefon": "33",
+    "mail": "m",
+    "heslo": "f2422ab1889edcb677adaa34311a9e3e34ec98650d824ced96c1a721e6b170210f1c7c320584d3d5639d4d94778da230a249cdb4498cdcaf810fe265068930b2"
+  },
+  {
+    "jmeno": "fds",
+    "prijmeni": "fds",
+    "uzJmeno": "fds",
+    "id": 6,
+    "pozice": "Manager",
+    "telefon": "33",
+    "mail": "m",
+    "heslo": "f2422ab1889edcb677adaa34311a9e3e34ec98650d824ced96c1a721e6b170210f1c7c320584d3d5639d4d94778da230a249cdb4498cdcaf810fe265068930b2"
+  },
+  {
+    "jmeno": "fds",
+    "prijmeni": "fds",
+    "uzJmeno": "fds",
+    "id": 9,
+    "pozice": "Manager",
+    "telefon": "33",
+    "mail": "m",
+    "heslo": "f2422ab1889edcb677adaa34311a9e3e34ec98650d824ced96c1a721e6b170210f1c7c320584d3d5639d4d94778da230a249cdb4498cdcaf810fe265068930b2"
+  },
+  {
+    "jmeno": "fds",
+    "prijmeni": "fds",
+    "uzJmeno": "fds",
+    "id": 10,
+    "pozice": "Manager",
+    "telefon": "33",
+    "mail": "m",
+    "heslo": "f2422ab1889edcb677adaa34311a9e3e34ec98650d824ced96c1a721e6b170210f1c7c320584d3d5639d4d94778da230a249cdb4498cdcaf810fe265068930b2"
+  },
+  {
+    "jmeno": "fds",
+    "prijmeni": "fds",
+    "uzJmeno": "fds",
+    "id": 11,
+    "pozice": "Manager",
+    "telefon": "33",
+    "mail": "m",
+    "heslo": "f2422ab1889edcb677adaa34311a9e3e34ec98650d824ced96c1a721e6b170210f1c7c320584d3d5639d4d94778da230a249cdb4498cdcaf810fe265068930b2"
   }
 ]

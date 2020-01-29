@@ -19,7 +19,6 @@ import org.springframework.stereotype.Component;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-//TODO implementovat hashování hesel
 
 @Component
 @FxmlView("login-window.fxml")

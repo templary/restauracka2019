@@ -1,6 +1,7 @@
 package cz.app.restauracka.demo.UI;
 
 
+import cz.app.restauracka.demo.Funkce.IDChecker;
 import cz.app.restauracka.demo.logika.Data.UlozDataMenu;
 import cz.app.restauracka.demo.logika.obj.Jidlo;
 import cz.app.restauracka.demo.logika.obj.MenuJidla;
@@ -37,6 +38,8 @@ public class PridejJidloController implements Initializable {
     UlozDataMenu ulozDataMenu;
     @Autowired
     MenuJidla menuJidla;
+    @Autowired
+    IDChecker idChecker;
 
 
     @FXML
@@ -84,6 +87,10 @@ public class PridejJidloController implements Initializable {
         if (1 == 1) { //TODO dodělat ověření!!!!
             String nazev = vytvorJidloNazev.getText();
             String popis = vytvorJidloPopis.getText();
+            int cena = Integer.parseInt(vytvorJidloCena.getText()); //TODO overeni jestli je to int
+            idChecker.setId();
+            Jidlo jidlo = new Jidlo(nazev, idChecker.getProperIDJidlo(), popis, cena);
+            menuJidla.vlozJidloDoMenu(jidlo);
             ulozDataMenu.saveData();
             zobrazJidla();
         } else {

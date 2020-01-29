@@ -1,6 +1,6 @@
 package cz.app.restauracka.demo.logika.obj;
 
-import cz.app.restauracka.demo.ExterniFce.ActualTime;
+import cz.app.restauracka.demo.Funkce.ActualTime;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
@@ -164,9 +164,11 @@ class ObjednavkyTest {
 
     @Test
     void getCenaObjednavky() {
+        //TODO dodělat
     }
 
     @Test
     void vlozObjednavkyDoZobrazovace() {
+        //TODO dodělat
     }
 }

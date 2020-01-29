@@ -1,5 +1,6 @@
 package cz.app.restauracka.demo.UI;
 
+import cz.app.restauracka.demo.Funkce.IDChecker;
 import cz.app.restauracka.demo.logika.Data.UlozDataZamestnancu;
 import cz.app.restauracka.demo.logika.Pozice;
 import cz.app.restauracka.demo.logika.ovladac.OvladacHash;
@@ -41,6 +42,8 @@ public class RegistraceController implements Initializable {
     UlozDataZamestnancu ulozDataZamestnancu;
     @Autowired
     OvladacHash ovladacHash;
+    @Autowired
+    IDChecker idChecker;
 
 
     @FXML
@@ -105,7 +108,8 @@ public class RegistraceController implements Initializable {
             String heslo = registraceHeslo.getText();
             String shaHeslo = ovladacHash.sha512hash(heslo);
             Pozice pozice = registracePozice.getValue();
-            int idZam = ovladacZam.idGenerator();
+            idChecker.setId();
+            int idZam = idChecker.getProperIDZamestnanec();
 
             ovladacZam.vytvorNovehoUzivatele(jmeno, prijmeni, nick, idZam, pozice, telefon, mail, shaHeslo);
             ulozDataZamestnancu.saveData();
