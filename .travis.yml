@@ -1,6 +1,8 @@
 language: java
 jdk:
   - openjdk8
+sudo: true
+dist: trusty
 before_install:
   - chmod +x mvnw
 install:
