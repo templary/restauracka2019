@@ -15,4 +15,4 @@ build_task:
   build_script: mvn clean compile test sonar:sonar
 install:
   - mvn -N io.takari:maven:wrapper
-  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+#  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
