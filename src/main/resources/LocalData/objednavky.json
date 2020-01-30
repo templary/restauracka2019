@@ -1,1 +1,41 @@
-[{"jidlo":{"id":2,"nazev":"Burger","popis":"Burger","cena":120},"stul":1,"date":"29/01/2020","time":"21:22:30","stav":false,"id":2},{"jidlo":{"id":1,"nazev":"Svíčková","popis":"Svíčková","cena":100},"stul":2,"date":"29/01/2020","time":"21:22:33","stav":false,"id":1},{"jidlo":{"id":3,"nazev":"Rizek","popis":"Rizek","cena":110},"stul":1,"date":"29/01/2020","time":"21:22:30","stav":false,"id":3}]
+[
+  {
+    "jidlo": {
+      "id": 2,
+      "nazev": "Burger",
+      "popis": "Burger",
+      "cena": 120
+    },
+    "stul": 1,
+    "date": "29/01/2020",
+    "time": "21:22:30",
+    "stav": false,
+    "id": 2
+  },
+  {
+    "jidlo": {
+      "id": 1,
+      "nazev": "Svíčková",
+      "popis": "Svíčková",
+      "cena": 100
+    },
+    "stul": 2,
+    "date": "29/01/2020",
+    "time": "21:22:33",
+    "stav": false,
+    "id": 1
+  },
+  {
+    "jidlo": {
+      "id": 3,
+      "nazev": "Rizek",
+      "popis": "Rizek",
+      "cena": 110
+    },
+    "stul": 1,
+    "date": "29/01/2020",
+    "time": "21:22:30",
+    "stav": false,
+    "id": 3
+  }
+]

@@ -25,6 +25,7 @@ import org.springframework.stereotype.Component;
 @Component
 @FxmlView("main-scene-new.fxml")
 public class MainController {
+    final ActualTime actualTime = new ActualTime();
     @Autowired
     LoginController loginController;
     @Autowired
@@ -47,10 +48,6 @@ public class MainController {
     NactiDataObjednavek nactiDataObjednavek;
     @Autowired
     UlozDataObjednavek ulozDataObjednavek;
-
-    final ActualTime actualTime = new ActualTime();
-
-
     @FXML
     private TableView objednaneJidla = new TableView<>();
     @FXML
@@ -114,8 +111,6 @@ public class MainController {
     }
 
     public void uzaverka(ActionEvent actionEvent) {
-        //TODO test
-        ovladacData.nactiData();
 
     }
 
@@ -189,11 +184,8 @@ public class MainController {
     }
 
     public void akceStul9(ActionEvent actionEvent) {
-//        objednanePolozky.setItems(listSetter(stoly.getStulPodleID(9).getObjednavka().getNazeJidlaACenu()));
-        //zvolenyStul = 9;
-        //setUpStolu();
-        System.out.println(objednavky.pocetVeciVObjednavce(1));
-        //System.out.println(objednavky.getIDJidelUStolu(1));
+        zvolenyStul = 9;
+        setUpStolu();
     }
 
     private void startMain() {
