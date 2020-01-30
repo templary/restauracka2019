@@ -5,6 +5,14 @@ sudo: true
 dist: trusty
 before_install:
   - chmod +x mvnw
+container:
+  image: maven:3.6.1-jdk-8
+
+build_task:
+  install_script:
+    - apt-get update
+    - apt-get install --no-install-recommends -y openjfx
+  build_script: mvn clean compile test sonar:sonar
 install:
   - mvn -N io.takari:maven:wrapper
   - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
