@@ -13,7 +13,7 @@ Tento projekt byl vytvořen v rámci týmové semestrální práce z předmětu 
 
 #### Tech/framework
 - postaveno na [Spring Boot](https://spring.io/projects/spring-boot)
-- online testy: [Travis](https://travis-ci.org/)
+- online testy: [Travis](https://travis-ci.org/templary/restauracka2019)
 #### Autoři
 
  - Miroslav Prokop
