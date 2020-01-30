@@ -48,5 +48,15 @@
     "telefon": "788287888",
     "mail": "m.c@mail.cz",
     "heslo": "1c8655f398d3cebd3bae5f866e5676ac0094cb4c0ae9b2f60a7d6dfdc28e1c9b9c514ac9a000f8fcd4287e27913a9c39b76cf1530faedfec117e6c0d9d82c272"
+  },
+  {
+    "jmeno": "test",
+    "prijmeni": "test",
+    "uzJmeno": "test",
+    "id": 5,
+    "pozice": "Manager",
+    "telefon": "890",
+    "mail": "test",
+    "heslo": "ee26b0dd4af7e749aa1a8ee3c10ae9923f618980772e473f8819a5d4940e0db27ac185f8a0e1d5f84f88bc887fd67b143732c304cc5fa9ad8e6f57f50028a8ff"
   }
 ]

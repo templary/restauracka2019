@@ -12,10 +12,6 @@ public class Zamestnanci {
 
     private Set<Zamestnanec> zamestnanciSet = new HashSet<>();
 
-    public Zamestnanci() {
-        System.out.println("Vytvarim: " + getClass().getName());
-    }
-
     public Set<Zamestnanec> getZamestnanciSet() {
         return zamestnanciSet;
     }

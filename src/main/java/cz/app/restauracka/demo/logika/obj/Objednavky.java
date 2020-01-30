@@ -68,7 +68,6 @@ public class Objednavky {
             Jidlo jidlo = menuJidla.getJidloPodleID(k);
             ZobrazovacObjednavek zobrazovacObjednavek = new ZobrazovacObjednavek(jidlo.getNazev(), v, jidlo.getCena(), jidlo.getCena() * v);
             zobrazovacObjednavekManager.vlozZobrazovaneJidloDoSetu(zobrazovacObjednavek);
-            //System.out.println("Key: " + k + ", Value: " + v);
         });
 
     }

@@ -262,8 +262,10 @@ public class MainController {
         mezisoucetText.setText(Integer.toString(objednavky.getCenaObjednavky(zvolenyStul)));
         double dan = 1.2;
         double dane = objednavky.getCenaObjednavky(zvolenyStul) * dan - (objednavky.getCenaObjednavky(zvolenyStul));
-        danText.setText(String.valueOf(Math.round(dane)));
-        celkemCenaText.setText(String.valueOf(objednavky.getCenaObjednavky(zvolenyStul) + dane));
+        String result = String.format("%.2f", dane);
+        danText.setText(result);
+        String result2 = String.format("%.2f", objednavky.getCenaObjednavky(zvolenyStul) + dane);
+        celkemCenaText.setText(result2);
     }
 
 }

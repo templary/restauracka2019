@@ -54,7 +54,7 @@ public class LoginController implements Initializable {
         if (loggedZam != null) {
             if (loggedZam.getHeslo().equals(ovladacHash.sha512hash(loginHeslo.getText()))) {
                 loginInfoText.setText("Prihlasen!");
-                System.out.println(loggedZam.getJmeno());
+                //System.out.println(loggedZam.getJmeno());
                 startMain();
             } else {
                 loginInfoText.setText("Chybné jméno nebo heslo");
