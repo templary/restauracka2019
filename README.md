@@ -1,6 +1,6 @@
 # Restauračka
 
-Tento projekt byl vytvořen vprámci týmové semestrální práce z předmětu 4IT115 - Softwarové inženýrství. Vrámci projektu jsme vytvořili aplikaci, která je vhodná pro restauce a kavárny jakožto komplexní systém, přes který se vytvářejí objednávky, platí a který udržuje přehled nad zákazníky v restauraci.
+Tento projekt byl vytvořen v rámci týmové semestrální práce z předmětu 4IT115 - Softwarové inženýrství. Vrámci projektu jsme vytvořili aplikaci, která je vhodná pro restauce a kavárny jakožto komplexní systém, přes který se vytvářejí objednávky, platí a který udržuje přehled nad zákazníky v restauraci.
 
 ###### Co aplikace nabízí
   - Databázi jídel na nápojů, které restaurace podává
@@ -12,7 +12,8 @@ Tento projekt byl vytvořen vprámci týmové semestrální práce z předmětu 
  - [Restauračka](https://github.com/templary/restauracka2019)
 
 #### Tech/framework
-- sestaveno a otestováno [Travis](https://travis-ci.org/)
+- postaveno na [Spring Boot](https://spring.io/projects/spring-boot)
+- online testy: [Travis](https://travis-ci.org/)
 #### Autoři
 
  - Miroslav Prokop
