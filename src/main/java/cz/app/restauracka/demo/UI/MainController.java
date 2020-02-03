@@ -84,6 +84,7 @@ public class MainController {
     @FXML
     private Text celkemCenaText;
     private int zvolenyStul = 0;
+    private String zvoleneJidlo;
 
     private void nactiMenu() {
         vyberNazev.setCellValueFactory(new PropertyValueFactory<>("popis"));
@@ -188,6 +189,7 @@ public class MainController {
         setUpStolu();
     }
 
+
     private void startMain() {
         Stage stage = (Stage) buttonLogout.getScene().getWindow();
 
@@ -222,17 +224,37 @@ public class MainController {
 
 
     @FXML
-    public void vyberPolozekOnClicked(MouseEvent event) {
+    private void vyberPolozekOnClicked(MouseEvent event) {
         if (event.getClickCount() == 2) {
             Jidlo vybraneJidlo = (Jidlo) vyberPolozek.getSelectionModel().getSelectedItem();
             ObjednaneJidlo objednaneJidlo = new ObjednaneJidlo(vybraneJidlo, zvolenyStul, actualTime.getCurrentDate(), actualTime.getCurrentTime(), vybraneJidlo.getId());
             objednavky.vlozObjednaneJidlo(objednaneJidlo);
-            objednavky.vlozObjednavkyDoZobrazovace(zvolenyStul);
-            ulozDataObjednavek.saveData();
-            nactiObjednavkyStolu();
-            zobrazovacObjednavekManager.vymazSetZobrazovanychJidel();
-            zobrazCeny();
+            zobrazovacSetUp();
         }
+    }
+
+    @FXML
+    private void zobrazovanePolozky(MouseEvent event) {
+        if (event.getClickCount() == 1) {
+            ZobrazovacObjednavek objednavkaZeZobrazovace = (ZobrazovacObjednavek) objednaneJidla.getSelectionModel().getSelectedItem();
+            zvoleneJidlo = menuJidla.getJidloPokudJeVMenu(objednavkaZeZobrazovace.getNazevJidla()).getPopis();
+        }
+    }
+
+    private void zobrazovacSetUp() {
+        objednavky.vlozObjednavkyDoZobrazovace(zvolenyStul);
+        ulozDataObjednavek.saveData();
+        nactiObjednavkyStolu();
+        zobrazovacObjednavekManager.vymazSetZobrazovanychJidel();
+        zobrazCeny();
+    }
+
+
+    @FXML
+    private void odeberJidloButton(ActionEvent actionEvent) {
+        objednavky.odeberObjednaneJidlo(objednavky.getObjednaneJidloPokudJeObjednanePodleStolu(zvoleneJidlo, zvolenyStul));
+        zobrazovacSetUp();
+
     }
 
     private void nactiObjednavkyStolu() {

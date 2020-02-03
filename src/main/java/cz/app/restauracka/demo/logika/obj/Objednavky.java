@@ -76,6 +76,15 @@ public class Objednavky {
         this.setObjednanychJidel = setObjednanychJidel;
     }
 
+    public ObjednaneJidlo getObjednaneJidloPokudJeObjednanePodleStolu(String nazev, int stul) {
+        for (ObjednaneJidlo objednaneJidlo : getObjednaneJidloPodleStolu(stul)) {
+            if (objednaneJidlo.getJidlo().getPopis().equals(nazev)) {
+                return objednaneJidlo;
+            }
+        }
+        return null;
+    }
+
     public Set<ObjednaneJidlo> getSetObjednanychJidel() {
         return setObjednanychJidel;
     }

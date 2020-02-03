@@ -45,6 +45,7 @@ public class MenuJidla {
         return null;
     }
 
+
     public Set getNazvyJidel() {
         return menuSet.stream()
                 .map(Jidlo::getNazev)

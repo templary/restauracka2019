@@ -1,15 +1,15 @@
 [
   {
     "jidlo": {
-      "id": 1,
-      "nazev": "Svíčková",
-      "popis": "Svíčková",
-      "cena": 100
+      "id": 3,
+      "nazev": "Rizek",
+      "popis": "Rizek",
+      "cena": 110
     },
     "stul": 1,
-    "date": "30/01/2020",
-    "time": "08:26:18",
+    "date": "03/02/2020",
+    "time": "21:10:54",
     "stav": false,
-    "id": 1
+    "id": 3
   }
 ]
